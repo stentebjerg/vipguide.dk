@@ -3,8 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD
 
 
+=======
+  	
+>>>>>>> master
 	<title>Vipguide.dk</title>
 </head>
 <body>
@@ -31,5 +35,28 @@
 <script>
 	if( !window.jQuery ) document.write('<script src="js/jquery-2.2.1-min.js"><\/script>');
 </script>
+<<<<<<< HEAD
+=======
+<script>
+ 
+ // ID of the Google Spreadsheet
+ var spreadsheetID = "1KOdKcrHYHxUqfxNZ6w9Zq8A6pcUGpV2I87qm42Daghs";
+ 
+ // Make sure it is public or set to Anyone with link can view 
+ var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
+ 
+ $.getJSON(url, function(data) {
+ 
+  var entry = data.feed.entry;
+ 
+  $(entry).each(function(){
+    // Column names are name, age, etc.
+    $('.results').prepend('<h2>'+this.gsx$name.$t+'</h2><p>'+this.gsx$age.$t+'</p>');
+  });
+ 
+ });
+ 
+</script>
+>>>>>>> master
 </body>
 </html>
