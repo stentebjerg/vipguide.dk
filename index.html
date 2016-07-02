@@ -4,32 +4,46 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Vipguide.dk</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+
+<script>
+
+    $(function() {
+
+
+   var people = [];
+
+   $.getJSON('https://script.googleusercontent.com/macros/echo?user_content_key=E760GEatkknA_34yKqvbNtD_VtVvoZi4kpLSB_VPj8uAszNayWuOPepDvLnCKRSnyfA0Bbbbg6wdH5LDegapxOGLpPgAC5exOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa1ZsYSbt7G4nMhEEDL32U4DxjO7V7yvmJPXJTBuCiTGh3rUPjpYM_V0PJJG7TIaKp9I2G87XXu29PncnMYeGMY9ifjD1hYgKjVT-dqVTTBR41a348cv7a07vGI2JnfKaMlgU5y07LitOmt5NOXgRBLI&lib=MbpKbbfePtAVndrs259dhPT7ROjQYJ8yx', function(data) {
+       $.each(data.person, function(i, f) {
+          var tblRow = "<tr>" + "<td>" + f.firstName + "</td>" +
+           "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
+           $(tblRow).appendTo("#userdata tbody");
+     });
+
+   });
+
+});
+</script>
 </head>
+
 <body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script>
-	if( !window.jQuery ) document.write('<script src="js/jquery-2.2.1-min.js"><\/script>');
-</script>
-<script>
- 
- // ID of the Google Spreadsheet
- var spreadsheetID = "1KOdKcrHYHxUqfxNZ6w9Zq8A6pcUGpV2I87qm42Daghs";
- 
- // Make sure it is public or set to Anyone with link can view 
- var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
- 
- $.getJSON(url, function(data) {
- 
-  var entry = data.feed.entry;
- 
-  $(entry).each(function(){
-    // Column names are name, age, etc.
-    $('.results').prepend('<h2>'+this.gsx$name.$t+'</h2><p>'+this.gsx$age.$t+'</p>');
-  });
- 
- });
- 
-</script>
+
+<div class="wrapper">
+<div class="profile">
+   <table id= "userdata" border="2">
+  <thead>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Address</th>
+            <th>City</th>
+        </thead>
+      <tbody>
+
+       </tbody>
+   </table>
+
+</div>
+</div>
 
 </body>
 </html>
