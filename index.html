@@ -1,122 +1,118 @@
 <!doctype html>
 <html lang="en" class="no-js">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Vipguide.dk</title>
-	<meta http-equiv="refresh" content="0; URL='https://trello.com/b/anGmwRxH/vipguide-dk'" />
-	<style type="text/css">
-		html {
-  box-sizing: border-box;
-  font-family: "Lato, sans-serif";
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="scripts/jquery.min.js"></script>
+    <title>Vipguide.dk</title>
+    <!--
+    <meta http-equiv="refresh" content="0; URL='https://trello.com/b/anGmwRxH/vipguide-dk'" />
+    -->
+    <style type="text/css">
+    body {
+        background: #2c3e50;
+        color: #fff;
+        font: 14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+        line-height: 1.5em;
+    }
+    
+    .spinner {
+        width: 40px;
+        height: 40px;
+        position: relative;
+        margin: 100px auto;
+    }
+    
+    .double-bounce1,
+    .double-bounce2 {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: #fff;
+        opacity: 0.6;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+        animation: sk-bounce 2.0s infinite ease-in-out;
+    }
+    
+    .double-bounce2 {
+        -webkit-animation-delay: -1.0s;
+        animation-delay: -1.0s;
+    }
+    
+    @-webkit-keyframes sk-bounce {
+        0%,
+        100% {
+            -webkit-transform: scale(0.0)
+        }
+        50% {
+            -webkit-transform: scale(1.0)
+        }
+    }
+    
+    @keyframes sk-bounce {
+        0%,
+        100% {
+            transform: scale(0.0);
+            -webkit-transform: scale(0.0);
+        }
+        50% {
+            transform: scale(1.0);
+            -webkit-transform: scale(1.0);
+        }
+    }
+    </style>
+    <script>
+    $(document).ready(function() {
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
+        $.getJSON("https://script.googleusercontent.com/macros/echo?user_content_key=5EsjqF9zSiYRzLdxA0FWJ31eBcMGJaR6ohRP_3c38gjlpUoHHqM4EBvyyigz13T6pZH1BZZKmJLy63ISKxfzoHtbkkeCuyFLOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa1ZsYSbt7G4nMhEEDL32U4DxjO7V7yvmJPXJTBuCiTGh3rUPjpYM_V0PJJG7TIaKp0jLoMwsSUsMcP5yKFD3NBDAyRnS2y9tmubJYMMS3Bbzgd7hhMCgocfi4X3ACCQPcZGbMpcUlCsXNNxV1KIw2tU&lib=MbpKbbfePtAVndrs259dhPT7ROjQYJ8yx", function(data) {
+            console.log(data); // intialize list
+            $("#badges").html('<ul>');
+            var output = "";
+            /* loop through the JSON, parse out badge name & icon
+            wrap it in some HTML. */
+            var day = "Onsdag";
+            for (var i in data.Onsdag) {
 
-html, body {
-  width: 100%;
-  height: 100%;
-  font-size: 62.5%;
-  font-family: 'Lato', sans-serif;
-  color: #4d4d4d;
-}
+                if (data.Onsdag[i].Firma !== '') {
+                    output += "<li>";
+                    output += "<span>" + data.Onsdag[i].Tidspunkt;
+                    output += "<br>" + data.Onsdag[i].Firma;
+                    output += "<br>" + data.Onsdag[i].Antal;
+                    output += "<br>" + data.Onsdag[i].Kontaktperson + "</span>";
+                    // output += "<img src = '" + data.Onsdag[i].icon_url + "'/>";
+                    output += "</li>";
+                }
+            }
+            $("#badges ul").append(output); // append li
+            $("#badges ul").append('</ul>'); // close list
 
-.wrapper {
-  font-size: 1.6rem;
-  background: #dad8d2;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
+            /* hide spinner and then output HTML we built in the for loop */
+            $(".spinner").hide();
+        });
+    });
 
-html, body {
-  width: 100%;
-  background: #dad8d2;
-}
+    /***** But how does JSON work exactly *****
 
-.hourglass {
-  display: block;
-  background: #dad8d2;
-  margin: 3em auto;
-  width: 2em;
-  height: 4em;
-  box-shadow: inset #dad8d2 0 0 0 0, inset #00b7c6 0 2em 0 0, inset #dad8d2 0 0 4em 0;
-  -webkit-animation: hourglass 1s linear infinite;
-          animation: hourglass 1s linear infinite;
-}
+    The magic here happens in the for loop over "data.badges". The "data" part, comes from the variable name we passed the function when we called the getJSON function and the "badges" part comes from the structure of the JSON data that the Treehouse API returned to us. 
+        
+    How do you know what the structure of that JSON is? 
 
-.outer {
-  fill: #00b7c6;
-}
+    You look at it using a JSON viewer like the one at jsonviewer.stack.hu. To see what the JSON looks like that we are getting in this example go here: http://jsonviewer.stack.hu/#http://teamtreehouse.com/jamesbarnett.json and click on the 'viewer tab' 
 
-.middle {
-  fill: #dad8d2;
-}
-
-@-webkit-keyframes hourglass {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    box-shadow: inset #dad8d2 0 0 0 0, inset #00b7c6 0 2em 0 0, inset #dad8d2 0 4em 0 0, inset #00b7c6 0 4em 0 0;
-  }
-  80% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    box-shadow: inset #dad8d2 0 2em 0 0, inset #00b7c6 0 2em 0 0, inset #dad8d2 0 2em 0 0, inset #00b7c6 0 4em 0 0;
-  }
-  100% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    box-shadow: inset #dad8d2 0 2em 0 0, inset #00b7c6 0 2em 0 0, inset #dad8d2 0 2em 0 0, inset #00b7c6 0 4em 0 0;
-  }
-}
-
-@keyframes hourglass {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    box-shadow: inset #dad8d2 0 0 0 0, inset #00b7c6 0 2em 0 0, inset #dad8d2 0 4em 0 0, inset #00b7c6 0 4em 0 0;
-  }
-  80% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    box-shadow: inset #dad8d2 0 2em 0 0, inset #00b7c6 0 2em 0 0, inset #dad8d2 0 2em 0 0, inset #00b7c6 0 4em 0 0;
-  }
-  100% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    box-shadow: inset #dad8d2 0 2em 0 0, inset #00b7c6 0 2em 0 0, inset #dad8d2 0 2em 0 0, inset #00b7c6 0 4em 0 0;
-  }
-}
-
-	</style>
+    **********/
+    </script>
 </head>
 
 <body>
-<link href='http://fonts.googleapis.com/css?family=Lato:900,400' rel='stylesheet' type='text/css'>
-
-<div class="wrapper">
-    <svg class="hourglass" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 206" preserveAspectRatio="none">
-        <path class="middle" d="M120 0H0v206h120V0zM77.1 133.2C87.5 140.9 92 145 92 152.6V178H28v-25.4c0-7.6 4.5-11.7 14.9-19.4 6-4.5 13-9.6 17.1-17 4.1 7.4 11.1 12.6 17.1 17zM60 89.7c-4.1-7.3-11.1-12.5-17.1-17C32.5 65.1 28 61 28 53.4V28h64v25.4c0 7.6-4.5 11.7-14.9 19.4-6 4.4-13 9.6-17.1 16.9z"/>
-        <path class="outer" d="M93.7 95.3c10.5-7.7 26.3-19.4 26.3-41.9V0H0v53.4c0 22.5 15.8 34.2 26.3 41.9 3 2.2 7.9 5.8 9 7.7-1.1 1.9-6 5.5-9 7.7C15.8 118.4 0 130.1 0 152.6V206h120v-53.4c0-22.5-15.8-34.2-26.3-41.9-3-2.2-7.9-5.8-9-7.7 1.1-2 6-5.5 9-7.7zM70.6 103c0 18 35.4 21.8 35.4 49.6V192H14v-39.4c0-27.9 35.4-31.6 35.4-49.6S14 81.2 14 53.4V14h92v39.4C106 81.2 70.6 85 70.6 103z"/>
-    </svg>
-</div>
+    <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+    <div id="badges" class="badges"></div>
 </body>
+
 </html>
