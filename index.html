@@ -68,7 +68,7 @@
     <script>
     $(document).ready(function() {
 
-        $.getJSON("https://script.googleusercontent.com/macros/echo?user_content_key=5EsjqF9zSiYRzLdxA0FWJ31eBcMGJaR6ohRP_3c38gjlpUoHHqM4EBvyyigz13T6pZH1BZZKmJLy63ISKxfzoHtbkkeCuyFLOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa1ZsYSbt7G4nMhEEDL32U4DxjO7V7yvmJPXJTBuCiTGh3rUPjpYM_V0PJJG7TIaKp0jLoMwsSUsMcP5yKFD3NBDAyRnS2y9tmubJYMMS3Bbzgd7hhMCgocfi4X3ACCQPcZGbMpcUlCsXNNxV1KIw2tU&lib=MbpKbbfePtAVndrs259dhPT7ROjQYJ8yx", function(data) {
+        $.getJSON("http://vipguide.dk/feed/feed.json", function(data) {
             console.log(data); // intialize list
             $("#badges").html('<ul>');
             var output = "";
