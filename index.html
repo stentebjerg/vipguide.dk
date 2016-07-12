@@ -11,6 +11,7 @@
 <body class="white">
     <div class="navbar-fixed">
         <nav class="red accent-3">
+
             <div class="nav-wrapper">
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <a class='dropdown-button btn right' href='#' data-activates='filter'>Alle hold <i class="material-icons">arrow_drop_down</i></a>
@@ -35,8 +36,7 @@
             Fredag 5. august
         </div>
     </div>
-    
-    <ul id="feed" class="feed collection">
+    <ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
     </ul>
     <div class="spinner">
         <div class="double-bounce1"></div>
@@ -56,22 +56,24 @@
             for (var i in data.Onsdag) {
 
                 if (data.Onsdag[i].Firma !== '') {
+                    output += "<li>";
                     if (data.Onsdag[i].Type === 'Afhentning') {
-                        output += "<li class='collection-item avatar'><i class='material-icons circle blue'>directions_bus</i>";
+                        output += "<div class='collapsible-header collection-item avatar'><i class='material-icons circle blue'>directions_bus</i>";
                     } else {
-                        output += "<li class='collection-item avatar'><i class='material-icons circle green'>person_pin_circle</i>";
+                        output += "<div class='collapsible-header collection-item avatar'><i class='material-icons circle green'>person_pin_circle</i>";
                     }
                     output += "<span class='title'>" + data.Onsdag[i].Firma + "</span>";
                     output += "<p>Kl. " + data.Onsdag[i].Tidspunkt + "<br>";
                     output += data.Onsdag[i].Antal + " personer</p>";
-                    output += "<p class='secondary-content'>" + data.Onsdag[i].Hold + "</p>";
-                    output += "</li>";
+                    output += "<p class='secondary-content'>Hold " + data.Onsdag[i].Hold + "</p></div>";
+                    output += "<div class='collapsible-body'><p>Lorem ipsum dolor sit amet.</p></div></li>";
                 }
             }
-            $("#feed ul").append(output); // append li
-            $("#feed ul").append('</ul>'); // close list
+            $("#feed").append(output); // append li
+            $("#feed").append('</ul>'); // close list
             /* hide spinner and then output HTML we built in the for loop */
             $(".spinner").hide();
+            
         });
     });
     </script>
