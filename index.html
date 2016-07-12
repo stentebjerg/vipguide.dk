@@ -1,72 +1,54 @@
-<!doctype html>
-<html lang="en" class="no-js">
-
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="scripts/jquery.min.js"></script>
-    <title>Vipguide.dk</title>
-    <!--
-    <meta http-equiv="refresh" content="0; URL='https://trello.com/b/anGmwRxH/vipguide-dk'" />
-    -->
-    <style type="text/css">
-    body {
-        background: #2c3e50;
-        color: #fff;
-        font: 14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-        line-height: 1.5em;
-    }
-    
-    .spinner {
-        width: 40px;
-        height: 40px;
-        position: relative;
-        margin: 100px auto;
-    }
-    
-    .double-bounce1,
-    .double-bounce2 {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        background-color: #fff;
-        opacity: 0.6;
-        position: absolute;
-        top: 0;
-        left: 0;
-        -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
-        animation: sk-bounce 2.0s infinite ease-in-out;
-    }
-    
-    .double-bounce2 {
-        -webkit-animation-delay: -1.0s;
-        animation-delay: -1.0s;
-    }
-    
-    @-webkit-keyframes sk-bounce {
-        0%,
-        100% {
-            -webkit-transform: scale(0.0)
-        }
-        50% {
-            -webkit-transform: scale(1.0)
-        }
-    }
-    
-    @keyframes sk-bounce {
-        0%,
-        100% {
-            transform: scale(0.0);
-            -webkit-transform: scale(0.0);
-        }
-        50% {
-            transform: scale(1.0);
-            -webkit-transform: scale(1.0);
-        }
-    }
-    </style>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="white">
+    <div class="navbar-fixed">
+    <nav class="red accent-3">
+      <div class="nav-wrapper">
+        <ul id="nav-mobile">
+          <li><a href="#">Onsdag</a></li>
+          <li><a href="#">Torsdag</a></li>
+          <li><a href="#">Fredag</a></li>
+          <li><a href="#">Lørdag</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header"><i class="material-icons yellow-text text-accent-4">directions_bus</i>First</div>
+      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+    </li>
+  </ul>
+  <div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large red">
+      <i class="material-icons">menu</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red"><i class="material-icons">contact_phone</i>Telefonliste</a></li>
+      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+    </ul>
+  </div>
+    <!--div id="feed" class="feed">
+    </div>
+    <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script>
     $(document).ready(function() {
+        $(".button-collapse").sideNav();
 
         $.getJSON("https://script.googleusercontent.com/macros/echo?user_content_key=5EsjqF9zSiYRzLdxA0FWJ31eBcMGJaR6ohRP_3c38gjlpUoHHqM4EBvyyigz13T6pZH1BZZKmJLy63ISKxfzoHtbkkeCuyFLOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa1ZsYSbt7G4nMhEEDL32U4DxjO7V7yvmJPXJTBuCiTGh3rUPjpYM_V0PJJG7TIaKp0jLoMwsSUsMcP5yKFD3NBDAyRnS2y9tmubJYMMS3Bbzgd7hhMCgocfi4X3ACCQPcZGbMpcUlCsXNNxV1KIw2tU&lib=MbpKbbfePtAVndrs259dhPT7ROjQYJ8yx", function(data) {
             console.log(data); // intialize list
@@ -81,7 +63,7 @@
                     output += "<li>";
                     output += "<span>" + data.Onsdag[i].Tidspunkt;
                     output += "<br>" + data.Onsdag[i].Firma;
-                    output += "<br>" + data.Onsdag[i].Antal;
+                    output += "<br>" + data.Onsdag[i].Drejebog;
                     output += "<br>" + data.Onsdag[i].Kontaktperson + "</span>";
                     // output += "<img src = '" + data.Onsdag[i].icon_url + "'/>";
                     output += "</li>";
@@ -94,25 +76,8 @@
             $(".spinner").hide();
         });
     });
-
-    /***** But how does JSON work exactly *****
-
-    The magic here happens in the for loop over "data.feed". The "data" part, comes from the variable name we passed the function when we called the getJSON function and the "feed" part comes from the structure of the JSON data that the Treehouse API returned to us. 
-        
-    How do you know what the structure of that JSON is? 
-
-    You look at it using a JSON viewer like the one at jsonviewer.stack.hu. To see what the JSON looks like that we are getting in this example go here: http://jsonviewer.stack.hu/#http://teamtreehouse.com/jamesbarnett.json and click on the 'viewer tab' 
-
-    **********/
     </script>
-</head>
-
-<body>
-    <div class="spinner">
-        <div class="double-bounce1"></div>
-        <div class="double-bounce2"></div>
-    </div>
-    <div id="feed" class="feed"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 </body>
 
 </html>
