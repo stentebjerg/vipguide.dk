@@ -13,24 +13,15 @@
         <nav class="red accent-3">
             <div class="nav-wrapper">
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <!--
-                <ul class="right">
-                    <li class="active"><a href="#">ONS</a></li>
-                    <li><a href="#">Tor</a></li>
-                    <li><a href="#">Fre</a></li>
-                    <li><a href="#">Lør</a></li>
-                </ul>
-                -->
                 <a class='dropdown-button btn right' href='#' data-activates='filter'>Alle hold <i class="material-icons">arrow_drop_down</i></a>
-            <!-- Dropdown Structure -->
-            <ul id='filter' class='dropdown-content'>
-                <li><a href="#!">Hold 1</a></li>
-                <li><a href="#!">Hold 2</a></li>
-                <li><a href="#!">Hold 3</a></li>
-                <li><a href="#!">Hold 4</a></li>
-                <li><a href="#!">Hold 5</a></li>
-                <li><a href="#!">Hold 6</a></li>
-            </ul>
+                <ul id='filter' class='dropdown-content'>
+                    <li><a href="#!">Hold 1</a></li>
+                    <li><a href="#!">Hold 2</a></li>
+                    <li><a href="#!">Hold 3</a></li>
+                    <li><a href="#!">Hold 4</a></li>
+                    <li><a href="#!">Hold 5</a></li>
+                    <li><a href="#!">Hold 6</a></li>
+                </ul>
                 <ul class="side-nav" id="mobile-demo">
                     <li><img src="assets/img/vipguide-logo-2016.svg"></li>
                     <li><a href="#"><i class="material-icons">contact_phone</i> Guider</a></li>
@@ -38,11 +29,13 @@
                 </ul>
             </div>
         </nav>
-    
-    
-    
-     </div>   
-    <div class="container">
+    </div>
+    <div class="grey lighten-2 grey-text text-darken-2 date">
+        <div class="container">
+            Fredag 5. august
+        </div>
+    </div>
+    <!-- 
         <ul class="collection">
             <li class="collection-item avatar">
                 <i class="material-icons circle blue">directions_bus</i>
@@ -61,7 +54,7 @@
             </li>
             </li>
         </ul>
-    </div>
+        -->
     <!--ul class="collapsible" data-collapsible="accordion">
     <li>
       <div class="collapsible-header"><i class="material-icons yellow-text text-accent-4">directions_bus</i>First</div>
@@ -72,12 +65,12 @@
       <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
     </li>
   </ul-->
-    <!--div id="feed" class="feed">
-    </div>
+    <ul id="feed" class="feed collection">
+    </ul>
     <div class="spinner">
         <div class="double-bounce1"></div>
         <div class="double-bounce2"></div>
-    </div-->
+    </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script>
     $(document).ready(function() {
@@ -93,11 +86,14 @@
             for (var i in data.Onsdag) {
 
                 if (data.Onsdag[i].Firma !== '') {
-                    output += "<li>";
-                    output += "<span>" + data.Onsdag[i].Tidspunkt;
-                    output += "<br>" + data.Onsdag[i].Firma;
-                    output += "<br>" + data.Onsdag[i].Drejebog;
-                    output += "<br>" + data.Onsdag[i].Kontaktperson + "</span>";
+                    if (data.Onsdag[i].Type === 'Afhentning') {
+                        output += "<li class='collection-item avatar'><i class='material-icons circle blue'>directions_bus</i>";
+                    } else {
+                        output += "<li class='collection-item avatar'><i class='material-icons circle green'>person_pin_circle</i>";
+                    }
+                    output += "<span class='title'>" + data.Onsdag[i].Firma + "</span>";
+                    output += "<p>" + data.Onsdag[i].Tidspunkt + "<br>" + "</p>";
+                    output += "<p class='secondary-content'>" + data.Onsdag[i].Hold + "</p>";
                     // output += "<img src = '" + data.Onsdag[i].icon_url + "'/>";
                     output += "</li>";
                 }

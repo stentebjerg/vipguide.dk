@@ -1,5 +1,6 @@
-body {}
-
+html {
+  @extend .grey-text, .text-darken-4;
+}
 .spinner {
     width: 40px;
     height: 40px;
@@ -67,8 +68,11 @@ nav {
       text-transform: none;
       height: 56px;
       line-height: 56px;
-
-
+      &:hover {
+        background: none;
+        box-shadow: none;
+        @extend .white-text;
+      }
       i {
         display: inline-block;
         height: 56px;
@@ -76,6 +80,20 @@ nav {
         vertical-align: middle;
       }
     }
+    .dropdown-content li>a, 
+    .dropdown-content li>span {
+        @extend .grey-text, .text-darken-4;
+        font-size: inherit;
+      }
+}
+
+.collection {
+  border:none;
+}
+
+.date {
+  height: 40px;
+  line-height: 40px;
 }
 
 
