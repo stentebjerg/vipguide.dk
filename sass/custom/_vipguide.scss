@@ -57,6 +57,10 @@ nav {
   li {
     height: 50px;
     line-height: 50px;
+    &.divider {
+      height: 1px;
+      margin-top: 10px;
+    }
   }
 
   .headline {
@@ -77,11 +81,13 @@ nav {
     vertical-align: middle;
     margin-left: -60px;
     margin-right:28px;
-  }
-
-  .time {
+    @extend .grey-text;
+    &.time {
     @extend .red-text, .text-accent-3;
   }
+  }
+
+  
 }
 
 .collection {
