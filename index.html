@@ -13,40 +13,55 @@
         <nav class="red accent-3">
             <div class="nav-wrapper">
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul class="">
+                <!--
+                <ul class="right">
                     <li class="active"><a href="#">ONS</a></li>
                     <li><a href="#">Tor</a></li>
                     <li><a href="#">Fre</a></li>
                     <li><a href="#">Lør</a></li>
                 </ul>
+                -->
+                <a class='dropdown-button btn right' href='#' data-activates='filter'>Alle hold <i class="material-icons">arrow_drop_down</i></a>
+            <!-- Dropdown Structure -->
+            <ul id='filter' class='dropdown-content'>
+                <li><a href="#!">Hold 1</a></li>
+                <li><a href="#!">Hold 2</a></li>
+                <li><a href="#!">Hold 3</a></li>
+                <li><a href="#!">Hold 4</a></li>
+                <li><a href="#!">Hold 5</a></li>
+                <li><a href="#!">Hold 6</a></li>
+            </ul>
                 <ul class="side-nav" id="mobile-demo">
-                <li><img src="assets/img/vipguide-logo-2016.svg"></li>
+                    <li><img src="assets/img/vipguide-logo-2016.svg"></li>
                     <li><a href="#"><i class="material-icons">contact_phone</i> Guider</a></li>
                     <li><a href="#">Hold</a></li>
                 </ul>
             </div>
         </nav>
-    </div>
-    <ul class="collection">
-    <li class="collection-item avatar">
-    <i class="material-icons circle blue">directions_bus</i>
-      <span class="title">Tulip</span>
-      <p>Kl. 13.00<br>
-      35 personer
-      </p>
-      <p class="secondary-content">Hold 2</p>
-    </li>
-    <li class="collection-item avatar">
-    <i class="material-icons circle green">person_pin_circle</i>
-      <span class="title">Tulip</span>
-      <p>Kl. 13.00
-      </p>
-      <p class="secondary-content">Hold 2</p>
-    </li>
-
     
-    </li>
-  </ul>
+    
+    
+     </div>   
+    <div class="container">
+        <ul class="collection">
+            <li class="collection-item avatar">
+                <i class="material-icons circle blue">directions_bus</i>
+                <span class="title">Tulip</span>
+                <p>Kl. 13.00
+                    <br> 35 personer
+                </p>
+                <p class="secondary-content">Hold 2</p>
+            </li>
+            <li class="collection-item avatar">
+                <i class="material-icons circle green">person_pin_circle</i>
+                <span class="title">Tulip</span>
+                <p>Kl. 13.00
+                </p>
+                <p class="secondary-content">Hold 2</p>
+            </li>
+            </li>
+        </ul>
+    </div>
     <!--ul class="collapsible" data-collapsible="accordion">
     <li>
       <div class="collapsible-header"><i class="material-icons yellow-text text-accent-4">directions_bus</i>First</div>
