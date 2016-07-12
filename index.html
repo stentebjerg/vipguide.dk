@@ -62,7 +62,8 @@
                         output += "<li class='collection-item avatar'><i class='material-icons circle green'>person_pin_circle</i>";
                     }
                     output += "<span class='title'>" + data.Onsdag[i].Firma + "</span>";
-                    output += "<p>" + data.Onsdag[i].Tidspunkt + "<br>" + "</p>";
+                    output += "<p>Kl. " + data.Onsdag[i].Tidspunkt + "<br>";
+                    output += data.Onsdag[i].Antal + " personer</p>";
                     output += "<p class='secondary-content'>" + data.Onsdag[i].Hold + "</p>";
                     output += "</li>";
                 }
