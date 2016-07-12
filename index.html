@@ -25,8 +25,15 @@
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
                     <!--li><img src="assets/img/vipguide-logo-2016.svg"></li-->
-                    <li><a href="#">Guider</a></li>
-                    <li><a href="#">Hold</a></li>
+                    <li class="headline">Vagtplan</li>
+                    <li><a href="#"><i class="material-icons time">access_time</i> Onsdag</a></li>
+                    <li><a href="#">Torsdag</a></li>
+                    <li><a href="#">Fredag</a></li>
+                    <li><a href="#">Lørdag</a></li>
+                    <li class="divider"></li>
+                    <li class="headline">Information</li>
+                    <li><a href="#"><i class="material-icons">people</i> Guider</a></li>
+                    <li><a href="#"><i class="material-icons">access_time</i> Hold</a></li>
                 </ul>
             </div>
         </nav>
@@ -38,9 +45,46 @@
     </div>
     <ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
     </ul>
-    <div class="spinner">
-        <div class="double-bounce1"></div>
-        <div class="double-bounce2"></div>
+    <div class="preloader-wrapper active">
+      <div class="spinner-layer spinner-blue">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-red">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-yellow">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-green">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script>
@@ -72,7 +116,7 @@
             $("#feed").append(output); // append li
             $("#feed").append('</ul>'); // close list
             /* hide spinner and then output HTML we built in the for loop */
-            $(".spinner").hide();
+            $(".preloader-wrapper").hide();
             
         });
     });
