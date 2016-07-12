@@ -1,5 +1,4 @@
 body {
-
 }
 
 .spinner {
@@ -49,3 +48,11 @@ body {
         -webkit-transform: scale(1.0);
     }
 }
+
+.collection .collection-item.avatar .secondary-content {
+  @extend .grey-text, .text-lighten-1;
+  top:10px;
+}
+
+
+
