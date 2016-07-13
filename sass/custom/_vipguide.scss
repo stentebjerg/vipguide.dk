@@ -19,6 +19,9 @@ html {
 }
 
 nav {
+    .brand-logo {
+      font-size: 1.5rem;
+    }
     .button-collapse {
         padding: 0 4.5%;
         i {
@@ -52,15 +55,19 @@ nav {
 }
 
 .side-nav {
-  @extend .grey-text;
+  @extend .grey-text, .text-darken-3;
 
   li {
     height: 50px;
     line-height: 50px;
+    font-weight: 500;
     &.divider {
       height: 1px;
       margin-top: 10px;
     }
+    &.active .time {
+    @extend .red-text, .text-accent-3;
+  }
   }
 
   .headline {
@@ -69,10 +76,14 @@ nav {
     height: 32px;
     line-height: 48px;
     margin-bottom: 14px;
+    font-weight: 400
 
   }
   a {
     padding: 0 30px 0 75px;
+    height: 50px;
+    line-height: 50px;
+    @extend .grey-text, .text-darken-3;
   }
   i.material-icons {
     display: inline-block;
@@ -81,10 +92,9 @@ nav {
     vertical-align: middle;
     margin-left: -60px;
     margin-right:28px;
-    @extend .grey-text;
-    &.time {
-    @extend .red-text, .text-accent-3;
-  }
+    font-size: 1.9rem;
+    @extend .grey-text, .text-darken-3;
+    
   }
 
   
