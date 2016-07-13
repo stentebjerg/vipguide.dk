@@ -44,26 +44,20 @@
     <script>
     $(document).ready(function() {
         /* Json feed */
-        $.getJSON("https://script.googleusercontent.com/macros/echo?user_content_key=5EsjqF9zSiYRzLdxA0FWJ31eBcMGJaR6ohRP_3c38gjlpUoHHqM4EBvyyigz13T6pZH1BZZKmJLy63ISKxfzoHtbkkeCuyFLOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa1ZsYSbt7G4nMhEEDL32U4DxjO7V7yvmJPXJTBuCiTGh3rUPjpYM_V0PJJG7TIaKp0jLoMwsSUsMcP5yKFD3NBDAyRnS2y9tmubJYMMS3Bbzgd7hhMCgocfi4X3ACCQPcZGbMpcUlCsXNNxV1KIw2tU&lib=MbpKbbfePtAVndrs259dhPT7ROjQYJ8yx", function(data) {
+        $.getJSON("https://script.googleusercontent.com/macros/echo?user_content_key=k-8JfcUQjMdnqq1Z7sqrfFWFFAInEn7l29Kg37tEuw1Q0Sdr38oqpHs54KHzBDNdsJVMop5SDo4-dv_zdbW4vi5NG-Zcu25_OJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa1ZsYSbt7G4nMhEEDL32U4DxjO7V7yvmJPXJTBuCiTGh3rUPjpYM_V0PJJG7TIaKp0jLoMwsSUsMcP5yKFD3NBDAyRnS2y9tmubJYMMS3Bbzgd7hhMCgocfi4X3ACCQPcTMoi2UnoP0x-DbLYQhinsUPEQA1-9knIA&lib=MbpKbbfePtAVndrs259dhPT7ROjQYJ8yx", function(data) {
             console.log(data); // intialize list
             $("#feed").html('<ul>');
             var output = "";
             /* loop through the JSON, parse out badge name & icon wrap it in some HTML. */
-            for (var i in data.Onsdag) {
-
-                if (data.Onsdag[i].Firma !== '') {
-                    output += "<li>";
-                    if (data.Onsdag[i].Type === 'Afhentning') {
-                        output += "<div class='collapsible-header collection-item avatar'><i class='material-icons circle blue'>directions_bus</i>";
+            for (var i in data.Telefonliste) {
+                    output += "<li class='collection-item avatar'>";
+                    if (data.Telefonliste[i].Billede !== '') {
+                        output += "<img src='https://memba.dk/images/Members/" + data.Telefonliste[i].Billede + "?w=100&h=100&mode=crop' alt='' class='circle'>";
                     } else {
-                        output += "<div class='collapsible-header collection-item avatar'><i class='material-icons circle green'>person_pin_circle</i>";
+                        output += "<i class='material-icons circle grey lighten-2'>perm_identity</i>";
                     }
-                    output += "<span class='title'>" + data.Onsdag[i].Firma + "</span>";
-                    output += "<p>Kl. " + data.Onsdag[i].Tidspunkt + "<br>";
-                    output += data.Onsdag[i].Antal + " personer</p>";
-                    output += "<a href='/hold.html' class='secondary-content'>Hold " + data.Onsdag[i].Hold + "</a></div>";
-                    output += "<div class='collapsible-body'><p>Lorem ipsum dolor sit amet.</p></div></li>";
-                }
+                    output += "<span class='title'>" + data.Telefonliste[i].Navn + "</span>";
+                    output += "<br><a href='tel:"  + data.Telefonliste[i].Tlf + "'>" + data.Telefonliste[i].Tlf + "</a></li>";
             }
             $("#feed").append(output); // append li
             $("#feed").append('</ul>'); // close list

@@ -51,6 +51,24 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/hold copy.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/hold copy.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/hold copy.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/hold copy.kit",
+		"outputAbbreviatedPath": "\/hold copy.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/hold.html": {
 		"fileType": 8192,
 		"ignore": 1,
@@ -78,12 +96,30 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/includes\/_feed.kit": {
+	"\/includes\/_feed-onsdag.kit": {
 		"fileType": 2048,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/includes\/_feed.kit",
-		"outputAbbreviatedPath": "\/includes\/_feed.html",
+		"inputAbbreviatedPath": "\/includes\/_feed-onsdag.kit",
+		"outputAbbreviatedPath": "\/includes\/_feed-onsdag.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/includes\/_feed-telefonliste.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/_feed-telefonliste.kit",
+		"outputAbbreviatedPath": "\/includes\/_feed-telefonliste.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/includes\/_feed-torsdag.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/_feed-torsdag.kit",
+		"outputAbbreviatedPath": "\/includes\/_feed-torsdag.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
@@ -111,6 +147,15 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/includes\/_nav.kit",
 		"outputAbbreviatedPath": "\/includes\/_nav.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/includes\/_preloader.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/_preloader.kit",
+		"outputAbbreviatedPath": "\/includes\/_preloader.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
@@ -817,6 +862,24 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/telefonliste.kit",
 		"outputAbbreviatedPath": "\/telefonliste.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/torsdag.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/torsdag.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/torsdag.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/torsdag.kit",
+		"outputAbbreviatedPath": "\/torsdag.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		}

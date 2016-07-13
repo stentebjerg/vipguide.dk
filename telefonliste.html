@@ -20,8 +20,8 @@
                     <li class="headline">Vagtplan</li>
                     <li><a href="/index.html"><i class="material-icons time">access_time</i> Onsdag</a></li>
                     <li><a href="/torsdag.html"><i class="material-icons time">access_time</i> Torsdag</a></li>
-                    <li><a href="/fredag.html"><i class="material-icons time">access_time</i> Fredag</a></li>
-                    <li><a href="/loerdag.html"><i class="material-icons time">access_time</i> Lørdag</a></li>
+                    <li><a href="#"><i class="material-icons time">access_time</i> Fredag</a></li>
+                    <li><a href="#"><i class="material-icons time">access_time</i> Lørdag</a></li>
                     <li class="divider"></li>
                     <li class="headline">Information</li>
                     <li><a href="/telefonliste.html"><i class="material-icons phone">contact_phone</i> Telefonliste</a></li>
@@ -30,7 +30,75 @@
             </div>
         </nav>
     </div>               
-   
+ <ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
+    </ul>
+<div class="preloader-wrapper active">
+      <div class="spinner-layer spinner-blue">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-red">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-yellow">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-green">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+    $(document).ready(function() {
+        /* Json feed */
+        $.getJSON("https://script.googleusercontent.com/macros/echo?user_content_key=k-8JfcUQjMdnqq1Z7sqrfFWFFAInEn7l29Kg37tEuw1Q0Sdr38oqpHs54KHzBDNdsJVMop5SDo4-dv_zdbW4vi5NG-Zcu25_OJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa1ZsYSbt7G4nMhEEDL32U4DxjO7V7yvmJPXJTBuCiTGh3rUPjpYM_V0PJJG7TIaKp0jLoMwsSUsMcP5yKFD3NBDAyRnS2y9tmubJYMMS3Bbzgd7hhMCgocfi4X3ACCQPcTMoi2UnoP0x-DbLYQhinsUPEQA1-9knIA&lib=MbpKbbfePtAVndrs259dhPT7ROjQYJ8yx", function(data) {
+            console.log(data); // intialize list
+            $("#feed").html('<ul>');
+            var output = "";
+            /* loop through the JSON, parse out badge name & icon wrap it in some HTML. */
+            for (var i in data.Telefonliste) {
+                    output += "<li class='collection-item avatar'>";
+                    if (data.Telefonliste[i].Billede !== '') {
+                        output += "<img src='https://memba.dk/images/Members/" + data.Telefonliste[i].Billede + "?w=100&h=100&mode=crop' alt='' class='circle'>";
+                    } else {
+                        output += "<i class='material-icons circle grey lighten-2'>perm_identity</i>";
+                    }
+                    output += "<span class='title'>" + data.Telefonliste[i].Navn + "</span>";
+                    output += "<br><a href='tel:"  + data.Telefonliste[i].Tlf + "'>" + data.Telefonliste[i].Tlf + "</a></li>";
+            }
+            $("#feed").append(output); // append li
+            $("#feed").append('</ul>'); // close list
+            /* hide spinner and then output HTML we built in the for loop */
+            $(".preloader-wrapper").hide();
+            
+        });
+    });
+    </script>     
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {

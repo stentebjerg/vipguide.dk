@@ -44,20 +44,18 @@
     <script>
     $(document).ready(function() {
         /* Json feed */
-        $.getJSON("https://script.googleusercontent.com/macros/echo?user_content_key=oUeW4TFVws-GBHigVispcMcoZJTOy8-UPsKeGG9EvxmCpFo0LTAccZkJVSAZ-s4omnaW2F4lBMT2FmIIiCcs4x1dd9yqokHvOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa1ZsYSbt7G4nMhEEDL32U4DxjO7V7yvmJPXJTBuCiTGh3rUPjpYM_V0PJJG7TIaKp0jLoMwsSUsMcP5yKFD3NBDAyRnS2y9tmubJYMMS3Bbzgd7hhMCgocfi4X3ACCQPcRVxleGkRRDkV1HyRDgAh18&lib=MbpKbbfePtAVndrs259dhPT7ROjQYJ8yx", function(data) {
+        $.getJSON("https://script.googleusercontent.com/macros/echo?user_content_key=k-8JfcUQjMdnqq1Z7sqrfFWFFAInEn7l29Kg37tEuw1Q0Sdr38oqpHs54KHzBDNdsJVMop5SDo4-dv_zdbW4vi5NG-Zcu25_OJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa1ZsYSbt7G4nMhEEDL32U4DxjO7V7yvmJPXJTBuCiTGh3rUPjpYM_V0PJJG7TIaKp0jLoMwsSUsMcP5yKFD3NBDAyRnS2y9tmubJYMMS3Bbzgd7hhMCgocfi4X3ACCQPcTMoi2UnoP0x-DbLYQhinsUPEQA1-9knIA&lib=MbpKbbfePtAVndrs259dhPT7ROjQYJ8yx", function(data) {
             console.log(data); // intialize list
             $("#feed").html('<ul>');
             var output = "";
             /* loop through the JSON, parse out badge name & icon wrap it in some HTML. */
-            for (var i in data.Hold) {
+            for (var i in data.Telefonliste) {
+              if (data.Telefonliste[i].Holdnummer !== '') {
                     output += "<li class='collection-item avatar'>";
-                    if (data.Hold[i].Billede !== '') {
-                        output += "<img src='https://memba.dk/images/Members/" + data.Hold[i].Billede + "?w=100&h=100&mode=crop' alt='' class='circle'>";
-                    } else {
-                        output += "<i class='material-icons circle grey lighten-2'>perm_identity</i>";
-                    }
-                    output += "<span class='title'>" + data.Hold[i].Navn + "</span>";
-                    output += "<p>" + data.Hold[i].Tlf + "</p></li>";
+                    output += "<i class='circle green accent-4'>"  + data.Telefonliste[i].Holdnummer +  "</i>";
+                    output += "<span class='title'>" + data.Telefonliste[i].Navne.replace(/,/g,'<br>') + "</span>";
+                    output += "</li>";
+            }
             }
             $("#feed").append(output); // append li
             $("#feed").append('</ul>'); // close list

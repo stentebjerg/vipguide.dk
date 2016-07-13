@@ -1,0 +1,54 @@
+<!-- @include /preloader -->
+    <script>
+    $(document).ready(function() {
+        /* Json feed */
+        $.getJSON("https://script.googleusercontent.com/macros/echo?user_content_key=SZT_V7rpDB-9HruAYEJEdTcZTc9xOFvpdSKzyoaUkQrEf3yW5Y8DlI0DxS-haKAwpNLCTPg9-ef6VDjvTcTGXRMl9xZuCFS5OJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa1ZsYSbt7G4nMhEEDL32U4DxjO7V7yvmJPXJTBuCiTGh3rUPjpYM_V0PJJG7TIaKp0jLoMwsSUsMcP5yKFD3NBDAyRnS2y9tmubJYMMS3Bbzgd7hhMCgocfi4X3ACCQPcR55aZZkEdKx5esG_4ZSePY&lib=MbpKbbfePtAVndrs259dhPT7ROjQYJ8yx", function(data) {
+            console.log(data); // intialize list
+            $("#feed").html('<ul>');
+            var output = "";
+            /* loop through the JSON, parse out badge name & icon wrap it in some HTML. */
+            for (var i in data.Torsdag) {
+
+                if (data.Torsdag[i].Firma !== '') {
+                    output += "<li>";
+                    if (data.Torsdag[i].Type === 'Afhentning') {
+                        output += "<div class='collapsible-header collection-item avatar'><i class='material-icons circle indigo'>directions_bus</i>";
+                    } else {
+                        output += "<div class='collapsible-header collection-item avatar'><i class='material-icons circle teal'>person_pin_circle</i>";
+                    }
+                    output += "<span class='title'>" + data.Torsdag[i].Firma + "</span>";
+                    output += "<p>Kl. " + data.Torsdag[i].Afgang + "<br>";
+                    output += data.Torsdag[i].Antal + " personer <br>";
+                    output += "<a href='/hold.html'>Hold " + data.Torsdag[i].Hold + "</a></p>";
+                    if (data.Torsdag[i].Drejebog !== '') {
+                    output += "<a href='" + data.Torsdag[i].Drejebog + "' class='secondary-content'>Drejebog</a>";
+                  }
+                  output += "</div>";
+                    output += "<div class='collapsible-body'>";
+                    output += "<div class='flex-container'>";
+                    output += "<div class='flex-item'>";
+                    output += "<h6>Kontaktperson</h6><p>" + data.Torsdag[i].Kontaktperson + "</p>";
+                    if (data.Torsdag[i].Mobil !== '') {
+                    output += "<h6>Mobil</h6><p>" + data.Torsdag[i].Mobil + "</p>";
+                  }
+                  output += "</div>";
+                  output += "<div class='flex-item'>";
+                  if (data.Torsdag[i].Afhentning !== '') {
+                    output += "<h6>Afhentning</h6><p>" + data.Torsdag[i].Afhentning + "</p>";
+                  }
+                  if (data.Torsdag[i].Tur !== '') {
+                    output += "<h6>Tour</h6><p>" + data.Torsdag[i].Tur + "</p>";
+                  }
+                  output += "</div>";
+                  output += "</div>";
+                  output += "</div></li>";
+                }
+            }
+            $("#feed").append(output); // append li
+            $("#feed").append('</ul>'); // close list
+            /* hide spinner and then output HTML we built in the for loop */
+            $(".preloader-wrapper").hide();
+            
+        });
+    });
+    </script>

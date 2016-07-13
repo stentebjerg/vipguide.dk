@@ -32,7 +32,7 @@
     </div>               
     <div class="grey lighten-2 grey-text text-darken-2 date">
         <div class="container">
-            Onsdag 3. august 2016
+            Torsdag 4. august 2016
         </div>
     </div>
 <ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
@@ -80,46 +80,46 @@
     </div>    <script>
     $(document).ready(function() {
         /* Json feed */
-        $.getJSON("https://script.googleusercontent.com/macros/echo?user_content_key=5EsjqF9zSiYRzLdxA0FWJ31eBcMGJaR6ohRP_3c38gjlpUoHHqM4EBvyyigz13T6pZH1BZZKmJLy63ISKxfzoHtbkkeCuyFLOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa1ZsYSbt7G4nMhEEDL32U4DxjO7V7yvmJPXJTBuCiTGh3rUPjpYM_V0PJJG7TIaKp0jLoMwsSUsMcP5yKFD3NBDAyRnS2y9tmubJYMMS3Bbzgd7hhMCgocfi4X3ACCQPcZGbMpcUlCsXNNxV1KIw2tU&lib=MbpKbbfePtAVndrs259dhPT7ROjQYJ8yx", function(data) {
+        $.getJSON("https://script.googleusercontent.com/macros/echo?user_content_key=SZT_V7rpDB-9HruAYEJEdTcZTc9xOFvpdSKzyoaUkQrEf3yW5Y8DlI0DxS-haKAwpNLCTPg9-ef6VDjvTcTGXRMl9xZuCFS5OJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa1ZsYSbt7G4nMhEEDL32U4DxjO7V7yvmJPXJTBuCiTGh3rUPjpYM_V0PJJG7TIaKp0jLoMwsSUsMcP5yKFD3NBDAyRnS2y9tmubJYMMS3Bbzgd7hhMCgocfi4X3ACCQPcR55aZZkEdKx5esG_4ZSePY&lib=MbpKbbfePtAVndrs259dhPT7ROjQYJ8yx", function(data) {
             console.log(data); // intialize list
             $("#feed").html('<ul>');
             var output = "";
             /* loop through the JSON, parse out badge name & icon wrap it in some HTML. */
-            for (var i in data.Onsdag) {
+            for (var i in data.Torsdag) {
 
-                if (data.Onsdag[i].Firma !== '') {
+                if (data.Torsdag[i].Firma !== '') {
                     output += "<li>";
-                    if (data.Onsdag[i].Type === 'Afhentning') {
+                    if (data.Torsdag[i].Type === 'Afhentning') {
                         output += "<div class='collapsible-header collection-item avatar'><i class='material-icons circle indigo'>directions_bus</i>";
                     } else {
                         output += "<div class='collapsible-header collection-item avatar'><i class='material-icons circle teal'>person_pin_circle</i>";
                     }
-                    output += "<span class='title'>" + data.Onsdag[i].Firma + "</span>";
-                    output += "<p>Kl. " + data.Onsdag[i].Afgang + "<br>";
-                    output += data.Onsdag[i].Antal + " personer <br>";
-                    output += "<a href='/hold.html'>Hold " + data.Onsdag[i].Hold + "</a></p>";
-                    if (data.Onsdag[i].Drejebog !== '') {
-                    output += "<a href='" + data.Onsdag[i].Drejebog + "' class='secondary-content'>Drejebog</a>";
-                	}
-                	output += "</div>";
+                    output += "<span class='title'>" + data.Torsdag[i].Firma + "</span>";
+                    output += "<p>Kl. " + data.Torsdag[i].Afgang + "<br>";
+                    output += data.Torsdag[i].Antal + " personer <br>";
+                    output += "<a href='/hold.html'>Hold " + data.Torsdag[i].Hold + "</a></p>";
+                    if (data.Torsdag[i].Drejebog !== '') {
+                    output += "<a href='" + data.Torsdag[i].Drejebog + "' class='secondary-content'>Drejebog</a>";
+                  }
+                  output += "</div>";
                     output += "<div class='collapsible-body'>";
                     output += "<div class='flex-container'>";
                     output += "<div class='flex-item'>";
-                    output += "<h6>Kontaktperson</h6><p>" + data.Onsdag[i].Kontaktperson + "</p>";
-                    if (data.Onsdag[i].Mobil !== '') {
-                    output += "<h6>Mobil</h6><p>" + data.Onsdag[i].Mobil + "</p>";
-                	}
-                	output += "</div>";
-                	output += "<div class='flex-item'>";
-                	if (data.Onsdag[i].Afhentning !== '') {
-                    output += "<h6>Afhentning</h6><p>" + data.Onsdag[i].Afhentning + "</p>";
-                	}
-                	if (data.Onsdag[i].Tur !== '') {
-                    output += "<h6>Tour</h6><p>" + data.Onsdag[i].Tur + "</p>";
-                	}
-                	output += "</div>";
-                	output += "</div>";
-                	output += "</div></li>";
+                    output += "<h6>Kontaktperson</h6><p>" + data.Torsdag[i].Kontaktperson + "</p>";
+                    if (data.Torsdag[i].Mobil !== '') {
+                    output += "<h6>Mobil</h6><p>" + data.Torsdag[i].Mobil + "</p>";
+                  }
+                  output += "</div>";
+                  output += "<div class='flex-item'>";
+                  if (data.Torsdag[i].Afhentning !== '') {
+                    output += "<h6>Afhentning</h6><p>" + data.Torsdag[i].Afhentning + "</p>";
+                  }
+                  if (data.Torsdag[i].Tur !== '') {
+                    output += "<h6>Tour</h6><p>" + data.Torsdag[i].Tur + "</p>";
+                  }
+                  output += "</div>";
+                  output += "</div>";
+                  output += "</div></li>";
                 }
             }
             $("#feed").append(output); // append li
