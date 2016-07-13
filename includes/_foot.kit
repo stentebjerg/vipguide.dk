@@ -3,8 +3,11 @@
     $(document).ready(function() {
         /* Slide navigation */
         $(".button-collapse").sideNav();
+       
         $(function() {
-  $('.side-nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+    if ((location.pathname.split("/")[1]) !== ""){
+        $('.nav-wrapper a[href^="/' + location.pathname.split("/")[1] + '"]').parent().addClass('active');
+    }
 });
         });
 </script>

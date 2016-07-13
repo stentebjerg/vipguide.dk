@@ -66,8 +66,14 @@ nav {
       margin-top: 10px;
     }
     &.active .time {
-    @extend .red-text, .text-accent-3;
+    color: #ff1744 !important;
   }
+  &.active .phone {
+      color: #00C853 !important;
+    }
+  &.active .people {
+      color: #2979FF !important;
+    }
   }
 
   .headline {
