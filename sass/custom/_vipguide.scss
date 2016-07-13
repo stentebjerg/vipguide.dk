@@ -56,6 +56,37 @@ nav {
 }
 
 .side-nav {
+
+  .top {
+    width: 100%;
+    height: 150px;
+    position: relative;
+    background: #000;
+
+    &:before {
+      content: ' ';
+      display: block;
+      background: url(http://www.smukfest.dk/media/1137/header_boege2.jpg?width=480&height=300&mode=crop&quality=100) no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 150px;
+      opacity: .4;
+    }
+
+    svg {
+      position: absolute;
+    top: 25px;
+    left: 50%;
+    margin-left: -75px;
+    width: 140px;
+    }
+  }
+
+
+  
   @extend .grey-text, .text-darken-3;
 
   li {
