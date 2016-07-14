@@ -15,7 +15,7 @@
     <div class="navbar-fixed">
         <nav class="red accent-3">
             <div class="nav-wrapper">
-            <a id="logo-container" href="#" class="brand-logo">Vagtplan</a>
+            <div id="logo-container" class="brand-logo">Vagtplan</div>
 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="side-nav" id="mobile-demo">
                     <li class="top"><a href="/index.html"><img src="assets/img/vipguide-logo-2016.png"></a></li>
@@ -37,8 +37,6 @@
             Onsdag 3. august 2016
         </div>
     </div>
-<ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
-    </ul>
 <div class="preloader-wrapper active">
       <div class="spinner-layer spinner-blue">
         <div class="circle-clipper left">
@@ -79,59 +77,74 @@
           <div class="circle"></div>
         </div>
       </div>
-    </div>    <script>
-    $(document).ready(function() {
-        /* Json feed */
-        $.getJSON("https://script.googleusercontent.com/macros/echo?user_content_key=5EsjqF9zSiYRzLdxA0FWJ31eBcMGJaR6ohRP_3c38gjlpUoHHqM4EBvyyigz13T6pZH1BZZKmJLy63ISKxfzoHtbkkeCuyFLOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa1ZsYSbt7G4nMhEEDL32U4DxjO7V7yvmJPXJTBuCiTGh3rUPjpYM_V0PJJG7TIaKp0jLoMwsSUsMcP5yKFD3NBDAyRnS2y9tmubJYMMS3Bbzgd7hhMCgocfi4X3ACCQPcZGbMpcUlCsXNNxV1KIw2tU&lib=MbpKbbfePtAVndrs259dhPT7ROjQYJ8yx", function(data) {
-            console.log(data); // intialize list
-            $("#feed").html('<ul>');
-            var output = "";
-            /* loop through the JSON, parse out badge name & icon wrap it in some HTML. */
-            for (var i in data.Onsdag) {
-
-                if (data.Onsdag[i].Firma !== '') {
-                    output += "<li>";
-                    if (data.Onsdag[i].Type === 'Afhentning') {
-                        output += "<div class='collapsible-header collection-item avatar'><i class='material-icons circle indigo'>directions_bus</i>";
-                    } else {
-                        output += "<div class='collapsible-header collection-item avatar'><i class='material-icons circle teal'>person_pin_circle</i>";
-                    }
-                    output += "<span class='title'>" + data.Onsdag[i].Firma + "</span>";
-                    output += "<p>Kl. " + data.Onsdag[i].Afgang + "<br>";
-                    output += data.Onsdag[i].Antal + " personer <br>";
-                    output += "<a href='/hold.html'>Hold " + data.Onsdag[i].Hold + "</a></p>";
-                    if (data.Onsdag[i].Drejebog !== '') {
-                    output += "<a href='" + data.Onsdag[i].Drejebog + "' class='secondary-content'>Drejebog</a>";
-                	}
-                	output += "</div>";
-                    output += "<div class='collapsible-body'>";
-                    output += "<div class='flex-container'>";
-                    output += "<div class='flex-item'>";
-                    output += "<h6>Kontaktperson</h6><p>" + data.Onsdag[i].Kontaktperson + "</p>";
-                    if (data.Onsdag[i].Mobil !== '') {
-                    output += "<h6>Mobil</h6><p>" + data.Onsdag[i].Mobil + "</p>";
-                	}
-                	output += "</div>";
-                	output += "<div class='flex-item'>";
-                	if (data.Onsdag[i].Afhentning !== '') {
-                    output += "<h6>Afhentning</h6><p>" + data.Onsdag[i].Afhentning + "</p>";
-                	}
-                	if (data.Onsdag[i].Tur !== '') {
-                    output += "<h6>Tour</h6><p>" + data.Onsdag[i].Tur + "</p>";
-                	}
-                	output += "</div>";
-                	output += "</div>";
-                	output += "</div></li>";
-                }
-            }
-            $("#feed").append(output); // append li
-            $("#feed").append('</ul>'); // close list
-            /* hide spinner and then output HTML we built in the for loop */
-            $(".preloader-wrapper").hide();
-            
-        });
-    });
-    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    </div><ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
+<script id="feed-template" type="text/x-handlebars-template">
+<li>
+    <div class="collapsible-header collection-item avatar">
+    {{#ifEquals cells.Type 'Afhentning'}}
+    <i class="material-icons circle indigo">directions_bus</i>
+    {{else}}
+    <i class="material-icons circle teal">person_pin_circle</i>
+    {{/ifEquals}}
+    <span class="title">{{cells.Firma}}</span>
+    <p>Kl. {{cells.Afgang}}<br>{{cells.Antal}} personer <br>
+    <a href="/hold.html">Hold {{cells.Hold}}</a></p>
+    {{#if cells.Drejebog}}
+    <a href="{{cells.Drejebog}}" class="secondary-content">Drejebog</a>
+    {{/if}}
+    </div>
+    <div class="collapsible-body">
+        <div class="flex-container">
+            <div class="flex-item">
+                {{#if cells.Kontaktperson}}
+                <h6>Kontaktperson</h6>
+                <p>{{cells.Kontaktperson}}</p>
+                {{/if}}
+                {{#if cells.Mobil}}
+                <h6>Mobil</h6>
+                <p>{{cells.Mobil}}</p>
+                {{/if}}
+            </div>
+            <div class="flex-item">
+                {{#if cells.Afhentning}}
+                <h6>Afhentning</h6>
+                <p>{{cells.Afhentning}}</p>
+                {{/if}}
+                {{#if cells.Tur}}
+                <h6>Tour</h6>
+                <p>{{cells.Tur}}</p>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</li>
+  </script>
+    </ul>
+<script>
+// Compares first value to the second one allowing entering IF clouse if true.
+// Otherwise entering ELSE clause if exist.
+ Handlebars.registerHelper('ifEquals', function(a, b, options) {
+  if (a === b) {
+    return options.fn(this);
+  }
+  return options.inverse(this);
+});
+$(document).ready(function() {
+  var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1c6U2j6NMYrmBkqe2SbYeM60shpUCquSSGhThMGWZwLU/edit#gid=1436365771';
+  // Compile the Handlebars template
+  var FeedTemplate = Handlebars.compile($('#feed-template').html());
+  // Out feed
+  $('#feed').sheetrock({
+    url: mySpreadsheet,
+    query: "select A,B,C,D,E,F,G,H,I,J,K,L,M,N",
+    rowTemplate: FeedTemplate,
+    callback: function (success) {
+      $('.preloader-wrapper').hide();
+    }
+  });
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
         /* Slide navigation */

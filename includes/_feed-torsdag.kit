@@ -1,54 +1,68 @@
 <!-- @include /preloader -->
-    <script>
-    $(document).ready(function() {
-        /* Json feed */
-        $.getJSON("https://script.googleusercontent.com/macros/echo?user_content_key=SZT_V7rpDB-9HruAYEJEdTcZTc9xOFvpdSKzyoaUkQrEf3yW5Y8DlI0DxS-haKAwpNLCTPg9-ef6VDjvTcTGXRMl9xZuCFS5OJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa1ZsYSbt7G4nMhEEDL32U4DxjO7V7yvmJPXJTBuCiTGh3rUPjpYM_V0PJJG7TIaKp0jLoMwsSUsMcP5yKFD3NBDAyRnS2y9tmubJYMMS3Bbzgd7hhMCgocfi4X3ACCQPcR55aZZkEdKx5esG_4ZSePY&lib=MbpKbbfePtAVndrs259dhPT7ROjQYJ8yx", function(data) {
-            console.log(data); // intialize list
-            $("#feed").html('<ul>');
-            var output = "";
-            /* loop through the JSON, parse out badge name & icon wrap it in some HTML. */
-            for (var i in data.Torsdag) {
-
-                if (data.Torsdag[i].Firma !== '') {
-                    output += "<li>";
-                    if (data.Torsdag[i].Type === 'Afhentning') {
-                        output += "<div class='collapsible-header collection-item avatar'><i class='material-icons circle indigo'>directions_bus</i>";
-                    } else {
-                        output += "<div class='collapsible-header collection-item avatar'><i class='material-icons circle teal'>person_pin_circle</i>";
-                    }
-                    output += "<span class='title'>" + data.Torsdag[i].Firma + "</span>";
-                    output += "<p>Kl. " + data.Torsdag[i].Afgang + "<br>";
-                    output += data.Torsdag[i].Antal + " personer <br>";
-                    output += "<a href='/hold.html'>Hold " + data.Torsdag[i].Hold + "</a></p>";
-                    if (data.Torsdag[i].Drejebog !== '') {
-                    output += "<a href='" + data.Torsdag[i].Drejebog + "' class='secondary-content'>Drejebog</a>";
-                  }
-                  output += "</div>";
-                    output += "<div class='collapsible-body'>";
-                    output += "<div class='flex-container'>";
-                    output += "<div class='flex-item'>";
-                    output += "<h6>Kontaktperson</h6><p>" + data.Torsdag[i].Kontaktperson + "</p>";
-                    if (data.Torsdag[i].Mobil !== '') {
-                    output += "<h6>Mobil</h6><p>" + data.Torsdag[i].Mobil + "</p>";
-                  }
-                  output += "</div>";
-                  output += "<div class='flex-item'>";
-                  if (data.Torsdag[i].Afhentning !== '') {
-                    output += "<h6>Afhentning</h6><p>" + data.Torsdag[i].Afhentning + "</p>";
-                  }
-                  if (data.Torsdag[i].Tur !== '') {
-                    output += "<h6>Tour</h6><p>" + data.Torsdag[i].Tur + "</p>";
-                  }
-                  output += "</div>";
-                  output += "</div>";
-                  output += "</div></li>";
-                }
-            }
-            $("#feed").append(output); // append li
-            $("#feed").append('</ul>'); // close list
-            /* hide spinner and then output HTML we built in the for loop */
-            $(".preloader-wrapper").hide();
-            
-        });
-    });
-    </script>
+<ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
+<script id="feed-template" type="text/x-handlebars-template">
+<li>
+    <div class="collapsible-header collection-item avatar">
+    {{#ifEquals cells.Type 'Afhentning'}}
+    <i class="material-icons circle indigo">directions_bus</i>
+    {{else}}
+    <i class="material-icons circle teal">person_pin_circle</i>
+    {{/ifEquals}}
+    <span class="title">{{cells.Firma}}</span>
+    <p>Kl. {{cells.Afgang}}<br>{{cells.Antal}} personer <br>
+    <a href="/hold.html">Hold {{cells.Hold}}</a></p>
+    {{#if cells.Drejebog}}
+    <a href="{{cells.Drejebog}}" class="secondary-content">Drejebog</a>
+    {{/if}}
+    </div>
+    <div class="collapsible-body">
+        <div class="flex-container">
+            <div class="flex-item">
+                {{#if cells.Kontaktperson}}
+                <h6>Kontaktperson</h6>
+                <p>{{cells.Kontaktperson}}</p>
+                {{/if}}
+                {{#if cells.Mobil}}
+                <h6>Mobil</h6>
+                <p>{{cells.Mobil}}</p>
+                {{/if}}
+            </div>
+            <div class="flex-item">
+                {{#if cells.Afhentning}}
+                <h6>Afhentning</h6>
+                <p>{{cells.Afhentning}}</p>
+                {{/if}}
+                {{#if cells.Tur}}
+                <h6>Tour</h6>
+                <p>{{cells.Tur}}</p>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</li>
+  </script>
+    </ul>
+<script>
+// Compares first value to the second one allowing entering IF clouse if true.
+// Otherwise entering ELSE clause if exist.
+ Handlebars.registerHelper('ifEquals', function(a, b, options) {
+  if (a === b) {
+    return options.fn(this);
+  }
+  return options.inverse(this);
+});
+$(document).ready(function() {
+  var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1c6U2j6NMYrmBkqe2SbYeM60shpUCquSSGhThMGWZwLU/edit#gid=472949414';
+  // Compile the Handlebars template
+  var FeedTemplate = Handlebars.compile($('#feed-template').html());
+  // Out feed
+  $('#feed').sheetrock({
+    url: mySpreadsheet,
+    query: "select A,B,C,D,E,F,G,H,I,J,K,L,M,N",
+    rowTemplate: FeedTemplate,
+    callback: function (success) {
+      $('.preloader-wrapper').hide();
+    }
+  });
+});
+</script>

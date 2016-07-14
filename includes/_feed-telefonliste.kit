@@ -1,3 +1,4 @@
+<!-- @include /preloader -->
 <ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
 <script id="feed-template" type="text/x-handlebars-template">
     <li class="collection-item avatar">
@@ -6,67 +7,22 @@
   {{else}}
     <i class="material-icons circle grey lighten-2">perm_identity</i>
   {{/if}}
-    <span class="title">{{cells.Navn}}</span><br><a href="tel:{{cells.Telefon}}">{{cells.Telefon}}</a>
+    <span class="title">{{cells.Navn}}</span>{{#if cells.Telefon}}<br><a href="tel:{{cells.Telefon}}"><i class="material-icons phone">phone</i> {{cells.Telefon}}</a>{{/if}}
     </li>
   </script>
     </ul>
-<div class="preloader-wrapper active">
-      <div class="spinner-layer spinner-blue">
-        <div class="circle-clipper left">
-          <div class="circle"></div>
-        </div><div class="gap-patch">
-          <div class="circle"></div>
-        </div><div class="circle-clipper right">
-          <div class="circle"></div>
-        </div>
-      </div>
-
-      <div class="spinner-layer spinner-red">
-        <div class="circle-clipper left">
-          <div class="circle"></div>
-        </div><div class="gap-patch">
-          <div class="circle"></div>
-        </div><div class="circle-clipper right">
-          <div class="circle"></div>
-        </div>
-      </div>
-
-      <div class="spinner-layer spinner-yellow">
-        <div class="circle-clipper left">
-          <div class="circle"></div>
-        </div><div class="gap-patch">
-          <div class="circle"></div>
-        </div><div class="circle-clipper right">
-          <div class="circle"></div>
-        </div>
-      </div>
-
-      <div class="spinner-layer spinner-green">
-        <div class="circle-clipper left">
-          <div class="circle"></div>
-        </div><div class="gap-patch">
-          <div class="circle"></div>
-        </div><div class="circle-clipper right">
-          <div class="circle"></div>
-        </div>
-      </div>
-    </div>
-    <script>
-
-    $(document).ready(function() {
-        var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1c6U2j6NMYrmBkqe2SbYeM60shpUCquSSGhThMGWZwLU/edit#gid=817945410';
-
-// Compile the Handlebars template for HR leaders.
-var FeedTemplate = Handlebars.compile($('#feed-template').html());
-
-// Load top five HR leaders.
-$('#feed').sheetrock({
-  url: mySpreadsheet,
-  query: "select A,B,C",
-  rowTemplate: FeedTemplate
-  
+<script>
+$(document).ready(function() {
+  var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1c6U2j6NMYrmBkqe2SbYeM60shpUCquSSGhThMGWZwLU/edit#gid=817945410';
+  // Compile the Handlebars template
+  var FeedTemplate = Handlebars.compile($('#feed-template').html());
+  $('#feed').sheetrock({
+    url: mySpreadsheet,
+    query: "select A,B,C",
+    rowTemplate: FeedTemplate,
+    callback: function (success) {
+      $('.preloader-wrapper').hide();
+    }
+  });
 });
-$('.preloader-wrapper').hide();
-    });
-    
-    </script>
+</script>

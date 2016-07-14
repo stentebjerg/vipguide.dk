@@ -15,7 +15,7 @@
     <div class="navbar-fixed">
         <nav class="blue accent-2">
             <div class="nav-wrapper">
-            <a id="logo-container" href="#" class="brand-logo">Hold</a>
+            <div id="logo-container" class="brand-logo">Hold</div>
 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="side-nav" id="mobile-demo">
                     <li class="top"><a href="/index.html"><img src="assets/img/vipguide-logo-2016.png"></a></li>
@@ -32,8 +32,6 @@
             </div>
         </nav>
     </div>               
-<ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
-    </ul>
 <div class="preloader-wrapper active">
       <div class="spinner-layer spinner-blue">
         <div class="circle-clipper left">
@@ -74,31 +72,33 @@
           <div class="circle"></div>
         </div>
       </div>
-    </div>
-    <script>
-    $(document).ready(function() {
-        /* Json feed */
-        $.getJSON("https://script.googleusercontent.com/macros/echo?user_content_key=k-8JfcUQjMdnqq1Z7sqrfFWFFAInEn7l29Kg37tEuw1Q0Sdr38oqpHs54KHzBDNdsJVMop5SDo4-dv_zdbW4vi5NG-Zcu25_OJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa1ZsYSbt7G4nMhEEDL32U4DxjO7V7yvmJPXJTBuCiTGh3rUPjpYM_V0PJJG7TIaKp0jLoMwsSUsMcP5yKFD3NBDAyRnS2y9tmubJYMMS3Bbzgd7hhMCgocfi4X3ACCQPcTMoi2UnoP0x-DbLYQhinsUPEQA1-9knIA&lib=MbpKbbfePtAVndrs259dhPT7ROjQYJ8yx", function(data) {
-            console.log(data); // intialize list
-            $("#feed").html('<ul>');
-            var output = "";
-            /* loop through the JSON, parse out badge name & icon wrap it in some HTML. */
-            for (var i in data.Telefonliste) {
-              if (data.Telefonliste[i].Holdnummer !== '') {
-                    output += "<li class='collection-item avatar'>";
-                    output += "<i class='circle green accent-4'>"  + data.Telefonliste[i].Holdnummer +  "</i>";
-                    output += "<span class='title'>" + data.Telefonliste[i].Navne.replace(/,/g,'<br>') + "</span>";
-                    output += "</li>";
-            }
-            }
-            $("#feed").append(output); // append li
-            $("#feed").append('</ul>'); // close list
-            /* hide spinner and then output HTML we built in the for loop */
-            $(".preloader-wrapper").hide();
-            
-        });
-    });
-    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    </div><ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
+<script id="feed-template" type="text/x-handlebars-template">
+    <li class="collection-item avatar">
+    <i class="circle green accent-4">{{cells.Holdnummer}}</i>
+    <span class="title">{{{escape cells.Navne}}}</span>
+    </li>
+  </script>
+    </ul>
+<script>
+Handlebars.registerHelper('escape', function(variable) {
+  return variable.replace(/,/g,'<br>');
+});
+$(document).ready(function() {
+  var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1c6U2j6NMYrmBkqe2SbYeM60shpUCquSSGhThMGWZwLU/edit#gid=817945410';
+  // Compile the Handlebars template
+  var FeedTemplate = Handlebars.compile($('#feed-template').html());
+  $('#feed').sheetrock({
+    url: mySpreadsheet,
+    query: "select D,E",
+    rowTemplate: FeedTemplate,
+    fetchSize: 8,
+    callback: function (success) {
+      $('.preloader-wrapper').hide();
+    }
+  });
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
         /* Slide navigation */

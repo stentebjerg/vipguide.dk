@@ -15,7 +15,7 @@
     <div class="navbar-fixed">
         <nav class="green accent-4">
             <div class="nav-wrapper">
-            <a id="logo-container" href="#" class="brand-logo">Telefonliste</a>
+            <div id="logo-container" class="brand-logo">Telefonliste</div>
 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="side-nav" id="mobile-demo">
                     <li class="top"><a href="/index.html"><img src="assets/img/vipguide-logo-2016.png"></a></li>
@@ -32,19 +32,7 @@
             </div>
         </nav>
     </div>               
- <ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
-<script id="feed-template" type="text/x-handlebars-template">
-    <li class="collection-item avatar">
-    {{#if cells.Billede}}
-    <img src="https://memba.dk/images/Members/{{cells.Billede}}?w=100&amp;h=100&amp;mode=crop" alt="" class="circle">
-  {{else}}
-    <i class="material-icons circle grey lighten-2">perm_identity</i>
-  {{/if}}
-    <span class="title">{{cells.Navn}}</span><br><a href="tel:{{cells.Telefon}}">{{cells.Telefon}}</a>
-    </li>
-  </script>
-    </ul>
-<div class="preloader-wrapper active">
+ <div class="preloader-wrapper active">
       <div class="spinner-layer spinner-blue">
         <div class="circle-clipper left">
           <div class="circle"></div>
@@ -84,26 +72,33 @@
           <div class="circle"></div>
         </div>
       </div>
-    </div>
-    <script>
-
-    $(document).ready(function() {
-        var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1c6U2j6NMYrmBkqe2SbYeM60shpUCquSSGhThMGWZwLU/edit#gid=817945410';
-
-// Compile the Handlebars template for HR leaders.
-var FeedTemplate = Handlebars.compile($('#feed-template').html());
-
-// Load top five HR leaders.
-$('#feed').sheetrock({
-  url: mySpreadsheet,
-  query: "select A,B,C",
-  rowTemplate: FeedTemplate
-  
+    </div><ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
+<script id="feed-template" type="text/x-handlebars-template">
+    <li class="collection-item avatar">
+    {{#if cells.Billede}}
+    <img src="https://memba.dk/images/Members/{{cells.Billede}}?w=100&amp;h=100&amp;mode=crop" alt="" class="circle">
+  {{else}}
+    <i class="material-icons circle grey lighten-2">perm_identity</i>
+  {{/if}}
+    <span class="title">{{cells.Navn}}</span>{{#if cells.Telefon}}<br><a href="tel:{{cells.Telefon}}"><i class="material-icons phone">phone</i> {{cells.Telefon}}</a>{{/if}}
+    </li>
+  </script>
+    </ul>
+<script>
+$(document).ready(function() {
+  var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1c6U2j6NMYrmBkqe2SbYeM60shpUCquSSGhThMGWZwLU/edit#gid=817945410';
+  // Compile the Handlebars template
+  var FeedTemplate = Handlebars.compile($('#feed-template').html());
+  $('#feed').sheetrock({
+    url: mySpreadsheet,
+    query: "select A,B,C",
+    rowTemplate: FeedTemplate,
+    callback: function (success) {
+      $('.preloader-wrapper').hide();
+    }
+  });
 });
-$('.preloader-wrapper').hide();
-    });
-    
-    </script>     
+</script>     
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {

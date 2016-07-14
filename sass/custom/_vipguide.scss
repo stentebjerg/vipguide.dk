@@ -150,6 +150,10 @@ nav {
   @extend .grey-text, .text-darken-4;
   border:none;
 }
+.collection .collection-item.avatar i.phone {
+  transform: translateY(2px);
+  font-size: 16px;
+}
 .collection .collection-item.avatar i.circle {
   font-style: normal;
 }
