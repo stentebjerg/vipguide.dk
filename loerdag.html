@@ -11,9 +11,9 @@
 </head>
 <body class="white">
     <div class="navbar-fixed">
-        <nav class="blue accent-2">
+        <nav class="red accent-3">
             <div class="nav-wrapper">
-            <div id="logo-container" class="brand-logo">Hold</div>
+            <div id="logo-container" class="brand-logo">Vagtplan</div>
 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="side-nav" id="mobile-demo">
                     <li class="top"><a href="/"><img src="assets/img/vipguide-logo-2016.png"></a></li>
@@ -31,6 +31,11 @@
         </nav>
     </div>
                
+    <div class="grey lighten-2 grey-text text-darken-2 date">
+        <div class="container">
+            Lørdag 6. august 2016
+        </div>
+    </div>
 <div class="preloader-wrapper active">
       <div class="spinner-layer spinner-blue">
         <div class="circle-clipper left">
@@ -73,31 +78,71 @@
       </div>
     </div><ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
 <script id="feed-template" type="text/x-handlebars-template">
-    <li class="collection-item avatar">
-    <i class="circle green accent-4">{{cells.Holdnummer}}</i>
-    <span class="title">{{{escape cells.Navne}}}</span>
-    </li>
+<li>
+    <div class="collapsible-header collection-item avatar">
+    {{#ifEquals cells.Type 'Afhentning'}}
+    <i class="material-icons circle indigo">directions_bus</i>
+    {{else}}
+    <i class="material-icons circle teal">person_pin_circle</i>
+    {{/ifEquals}}
+    <span class="title">{{cells.Firma}}</span>
+    <p>Kl. {{cells.Afgang}}<br>{{cells.Antal}} personer <br>
+    <a href="/hold.html">Hold {{cells.Hold}}</a></p>
+    {{#if cells.Drejebog}}
+    <a href="{{cells.Drejebog}}" class="secondary-content">Drejebog</a>
+    {{/if}}
+    </div>
+    <div class="collapsible-body">
+        <div class="flex-container">
+            <div class="flex-item">
+                {{#if cells.Kontaktperson}}
+                <h6>Kontaktperson</h6>
+                <p>{{cells.Kontaktperson}}</p>
+                {{/if}}
+                {{#if cells.Mobil}}
+                <h6>Mobil</h6>
+                <p>{{cells.Mobil}}</p>
+                {{/if}}
+            </div>
+            <div class="flex-item">
+                {{#if cells.Afhentning}}
+                <h6>Afhentning</h6>
+                <p>{{cells.Afhentning}}</p>
+                {{/if}}
+                {{#if cells.Tur}}
+                <h6>Tur</h6>
+                <p>{{cells.Tur}}</p>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</li>
   </script>
-    </ul>
-<script>
-Handlebars.registerHelper('escape', function(variable) {
-  return variable.replace(/,/g,'<br>');
+    </ul><script>
+// Compares first value to the second one allowing entering IF clouse if true.
+// Otherwise entering ELSE clause if exist.
+ Handlebars.registerHelper('ifEquals', function(a, b, options) {
+  if (a === b) {
+    return options.fn(this);
+  }
+  return options.inverse(this);
 });
 $(document).ready(function() {
-  var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1c6U2j6NMYrmBkqe2SbYeM60shpUCquSSGhThMGWZwLU/edit#gid=817945410';
+  var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1c6U2j6NMYrmBkqe2SbYeM60shpUCquSSGhThMGWZwLU/edit#gid=956771978';
   // Compile the Handlebars template
   var FeedTemplate = Handlebars.compile($('#feed-template').html());
+  // Out feed
   $('#feed').sheetrock({
     url: mySpreadsheet,
-    query: "select D,E",
+    query: "select A,B,C,D,E,F,G,H,I,J,K,L,M,N",
     rowTemplate: FeedTemplate,
-    fetchSize: 8,
     callback: function (success) {
       $('.preloader-wrapper').hide();
     }
   });
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
         /* Slide navigation */

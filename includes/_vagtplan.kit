@@ -1,0 +1,43 @@
+<ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
+<script id="feed-template" type="text/x-handlebars-template">
+<li>
+    <div class="collapsible-header collection-item avatar">
+    {{#ifEquals cells.Type 'Afhentning'}}
+    <i class="material-icons circle indigo">directions_bus</i>
+    {{else}}
+    <i class="material-icons circle teal">person_pin_circle</i>
+    {{/ifEquals}}
+    <span class="title">{{cells.Firma}}</span>
+    <p>Kl. {{cells.Afgang}}<br>{{cells.Antal}} personer <br>
+    <a href="/hold.html">Hold {{cells.Hold}}</a></p>
+    {{#if cells.Drejebog}}
+    <a href="{{cells.Drejebog}}" class="secondary-content">Drejebog</a>
+    {{/if}}
+    </div>
+    <div class="collapsible-body">
+        <div class="flex-container">
+            <div class="flex-item">
+                {{#if cells.Kontaktperson}}
+                <h6>Kontaktperson</h6>
+                <p>{{cells.Kontaktperson}}</p>
+                {{/if}}
+                {{#if cells.Mobil}}
+                <h6>Mobil</h6>
+                <p>{{cells.Mobil}}</p>
+                {{/if}}
+            </div>
+            <div class="flex-item">
+                {{#if cells.Afhentning}}
+                <h6>Afhentning</h6>
+                <p>{{cells.Afhentning}}</p>
+                {{/if}}
+                {{#if cells.Tur}}
+                <h6>Tur</h6>
+                <p>{{cells.Tur}}</p>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</li>
+  </script>
+    </ul>
