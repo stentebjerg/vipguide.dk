@@ -7,6 +7,8 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.2/handlebars.min.js"></script>
+    <script type="text/javascript" src="https://chriszarate.github.io/sheetrock/dist/sheetrock.min.js"></script>
 </head>
 
 <body class="white">
@@ -31,6 +33,16 @@
         </nav>
     </div>               
  <ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
+<script id="feed-template" type="text/x-handlebars-template">
+    <li class="collection-item avatar">
+    {{#if cells.Billede}}
+    <img src="https://memba.dk/images/Members/{{cells.Billede}}?w=100&amp;h=100&amp;mode=crop" alt="" class="circle">
+  {{else}}
+    <i class="material-icons circle grey lighten-2">perm_identity</i>
+  {{/if}}
+    <span class="title">{{cells.Navn}}</span><br><a href="tel:{{cells.Telefon}}">{{cells.Telefon}}</a>
+    </li>
+  </script>
     </ul>
 <div class="preloader-wrapper active">
       <div class="spinner-layer spinner-blue">
@@ -74,30 +86,23 @@
       </div>
     </div>
     <script>
+
     $(document).ready(function() {
-        /* Json feed */
-        $.getJSON("https://script.googleusercontent.com/macros/echo?user_content_key=k-8JfcUQjMdnqq1Z7sqrfFWFFAInEn7l29Kg37tEuw1Q0Sdr38oqpHs54KHzBDNdsJVMop5SDo4-dv_zdbW4vi5NG-Zcu25_OJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa1ZsYSbt7G4nMhEEDL32U4DxjO7V7yvmJPXJTBuCiTGh3rUPjpYM_V0PJJG7TIaKp0jLoMwsSUsMcP5yKFD3NBDAyRnS2y9tmubJYMMS3Bbzgd7hhMCgocfi4X3ACCQPcTMoi2UnoP0x-DbLYQhinsUPEQA1-9knIA&lib=MbpKbbfePtAVndrs259dhPT7ROjQYJ8yx", function(data) {
-            console.log(data); // intialize list
-            $("#feed").html('<ul>');
-            var output = "";
-            /* loop through the JSON, parse out badge name & icon wrap it in some HTML. */
-            for (var i in data.Telefonliste) {
-                    output += "<li class='collection-item avatar'>";
-                    if (data.Telefonliste[i].Billede !== '') {
-                        output += "<img src='https://memba.dk/images/Members/" + data.Telefonliste[i].Billede + "?w=100&h=100&mode=crop' alt='' class='circle'>";
-                    } else {
-                        output += "<i class='material-icons circle grey lighten-2'>perm_identity</i>";
-                    }
-                    output += "<span class='title'>" + data.Telefonliste[i].Navn + "</span>";
-                    output += "<br><a href='tel:"  + data.Telefonliste[i].Tlf + "'>" + data.Telefonliste[i].Tlf + "</a></li>";
-            }
-            $("#feed").append(output); // append li
-            $("#feed").append('</ul>'); // close list
-            /* hide spinner and then output HTML we built in the for loop */
-            $(".preloader-wrapper").hide();
-            
-        });
+        var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1c6U2j6NMYrmBkqe2SbYeM60shpUCquSSGhThMGWZwLU/edit#gid=817945410';
+
+// Compile the Handlebars template for HR leaders.
+var FeedTemplate = Handlebars.compile($('#feed-template').html());
+
+// Load top five HR leaders.
+$('#feed').sheetrock({
+  url: mySpreadsheet,
+  query: "select A,B,C",
+  rowTemplate: FeedTemplate
+  
+});
+$('.preloader-wrapper').hide();
     });
+    
     </script>     
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 <script type="text/javascript">

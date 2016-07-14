@@ -87,6 +87,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/includes\/_feed-telefonliste copy.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/_feed-telefonliste copy.kit",
+		"outputAbbreviatedPath": "\/includes\/_feed-telefonliste copy.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/includes\/_feed-telefonliste.kit": {
 		"fileType": 2048,
 		"ignore": 1,
