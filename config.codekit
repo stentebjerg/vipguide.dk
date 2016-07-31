@@ -46,24 +46,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/Heartland.png": {
+	"\/assets\/img\/heartland.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 27999,
-		"inputAbbreviatedPath": "\/assets\/img\/Heartland.png",
-		"outputAbbreviatedPath": "\/assets\/img\/Heartland.png",
+		"inputAbbreviatedPath": "\/assets\/img\/heartland.png",
+		"outputAbbreviatedPath": "\/assets\/img\/heartland.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/hifi.png": {
+	"\/assets\/img\/hifi klubben.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 18449,
-		"inputAbbreviatedPath": "\/assets\/img\/hifi.png",
-		"outputAbbreviatedPath": "\/assets\/img\/hifi.png",
+		"inputAbbreviatedPath": "\/assets\/img\/hifi klubben.png",
+		"outputAbbreviatedPath": "\/assets\/img\/hifi klubben.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -90,24 +90,57 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/jyllands-posten.png": {
+	"\/assets\/img\/jyllands posten.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 3508,
-		"inputAbbreviatedPath": "\/assets\/img\/jyllands-posten.png",
-		"outputAbbreviatedPath": "\/assets\/img\/jyllands-posten.png",
+		"inputAbbreviatedPath": "\/assets\/img\/jyllands posten.png",
+		"outputAbbreviatedPath": "\/assets\/img\/jyllands posten.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/Jyske Bank.png": {
+	"\/assets\/img\/jyske bank.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 15486,
-		"inputAbbreviatedPath": "\/assets\/img\/Jyske Bank.png",
-		"outputAbbreviatedPath": "\/assets\/img\/Jyske Bank.png",
+		"inputAbbreviatedPath": "\/assets\/img\/jyske bank.png",
+		"outputAbbreviatedPath": "\/assets\/img\/jyske bank.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/lightyears.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11573,
+		"inputAbbreviatedPath": "\/assets\/img\/lightyears.png",
+		"outputAbbreviatedPath": "\/assets\/img\/lightyears.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/nonbye.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 16743,
+		"inputAbbreviatedPath": "\/assets\/img\/nonbye.png",
+		"outputAbbreviatedPath": "\/assets\/img\/nonbye.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/Red Bull.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 36251,
+		"inputAbbreviatedPath": "\/assets\/img\/Red Bull.png",
+		"outputAbbreviatedPath": "\/assets\/img\/Red Bull.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -130,6 +163,28 @@
 		"initialSize": 4465,
 		"inputAbbreviatedPath": "\/assets\/img\/royal unibrew 2.png",
 		"outputAbbreviatedPath": "\/assets\/img\/royal unibrew 2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/santa maria.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 16516,
+		"inputAbbreviatedPath": "\/assets\/img\/santa maria.png",
+		"outputAbbreviatedPath": "\/assets\/img\/santa maria.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/Schur Packaging.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 23276,
+		"inputAbbreviatedPath": "\/assets\/img\/Schur Packaging.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/Schur Packaging.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -167,68 +222,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/light-years.jpg": {
-		"fileType": 16384,
+	"\/assets\/img\/waoo.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 46981,
-		"inputAbbreviatedPath": "\/assets\/light-years.jpg",
-		"outputAbbreviatedPath": "\/assets\/light-years.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/nonbye (1).jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 54413,
-		"inputAbbreviatedPath": "\/assets\/nonbye (1).jpg",
-		"outputAbbreviatedPath": "\/assets\/nonbye (1).jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/Red Bull.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 31793,
-		"inputAbbreviatedPath": "\/assets\/Red Bull.jpg",
-		"outputAbbreviatedPath": "\/assets\/Red Bull.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/santa-maria.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 105285,
-		"inputAbbreviatedPath": "\/assets\/santa-maria.jpg",
-		"outputAbbreviatedPath": "\/assets\/santa-maria.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/schur.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 644496,
-		"inputAbbreviatedPath": "\/assets\/schur.jpg",
-		"outputAbbreviatedPath": "\/assets\/schur.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/waoo.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 763938,
-		"inputAbbreviatedPath": "\/assets\/waoo.jpg",
-		"outputAbbreviatedPath": "\/assets\/waoo.jpg",
+		"initialSize": 53650,
+		"inputAbbreviatedPath": "\/assets\/img\/waoo.png",
+		"outputAbbreviatedPath": "\/assets\/img\/waoo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
