@@ -189,13 +189,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/schur packaging.jpg": {
-		"fileType": 16384,
+	"\/assets\/img\/schur packaging.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 23276,
-		"inputAbbreviatedPath": "\/assets\/img\/schur packaging.jpg",
-		"outputAbbreviatedPath": "\/assets\/img\/schur packaging.jpg",
+		"initialSize": 27675,
+		"inputAbbreviatedPath": "\/assets\/img\/schur packaging.png",
+		"outputAbbreviatedPath": "\/assets\/img\/schur packaging.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
