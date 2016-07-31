@@ -81,7 +81,7 @@
 <li>
     <div class="collapsible-header collection-item avatar">
     {{#ifEquals cells.Type 'Afhentning'}}
-    <i class="material-icons circle indigo">directions_bus</i>
+    <img src="http://vipguide.dk/assets/img/vipguide-logo-2016.png" alt="" class="circle">
     {{else}}
     <i class="material-icons circle teal">person_pin_circle</i>
     {{/ifEquals}}
@@ -118,7 +118,9 @@
     </div>
 </li>
   </script>
-    </ul><script>
+    </ul>
+
+<script>
 // Compares first value to the second one allowing entering IF clouse if true.
 // Otherwise entering ELSE clause if exist.
  Handlebars.registerHelper('ifEquals', function(a, b, options) {
