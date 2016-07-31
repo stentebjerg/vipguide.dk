@@ -24,6 +24,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/royal unibrew 1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4465,
+		"inputAbbreviatedPath": "\/assets\/img\/royal unibrew 1.png",
+		"outputAbbreviatedPath": "\/assets\/img\/royal unibrew 1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/royal unibrew 2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4465,
+		"inputAbbreviatedPath": "\/assets\/img\/royal unibrew 2.png",
+		"outputAbbreviatedPath": "\/assets\/img\/royal unibrew 2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/telia.png": {
 		"fileType": 32768,
 		"ignore": 0,
