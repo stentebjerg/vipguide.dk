@@ -68,13 +68,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/heartland 2.png": {
+	"\/assets\/img\/heartland.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 16342,
-		"inputAbbreviatedPath": "\/assets\/img\/heartland 2.png",
-		"outputAbbreviatedPath": "\/assets\/img\/heartland 2.png",
+		"inputAbbreviatedPath": "\/assets\/img\/heartland.png",
+		"outputAbbreviatedPath": "\/assets\/img\/heartland.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
