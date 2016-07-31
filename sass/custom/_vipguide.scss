@@ -11,6 +11,10 @@ html {
     @extend .light-blue-text, .text-darken-1;
 }
 
+.collection .collection-item.avatar .circle {
+  border: 1px solid $collapsible-border-color; 
+}
+
 .collection .collection-item.avatar p {
   @extend .grey-text, .text-darken-1;
 }

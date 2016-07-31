@@ -6,9 +6,20 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 10988,
+		"initialSize": 21797,
 		"inputAbbreviatedPath": "\/assets\/img\/hth.png",
 		"outputAbbreviatedPath": "\/assets\/img\/hth.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/jyllands-posten.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3508,
+		"inputAbbreviatedPath": "\/assets\/img\/jyllands-posten.png",
+		"outputAbbreviatedPath": "\/assets\/img\/jyllands-posten.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
