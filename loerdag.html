@@ -80,11 +80,7 @@
 <script id="feed-template" type="text/x-handlebars-template">
 <li>
     <div class="collapsible-header collection-item avatar">
-    {{#ifEquals cells.Type 'Afhentning'}}
-    <img src="http://vipguide.dk/assets/img/tulip.png" alt="" class="circle">
-    {{else}}
-    <i class="material-icons circle teal">person_pin_circle</i>
-    {{/ifEquals}}
+    <img src="http://vipguide.dk/assets/img/{{cells.Firma}}.png" alt="" class="circle">
     <span class="title">{{cells.Firma}}</span>
     <p>Kl. {{cells.Afgang}}<br>{{cells.Antal}} personer <br>
     <a href="/hold.html">Hold {{cells.Hold}}</a></p>
