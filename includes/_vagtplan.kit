@@ -1,8 +1,9 @@
 <ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
 <script id="feed-template" type="text/x-handlebars-template">
+
 <li>
     <div class="collapsible-header collection-item avatar">
-    <img src="http://vipguide.dk/assets/img/{{cells.Firma}}.png" alt="" class="circle">
+    <img src="http://vipguide.dk/assets/img/{{toLowerCase cells.Firma}}.png" alt="" class="circle">
     <span class="title">{{cells.Firma}}</span>
     <p>Kl. {{cells.Afgang}}<br>{{cells.Antal}} personer <br>
     <a href="/hold.html">Hold {{cells.Hold}}</a></p>
