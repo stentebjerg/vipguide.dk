@@ -2,6 +2,39 @@
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
 "creatorBuild": "19127",
 "files": {
+	"\/assets\/img\/cisco.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 22175,
+		"inputAbbreviatedPath": "\/assets\/img\/cisco.png",
+		"outputAbbreviatedPath": "\/assets\/img\/cisco.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/danish crown.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 19700,
+		"inputAbbreviatedPath": "\/assets\/img\/danish crown.png",
+		"outputAbbreviatedPath": "\/assets\/img\/danish crown.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/diageo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 10372,
+		"inputAbbreviatedPath": "\/assets\/img\/diageo.png",
+		"outputAbbreviatedPath": "\/assets\/img\/diageo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/dynaudio.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -9,6 +42,28 @@
 		"initialSize": 3746,
 		"inputAbbreviatedPath": "\/assets\/img\/dynaudio.png",
 		"outputAbbreviatedPath": "\/assets\/img\/dynaudio.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/Heartland.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 27999,
+		"inputAbbreviatedPath": "\/assets\/img\/Heartland.png",
+		"outputAbbreviatedPath": "\/assets\/img\/Heartland.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/hifi.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 18449,
+		"inputAbbreviatedPath": "\/assets\/img\/hifi.png",
+		"outputAbbreviatedPath": "\/assets\/img\/hifi.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -24,6 +79,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/hummel.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 14640,
+		"inputAbbreviatedPath": "\/assets\/img\/hummel.png",
+		"outputAbbreviatedPath": "\/assets\/img\/hummel.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/jyllands-posten.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -31,6 +97,17 @@
 		"initialSize": 3508,
 		"inputAbbreviatedPath": "\/assets\/img\/jyllands-posten.png",
 		"outputAbbreviatedPath": "\/assets\/img\/jyllands-posten.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/Jyske Bank.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 15486,
+		"inputAbbreviatedPath": "\/assets\/img\/Jyske Bank.png",
+		"outputAbbreviatedPath": "\/assets\/img\/Jyske Bank.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -86,6 +163,72 @@
 		"initialSize": 21654,
 		"inputAbbreviatedPath": "\/assets\/img\/vipguide-logo-2016.png",
 		"outputAbbreviatedPath": "\/assets\/img\/vipguide-logo-2016.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/light-years.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 46981,
+		"inputAbbreviatedPath": "\/assets\/light-years.jpg",
+		"outputAbbreviatedPath": "\/assets\/light-years.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/nonbye (1).jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 54413,
+		"inputAbbreviatedPath": "\/assets\/nonbye (1).jpg",
+		"outputAbbreviatedPath": "\/assets\/nonbye (1).jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Red Bull.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 31793,
+		"inputAbbreviatedPath": "\/assets\/Red Bull.jpg",
+		"outputAbbreviatedPath": "\/assets\/Red Bull.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/santa-maria.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 105285,
+		"inputAbbreviatedPath": "\/assets\/santa-maria.jpg",
+		"outputAbbreviatedPath": "\/assets\/santa-maria.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/schur.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 644496,
+		"inputAbbreviatedPath": "\/assets\/schur.jpg",
+		"outputAbbreviatedPath": "\/assets\/schur.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/waoo.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 763938,
+		"inputAbbreviatedPath": "\/assets\/waoo.jpg",
+		"outputAbbreviatedPath": "\/assets\/waoo.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
