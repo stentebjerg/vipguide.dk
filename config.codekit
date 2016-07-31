@@ -2,6 +2,17 @@
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
 "creatorBuild": "19127",
 "files": {
+	"\/assets\/img\/bestseller.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 19752,
+		"inputAbbreviatedPath": "\/assets\/img\/bestseller.png",
+		"outputAbbreviatedPath": "\/assets\/img\/bestseller.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/cisco.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -46,13 +57,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/heartland.png": {
+	"\/assets\/img\/harman.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 27999,
-		"inputAbbreviatedPath": "\/assets\/img\/heartland.png",
-		"outputAbbreviatedPath": "\/assets\/img\/heartland.png",
+		"initialSize": 23383,
+		"inputAbbreviatedPath": "\/assets\/img\/harman.png",
+		"outputAbbreviatedPath": "\/assets\/img\/harman.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/heartland 2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 16342,
+		"inputAbbreviatedPath": "\/assets\/img\/heartland 2.png",
+		"outputAbbreviatedPath": "\/assets\/img\/heartland 2.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -130,6 +152,17 @@
 		"initialSize": 16743,
 		"inputAbbreviatedPath": "\/assets\/img\/nonbye.png",
 		"outputAbbreviatedPath": "\/assets\/img\/nonbye.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/pot.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3508,
+		"inputAbbreviatedPath": "\/assets\/img\/pot.png",
+		"outputAbbreviatedPath": "\/assets\/img\/pot.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
