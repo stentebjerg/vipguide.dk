@@ -9,6 +9,7 @@ html {
 .collection .collection-item.avatar .secondary-content {
     top: 10px;
     @extend .light-blue-text, .text-darken-1;
+    z-index: 1000;
 }
 
 .collection .collection-item.avatar .circle {

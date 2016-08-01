@@ -4,13 +4,9 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Vipguide 2016</title>
 <head>
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="/css/app.min.css" media="screen,projection" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.2/handlebars.min.js"></script>
-    <script type="text/javascript" src="https://chriszarate.github.io/sheetrock/dist/sheetrock.min.js"></script>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/assets/img/icons/favicon.ico" type="image/x-icon" />
 	<link rel="apple-touch-icon" sizes="57x57" href="/assets/img/icons/apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/assets/img/icons/apple-touch-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/icons/apple-touch-icon-72x72.png">
@@ -96,9 +92,9 @@
           <div class="circle"></div>
         </div>
       </div>
-    </div><ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
+    </div><script type="text/javascript" src="/scripts/min/app.min.js"></script>
+<ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
 <script id="feed-template" type="text/x-handlebars-template">
-
 <li>
     <div class="collapsible-header collection-item avatar">
     <img src="http://vipguide.dk/assets/img/{{toLowerCase cells.Firma}}.png" alt="" class="circle">
@@ -162,19 +158,6 @@ Handlebars.registerHelper('toLowerCase', function(str) {
     }
   });
 });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        /* Slide navigation */
-        $(".button-collapse").sideNav();
-       	/* Add active class to nav */
-        $(function() {
-    if ((location.pathname.split("/")[1]) !== ""){
-        $('.nav-wrapper a[href^="/' + location.pathname.split("/")[1] + '"]').parent().addClass('active');
-    }
-});
-        });
 </script>
 </body>
 </html>
