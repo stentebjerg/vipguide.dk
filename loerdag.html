@@ -4,17 +4,7 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Vipguide 2016</title>
 <head>
-<script>
-      var cb = function() {
-        var l = document.createElement('link'); l.rel = 'stylesheet';
-        l.href = '/css/app.min.css';
-        var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-      };
-      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-          webkitRequestAnimationFrame || msRequestAnimationFrame;
-      if (raf) raf(cb);
-      else window.addEventListener('load', cb);
-</script>
+    <link type="text/css" rel="stylesheet" href="/css/app.min.css" media="screen,projection" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/assets/img/icons/favicon.ico" type="image/x-icon" />
 	<link rel="apple-touch-icon" sizes="57x57" href="/assets/img/icons/apple-touch-icon-57x57.png">
@@ -102,7 +92,8 @@
           <div class="circle"></div>
         </div>
       </div>
-    </div><ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
+    </div><script type="text/javascript" src="/scripts/min/app.min.js"></script>
+<ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
 <script id="feed-template" type="text/x-handlebars-template">
 <li>
     <div class="collapsible-header collection-item avatar">
@@ -141,7 +132,8 @@
 </li>
   </script>
     </ul>
-<script type="text/javascript" src="/scripts/min/app.min.js"></script><script>
+
+<script>
 // Compares first value to the second one allowing entering IF clouse if true.
 // Otherwise entering ELSE clause if exist.
  Handlebars.registerHelper('ifEquals', function(a, b, options) {
