@@ -206,3 +206,9 @@ nav {
   line-height: 40px;
   padding-left: 15px;
 }
+
+.team .collection-item.avatar {
+  display: flex;
+  min-height: 64px;
+  align-items: center;
+}
