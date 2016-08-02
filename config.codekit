@@ -2,6 +2,116 @@
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
 "creatorBuild": "19127",
 "files": {
+	"\/assets\/img\/android-chrome-192x192.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5212,
+		"inputAbbreviatedPath": "\/assets\/img\/android-chrome-192x192.png",
+		"outputAbbreviatedPath": "\/assets\/img\/android-chrome-192x192.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/apple-touch-icon-114x114.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8988,
+		"inputAbbreviatedPath": "\/assets\/img\/apple-touch-icon-114x114.png",
+		"outputAbbreviatedPath": "\/assets\/img\/apple-touch-icon-114x114.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/apple-touch-icon-120x120.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2640,
+		"inputAbbreviatedPath": "\/assets\/img\/apple-touch-icon-120x120.png",
+		"outputAbbreviatedPath": "\/assets\/img\/apple-touch-icon-120x120.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/apple-touch-icon-144x144.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3452,
+		"inputAbbreviatedPath": "\/assets\/img\/apple-touch-icon-144x144.png",
+		"outputAbbreviatedPath": "\/assets\/img\/apple-touch-icon-144x144.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/apple-touch-icon-152x152.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 17342,
+		"inputAbbreviatedPath": "\/assets\/img\/apple-touch-icon-152x152.png",
+		"outputAbbreviatedPath": "\/assets\/img\/apple-touch-icon-152x152.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/apple-touch-icon-180x180.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3391,
+		"inputAbbreviatedPath": "\/assets\/img\/apple-touch-icon-180x180.png",
+		"outputAbbreviatedPath": "\/assets\/img\/apple-touch-icon-180x180.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/apple-touch-icon-57x57.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3199,
+		"inputAbbreviatedPath": "\/assets\/img\/apple-touch-icon-57x57.png",
+		"outputAbbreviatedPath": "\/assets\/img\/apple-touch-icon-57x57.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/apple-touch-icon-60x60.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1182,
+		"inputAbbreviatedPath": "\/assets\/img\/apple-touch-icon-60x60.png",
+		"outputAbbreviatedPath": "\/assets\/img\/apple-touch-icon-60x60.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/apple-touch-icon-72x72.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1499,
+		"inputAbbreviatedPath": "\/assets\/img\/apple-touch-icon-72x72.png",
+		"outputAbbreviatedPath": "\/assets\/img\/apple-touch-icon-72x72.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/apple-touch-icon-76x76.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5141,
+		"inputAbbreviatedPath": "\/assets\/img\/apple-touch-icon-76x76.png",
+		"outputAbbreviatedPath": "\/assets\/img\/apple-touch-icon-76x76.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/bestseller.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -53,6 +163,39 @@
 		"initialSize": 3746,
 		"inputAbbreviatedPath": "\/assets\/img\/dynaudio.png",
 		"outputAbbreviatedPath": "\/assets\/img\/dynaudio.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/favicon-16x16.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 359,
+		"inputAbbreviatedPath": "\/assets\/img\/favicon-16x16.png",
+		"outputAbbreviatedPath": "\/assets\/img\/favicon-16x16.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/favicon-32x32.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 691,
+		"inputAbbreviatedPath": "\/assets\/img\/favicon-32x32.png",
+		"outputAbbreviatedPath": "\/assets\/img\/favicon-32x32.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/favicon-96x96.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2211,
+		"inputAbbreviatedPath": "\/assets\/img\/favicon-96x96.png",
+		"outputAbbreviatedPath": "\/assets\/img\/favicon-96x96.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -321,6 +464,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/largetile.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 40435,
+		"inputAbbreviatedPath": "\/assets\/img\/largetile.png",
+		"outputAbbreviatedPath": "\/assets\/img\/largetile.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/lightyears.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -328,6 +482,17 @@
 		"initialSize": 11573,
 		"inputAbbreviatedPath": "\/assets\/img\/lightyears.png",
 		"outputAbbreviatedPath": "\/assets\/img\/lightyears.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/mediumtile.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6441,
+		"inputAbbreviatedPath": "\/assets\/img\/mediumtile.png",
+		"outputAbbreviatedPath": "\/assets\/img\/mediumtile.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -420,6 +585,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/smalltile.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3523,
+		"inputAbbreviatedPath": "\/assets\/img\/smalltile.png",
+		"outputAbbreviatedPath": "\/assets\/img\/smalltile.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/telia.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -460,6 +636,17 @@
 		"initialSize": 53650,
 		"inputAbbreviatedPath": "\/assets\/img\/waoo.png",
 		"outputAbbreviatedPath": "\/assets\/img\/waoo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/widetile.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 14465,
+		"inputAbbreviatedPath": "\/assets\/img\/widetile.png",
+		"outputAbbreviatedPath": "\/assets\/img\/widetile.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
