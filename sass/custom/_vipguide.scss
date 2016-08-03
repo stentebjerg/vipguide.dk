@@ -105,7 +105,8 @@ nav {
     &.top.active {
       @extend .black;
     }
-    &.active .time {
+    &.active .time, 
+    &.active .finurligheder {
     color: #ff1744 !important;
   }
   &.active .phone {
@@ -211,4 +212,8 @@ nav {
   display: flex;
   min-height: 64px;
   align-items: center;
+}
+
+.browser-default li {
+  list-style-type: initial;
 }

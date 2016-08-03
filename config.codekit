@@ -160,7 +160,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 3746,
+		"initialSize": 17114,
 		"inputAbbreviatedPath": "\/assets\/img\/dynaudio.png",
 		"outputAbbreviatedPath": "\/assets\/img\/dynaudio.png",
 		"outputPathIsOutsideProject": 0,
@@ -207,6 +207,17 @@
 		"initialSize": 23383,
 		"inputAbbreviatedPath": "\/assets\/img\/harman.png",
 		"outputAbbreviatedPath": "\/assets\/img\/harman.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/header_boege2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 83746,
+		"inputAbbreviatedPath": "\/assets\/img\/header_boege2.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/header_boege2.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -512,7 +523,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 3508,
+		"initialSize": 14734,
 		"inputAbbreviatedPath": "\/assets\/img\/pot.png",
 		"outputAbbreviatedPath": "\/assets\/img\/pot.png",
 		"outputPathIsOutsideProject": 0,
@@ -689,6 +700,24 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
+	"\/finurligheder.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/finurligheder.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/finurligheder.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/finurligheder.kit",
+		"outputAbbreviatedPath": "\/finurligheder.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/fredag.html": {
 		"fileType": 8192,
 		"ignore": 1,
@@ -704,15 +733,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/fredag.kit",
 		"outputAbbreviatedPath": "\/fredag.html",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/guider.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/guider.html",
-		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
@@ -1564,11 +1584,11 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
-		"syntaxCheckerStyle": 0
+		"syntaxCheckerStyle": 1
 		},
 	"\/scripts\/handlebars.min.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/scripts\/handlebars.min.js",
 		"outputAbbreviatedPath": "\/scripts\/min\/handlebars.min.min.js",
@@ -1579,7 +1599,7 @@
 		},
 	"\/scripts\/jquery-2.1.1.min.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/scripts\/jquery-2.1.1.min.js",
 		"outputAbbreviatedPath": "\/scripts\/min\/jquery-2.1.1.min.min.js",
@@ -1590,7 +1610,7 @@
 		},
 	"\/scripts\/materialize.min.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/scripts\/materialize.min.js",
 		"outputAbbreviatedPath": "\/scripts\/min\/materialize.min.min.js",
@@ -1612,7 +1632,7 @@
 		},
 	"\/scripts\/sheetrock.min.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/scripts\/sheetrock.min.js",
 		"outputAbbreviatedPath": "\/scripts\/min\/sheetrock.min.min.js",
@@ -1662,32 +1682,6 @@
 	],
 "lastSavedByUser": "Anders Stentebjerg",
 "manualImportLinks": {
-	"\/scripts\/app.js": [
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/scripts\/jquery-2.1.1.min.js",
-			"position": 0,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/scripts\/handlebars.min.js",
-			"position": 1,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/scripts\/sheetrock.min.js",
-			"position": 2,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/scripts\/materialize.min.js",
-			"position": 3,
-			"type": 0
-			}
-		]
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
