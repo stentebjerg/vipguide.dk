@@ -59,6 +59,38 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/facts.kit",
+			"settings":
+			{
+				"buffer_size": 4303,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "custom/_vipguide.scss",
+			"settings":
+			{
+				"buffer_size": 3909,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_nav.kit",
+			"settings":
+			{
+				"buffer_size": 1555,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/andersstentebjerg/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+			"settings":
+			{
+				"buffer_size": 4287,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -67,8 +99,8 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "",
+		"height": 87.0,
+		"last_filter": "install",
 		"selected_items":
 		[
 			[
@@ -101,10 +133,17 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk"
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/sass",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/sass/custom"
 	],
 	"file_history":
 	[
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/finurligheder.kit",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/facts.html",
+		"/Users/andersstentebjerg/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/Users/andersstentebjerg/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
 		"/Users/andersstentebjerg/Library/Mobile Documents/74ZAFF46HB~jp~informationarchitects~Writer/Documents/noter.md",
 		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_preloader.kit",
 		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/index.html",
@@ -133,7 +172,7 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -147,6 +186,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			">\n",
+			"<br>",
+			"html",
 			"i",
 			"hold",
 			"border-bottom",
@@ -203,8 +245,129 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/facts.kit",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4303,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								171,
+								156
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "custom/_vipguide.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3909,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1987,
+								1987
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1274.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_nav.kit",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1555,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1326,
+								1313
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/andersstentebjerg/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4287,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								522,
+								522
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -285,7 +448,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 236.0,
+	"side_bar_width": 264.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
