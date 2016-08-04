@@ -109,13 +109,14 @@
                 <a target="_blank" href="{{cells.Drejebog}}" class="secondary-content">Drejebog</a> {{/if}}
             </div>
             <div class="collapsible-body">
-            {{#if cells.Moedetidspunkt}}
                 <div class="flex-container">
-                       Mød kl. <u>{{cells.Moedetidspunkt}}</u>, men kom gerne før og få en 🍺
-                </div>
-                <hr>
-                {{/if}}
-                <div class="flex-container">
+                        {{#if cells.Moedetidspunkt}}
+                        <div class="flex-item">
+                        <h6>Mødetidspunkt</h6>
+                        Mød kl. <u>{{cells.Moedetidspunkt}}</u>, men kom gerne før og få en 🍺
+                        </div>
+                        {{/if}}
+
                         {{#if cells.Kontaktperson}}
                         <div class="flex-item">
                         <h6>Kontaktperson</h6>
