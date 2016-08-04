@@ -574,6 +574,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/samsung.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 47226,
+		"inputAbbreviatedPath": "\/assets\/img\/samsung.png",
+		"outputAbbreviatedPath": "\/assets\/img\/samsung.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/santa maria.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -886,6 +897,24 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/loerdag.kit",
 		"outputAbbreviatedPath": "\/loerdag.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/onsdag.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/onsdag.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/onsdag.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/onsdag.kit",
+		"outputAbbreviatedPath": "\/onsdag.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
@@ -1656,24 +1685,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/telefonliste.kit",
 		"outputAbbreviatedPath": "\/telefonliste.html",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/torsdag.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/torsdag.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/torsdag.kit": {
-		"fileType": 2048,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/torsdag.kit",
-		"outputAbbreviatedPath": "\/torsdag.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		}

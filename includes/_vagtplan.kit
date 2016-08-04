@@ -22,6 +22,10 @@
                 <h6>Mobil</h6>
                 <p>{{cells.Mobil}}</p>
                 {{/if}}
+                {{#if cells.Kommentar}}
+                <h6>Kommentarer</h6>
+                <p>{{cells.Kommentar}}</p>
+                {{/if}}
             </div>
             <div class="flex-item">
                 {{#if cells.Afhentning}}
@@ -33,6 +37,7 @@
                 <p>{{cells.Tur}}</p>
                 {{/if}}
             </div>
+            
         </div>
     </div>
 </li>
