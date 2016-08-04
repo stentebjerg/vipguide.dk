@@ -217,3 +217,10 @@ nav {
 .browser-default li {
   list-style-type: initial;
 }
+
+.feed hr{
+  border: 0;
+  height: 1px;
+  background: $collapsible-border-color; 
+}
+
