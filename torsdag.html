@@ -28,9 +28,9 @@
 </head>
 <body class="white">
     <div class="navbar-fixed">
-        <nav class="green accent-4">
+        <nav class="red accent-3">
             <div class="nav-wrapper">
-            <div id="logo-container" class="brand-logo center">Telefonliste</div>
+            <div id="logo-container" class="brand-logo center">Torsdag 4/8-2016</div>
 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="side-nav" id="mobile-demo">
                     <li class="top"><a href="/"><img src="assets/img/vipguide-logo-2016.png"></a></li>
@@ -51,7 +51,10 @@
         </nav>
     </div>
                
- <div class="preloader-wrapper small active">
+    <div class="grey lighten-2 grey-text text-darken-2 date">
+            Ansvarlig: Jeppe Simonsen & Anders Stentebjerg
+    </div>
+<div class="preloader-wrapper small active">
       <div class="spinner-layer spinner-blue">
         <div class="circle-clipper left">
           <div class="circle"></div>
@@ -93,31 +96,93 @@
       </div>
     </div><script type="text/javascript" src="/scripts/min/app.min.js"></script>
 <ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
-<script id="feed-template" type="text/x-handlebars-template">
-    <li class="collection-item avatar">
-    {{#if cells.Billede}}
-    <img src="https://memba.dk/images/Members/{{cells.Billede}}?w=100&amp;h=100&amp;mode=crop" alt="" class="circle">
-  {{else}}
-    <i class="material-icons circle grey lighten-2">perm_identity</i>
-  {{/if}}
-    <span class="title">{{cells.Navn}}</span>{{#if cells.Telefon}}<br><a href="tel:{{cells.Telefon}}"><i class="material-icons phone">phone</i> {{cells.Telefon}}</a>{{/if}}
-    </li>
-  </script>
-    </ul>
+    <script id="feed-template" type="text/x-handlebars-template">
+        <li>
+            <div class="collapsible-header collection-item avatar">
+                <img src="http://vipguide.dk/assets/img/{{toLowerCase cells.Firma}}.png" alt="{{cells.Firma}}" class="circle">
+                <span class="title">{{cells.Firma}}</span>
+                <p>{{cells.Type}} kl. {{cells.Afgang}}
+                    <br>{{cells.Antal}} personer
+                    <br>
+                    <a href="/hold.html">Hold {{cells.Hold}}</a></p>
+                {{#if cells.Drejebog}}
+                <a target="_blank" href="{{cells.Drejebog}}" class="secondary-content">Drejebog</a> {{/if}}
+            </div>
+            <div class="collapsible-body">
+                <div class="flex-container">
+                        {{#if cells.Moedetidspunkt}}
+                        <div class="flex-item">
+                        <h6>Mødetidspunkt</h6>
+                        Mød kl. <u>{{cells.Moedetidspunkt}}</u>, men kom gerne før og få en 🍺
+                        </div>
+                        {{/if}}
+
+                        {{#if cells.Kontaktperson}}
+                        <div class="flex-item">
+                        <h6>Kontaktperson</h6>
+                        <p>{{cells.Kontaktperson}}</p>
+                        </div>
+                        {{/if}}
+
+                        {{#if cells.Mobil}}
+                        <div class="flex-item">
+                        <h6>Mobil</h6>
+                        <p>{{cells.Mobil}}</p>
+                        </div>
+                        {{/if}} 
+
+                        {{#if cells.Kommentar}}
+                        <div class="flex-item">
+                        <h6>Kommentarer</h6>
+                        <p>{{cells.Kommentar}}</p>
+                        </div>
+                        {{/if}}
+                    
+                    
+                        {{#if cells.Afhentning}}
+                        <div class="flex-item">
+                        <h6>Afhentning</h6>
+                        <p>{{cells.Afhentning}}</p>
+                        </div>
+                        {{/if}} 
+
+                        {{#if cells.Tur}}
+                        <div class="flex-item">
+                        <h6>Tur</h6>
+                        <p>{{cells.Tur}}</p>
+                        </div>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </li>
+    </script>
+</ul>
 <script>
-$(document).ready(function() {
-  var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1c6U2j6NMYrmBkqe2SbYeM60shpUCquSSGhThMGWZwLU/edit#gid=817945410';
+// Compares first value to the second one allowing entering IF clouse if true.
+// Otherwise entering ELSE clause if exist.
+ Handlebars.registerHelper('ifEquals', function(a, b, options) {
+  if (a === b) {
+    return options.fn(this);
+  }
+  return options.inverse(this);
+});
+Handlebars.registerHelper('toLowerCase', function(str) {
+  return str.toLowerCase();
+});$(document).ready(function() {
+  var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1c6U2j6NMYrmBkqe2SbYeM60shpUCquSSGhThMGWZwLU/edit#gid=369183786';
   // Compile the Handlebars template
   var FeedTemplate = Handlebars.compile($('#feed-template').html());
+  // Out feed
   $('#feed').sheetrock({
     url: mySpreadsheet,
-    query: "select A,B,C",
+    query: "select A,B,C,D,E,F,G,H,I,J,K,L,M,N",
     rowTemplate: FeedTemplate,
     callback: function (success) {
       $('.preloader-wrapper').hide();
     }
   });
 });
-</script>     
+</script>
 </body>
 </html>
