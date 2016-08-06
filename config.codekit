@@ -738,6 +738,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/fredag.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fredag.kit",
+		"outputAbbreviatedPath": "\/fredag.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/hold.html": {
 		"fileType": 8192,
 		"ignore": 1,
@@ -879,15 +888,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/loerdag.html",
 		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/loerdag.kit": {
-		"fileType": 2048,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/loerdag.kit",
-		"outputAbbreviatedPath": "\/loerdag.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
