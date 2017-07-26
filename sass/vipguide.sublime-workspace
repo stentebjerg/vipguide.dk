@@ -4,12 +4,12 @@
 		"selected_items":
 		[
 			[
-				"iniln",
-				"inline-block"
+				"padd",
+				"padding-right"
 			],
 			[
-				"padd",
-				"padding-left"
+				"iniln",
+				"inline-block"
 			],
 			[
 				"trans",
@@ -60,10 +60,67 @@
 	"buffers":
 	[
 		{
-			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/finurligheder.kit",
+			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_nav.kit",
 			"settings":
 			{
-				"buffer_size": 4638,
+				"buffer_size": 1549,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_vagtplan.kit",
+			"settings":
+			{
+				"buffer_size": 2644,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "5 A\n9 B\n1,2 C",
+			"settings":
+			{
+				"buffer_size": 13,
+				"line_ending": "Unix",
+				"name": "5 A"
+			}
+		},
+		{
+			"file": "custom/_vipguide.scss",
+			"settings":
+			{
+				"buffer_size": 3807,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/onsdag.kit",
+			"settings":
+			{
+				"buffer_size": 398,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/torsdag.kit",
+			"settings":
+			{
+				"buffer_size": 417,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/fredag.kit",
+			"settings":
+			{
+				"buffer_size": 398,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/index.kit",
+			"settings":
+			{
+				"buffer_size": 416,
 				"line_ending": "Unix"
 			}
 		}
@@ -110,17 +167,16 @@
 	"expanded_folders":
 	[
 		"/Users/andersstentebjerg/Documents/Github/vipguide.dk",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/sass",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/sass/custom"
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes"
 	],
 	"file_history":
 	[
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/index.kit",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/finurligheder.kit",
 		"/Users/andersstentebjerg/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
 		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/facts.kit",
 		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_nav.kit",
 		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/sass/custom/_vipguide.scss",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/finurligheder.kit",
 		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/facts.html",
 		"/Users/andersstentebjerg/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
 		"/Users/andersstentebjerg/Library/Mobile Documents/74ZAFF46HB~jp~informationarchitects~Writer/Documents/noter.md",
@@ -132,7 +188,6 @@
 		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_feed-telefonliste.kit",
 		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/telefonliste.kit",
 		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/torsdag.kit",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/index.kit",
 		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_feed-hold.kit",
 		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/hold.html",
 		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/hold.kit",
@@ -163,6 +218,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"flex",
+			"item",
+			"feed",
 			">\n",
 			"<br>",
 			"html",
@@ -227,25 +285,25 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/finurligheder.kit",
+					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_nav.kit",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4638,
+						"buffer_size": 1549,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4621,
-								4621
+								1549,
+								1549
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -253,6 +311,206 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_vagtplan.kit",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2644,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								890,
+								890
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								13
+							]
+						],
+						"settings":
+						{
+							"auto_name": "5 A",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "custom/_vipguide.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3807,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3196,
+								3196
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2486.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/onsdag.kit",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 398,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/torsdag.kit",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 417,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								416,
+								416
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/fredag.kit",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 398,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								342,
+								342
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/index.kit",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 416,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]

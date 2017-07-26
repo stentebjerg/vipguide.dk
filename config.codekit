@@ -134,6 +134,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/Culture-Club.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3920,
+		"inputAbbreviatedPath": "\/assets\/img\/Culture-Club.png",
+		"outputAbbreviatedPath": "\/assets\/img\/Culture-Club.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/danish crown.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -211,6 +222,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/header_boege2 2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 83746,
+		"inputAbbreviatedPath": "\/assets\/img\/header_boege2 2.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/header_boege2 2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/header_boege2.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -218,6 +240,17 @@
 		"initialSize": 83746,
 		"inputAbbreviatedPath": "\/assets\/img\/header_boege2.jpg",
 		"outputAbbreviatedPath": "\/assets\/img\/header_boege2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/header_boege2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 70495,
+		"inputAbbreviatedPath": "\/assets\/img\/header_boege2.png",
+		"outputAbbreviatedPath": "\/assets\/img\/header_boege2.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -888,6 +921,15 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/loerdag.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/loerdag.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/loerdag.kit",
+		"outputAbbreviatedPath": "\/loerdag.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
@@ -1706,7 +1748,7 @@
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
 	"displayValue": "vipguide.dk",
-	"displayValueWasSetByUser": 0,
+	"displayValueWasSetByUser": 1,
 	"iconImageName": "brackets_yellow"
 	},
 "projectSettings": {

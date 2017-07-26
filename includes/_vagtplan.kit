@@ -7,8 +7,9 @@
                 <span class="title">{{cells.Firma}}</span>
                 <p>{{cells.Type}} kl. {{cells.Afgang}}
                     <br>{{cells.Antal}} personer
+                    {{#if cells.Hold}}
                     <br>
-                    <a href="/hold.html">Hold {{cells.Hold}}</a></p>
+                    <a href="/hold.html">Hold {{cells.Hold}}</a>{{/if}}</p>
                 {{#if cells.Drejebog}}
                 <a target="_blank" href="{{cells.Drejebog}}" class="secondary-content">Drejebog</a> {{/if}}
             </div>

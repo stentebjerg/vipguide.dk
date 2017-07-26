@@ -2,7 +2,7 @@
 <html>
 <meta charset="UTF-8">
 <meta name="robots" content="noindex, nofollow">
-<title>Vipguide 2016</title>
+<title>Vipguide 2017</title>
 <head>
 	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="/css/app.min.css" media="screen,projection" />
@@ -27,25 +27,25 @@
 	<meta name="msapplication-square310x310logo" content="/assets/img/largetile.png" />
 </head>
 <body class="white">
-    <div class="navbar-fixed">
-        <nav class="red accent-3">
+    <div class="">
+        <nav class="indigo accent-3">
             <div class="nav-wrapper">
-            <div id="logo-container" class="brand-logo center">Lørdag 6/8-2016</div>
+            <div id="logo-container" class="brand-logo center">Onsdag 9/8-2016</div>
 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="side-nav" id="mobile-demo">
-                    <li class="top"><a href="/"><img src="assets/img/vipguide-logo-2016.png"></a></li>
+                    <li class="top"><a href="/"></a></li>
                     <li class="headline">Vagtplan</li>
-                    <li><a href="/onsdag"><i class="material-icons time">access_time</i> Onsdag</a></li>
+                    <li><a href="/onsdag.html"><i class="material-icons time">access_time</i> Onsdag</a></li>
                     <li><a href="/torsdag.html"><i class="material-icons time">access_time</i> Torsdag</a></li>
                     <li><a href="/fredag.html"><i class="material-icons time">access_time</i> Fredag</a></li>
-                    <li><a href="/"><i class="material-icons time">access_time</i> Lørdag</a></li>
+                    <li><a href="/loerdag.html"><i class="material-icons time">access_time</i> Lørdag</a></li>
                     <li class="divider"></li>
                     <li class="headline">Information</li>
                     <li><a href="/telefonliste.html"><i class="material-icons phone">contact_phone</i> Telefonliste</a></li>
                     <li><a href="/hold.html"><i class="material-icons people">people</i> Holdliste</a></li>
                     <li><a href="/facts.html"><i class="material-icons facts">info_outline</i> Facts & figures</a></li>
                     <li><a href="/finurligheder.html"><i class="material-icons finurligheder">favorite</i> Finurligheder</a></li>
-                    <li><a href="https://www.facebook.com/groups/240788406061190" target="_blank"><i class="material-icons">share</i> Facebook</a></li>
+                    <li><a href="https://www.facebook.com/groups/240788406061190" target="_blank"><i class="material-icons">open_in_new</i> Facebook</a></li>
                 </ul>
             </div>
         </nav>
@@ -103,8 +103,9 @@
                 <span class="title">{{cells.Firma}}</span>
                 <p>{{cells.Type}} kl. {{cells.Afgang}}
                     <br>{{cells.Antal}} personer
+                    {{#if cells.Hold}}
                     <br>
-                    <a href="/hold.html">Hold {{cells.Hold}}</a></p>
+                    <a href="/hold.html">Hold {{cells.Hold}}</a>{{/if}}</p>
                 {{#if cells.Drejebog}}
                 <a target="_blank" href="{{cells.Drejebog}}" class="secondary-content">Drejebog</a> {{/if}}
             </div>
@@ -170,7 +171,7 @@
 Handlebars.registerHelper('toLowerCase', function(str) {
   return str.toLowerCase();
 });$(document).ready(function() {
-  var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1c6U2j6NMYrmBkqe2SbYeM60shpUCquSSGhThMGWZwLU/edit#gid=956771978';
+  var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1CNrVQoSyKQ1j0SYOHPf0s4TPgXZvYlBZh3I2lopW73M/edit#gid=956771978';
   // Compile the Handlebars template
   var FeedTemplate = Handlebars.compile($('#feed-template').html());
   // Out feed
