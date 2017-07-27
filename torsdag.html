@@ -158,6 +158,47 @@
     </script>
 </ul>
 <script>
+function loadFromLocalStorage() {
+    var data = localStorage.getItem('torsdag');
+    if (data == null)
+    {
+      return data;
+    }
+    
+    return JSON.parse(data);
+  }
+  
+  function refresh() {
+    localStorage.setItem('torsdag', null);
+    location.reload();
+  } 
+  
+  function setInLocalStorage(rawData) {
+    console.log('rawDAta');
+    console.log(rawData);
+    localStorage.setItem('torsdag', JSON.stringify(rawData));
+  }
+  
+  function loadDataIntoSpreadSheet() {
+    
+    var data = loadFromLocalStorage();
+    var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1CNrVQoSyKQ1j0SYOHPf0s4TPgXZvYlBZh3I2lopW73M/edit#gid=369183786';
+    // Compile the Handlebars template
+    var FeedTemplate = Handlebars.compile($('#feed-template').html());
+    // Out feed
+    $('#feed').sheetrock({
+      url: mySpreadsheet,
+      query: "select A,B,C,D,E,F,G,H,I,J,K,L,M,N",
+      rowTemplate: FeedTemplate,
+      callback: function (success, options, response) {
+      console.log(success);
+      console.log(options);
+      setInLocalStorage(response.raw);
+      console.log(response);
+        $('.preloader-wrapper').hide();
+      }
+    }, data);
+  }
 // Compares first value to the second one allowing entering IF clouse if true.
 // Otherwise entering ELSE clause if exist.
  Handlebars.registerHelper('ifEquals', function(a, b, options) {
@@ -169,19 +210,7 @@
 Handlebars.registerHelper('toLowerCase', function(str) {
   return str.toLowerCase();
 });$(document).ready(function() {
-  var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1CNrVQoSyKQ1j0SYOHPf0s4TPgXZvYlBZh3I2lopW73M/edit#gid=369183786';
-  // Compile the Handlebars template
-  var FeedTemplate = Handlebars.compile($('#feed-template').html());
-  // Out feed
-  $('#feed').sheetrock({
-    url: mySpreadsheet,
-    query: "select A,B,C,D,E,F,G,H,I,J,K,L,M,N",
-    rowTemplate: FeedTemplate,
-    callback: function (success) {
-      $('.preloader-wrapper').hide();
-    }
-  });
+  loadDataIntoSpreadSheet();
 });
-</script>
-</body>
+</script></body>
 </html>

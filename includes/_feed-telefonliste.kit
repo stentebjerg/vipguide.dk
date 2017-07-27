@@ -13,17 +13,49 @@
   </script>
     </ul>
 <script>
-$(document).ready(function() {
-  var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1c6U2j6NMYrmBkqe2SbYeM60shpUCquSSGhThMGWZwLU/edit#gid=817945410';
-  // Compile the Handlebars template
-  var FeedTemplate = Handlebars.compile($('#feed-template').html());
-  $('#feed').sheetrock({
-    url: mySpreadsheet,
-    query: "select A,B,C",
-    rowTemplate: FeedTemplate,
-    callback: function (success) {
-      $('.preloader-wrapper').hide();
+function loadFromLocalStorage() {
+    var data = localStorage.getItem('telefonliste');
+    if (data == null)
+    {
+      return data;
     }
-  });
+    
+    return JSON.parse(data);
+  }
+  
+  function refresh() {
+    localStorage.setItem('telefonliste', null);
+    location.reload();
+  } 
+  
+  function setInLocalStorage(rawData) {
+    console.log('rawDAta');
+    console.log(rawData);
+    localStorage.setItem('telefonliste', JSON.stringify(rawData));
+  }
+  
+  function loadDataIntoSpreadSheet() {
+    
+    var data = loadFromLocalStorage();
+    var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1c6U2j6NMYrmBkqe2SbYeM60shpUCquSSGhThMGWZwLU/edit#gid=817945410';
+    // Compile the Handlebars template
+    var FeedTemplate = Handlebars.compile($('#feed-template').html());
+    // Out feed
+    $('#feed').sheetrock({
+      url: mySpreadsheet,
+      query: "select A,B,C",
+      rowTemplate: FeedTemplate,
+      callback: function (success, options, response) {
+      console.log(success);
+      console.log(options);
+      setInLocalStorage(response.raw);
+      console.log(response);
+        $('.preloader-wrapper').hide();
+      }
+    }, data);
+  }
+<!-- @include /handlebars-helpers -->
+$(document).ready(function() {
+  loadDataIntoSpreadSheet();
 });
 </script>

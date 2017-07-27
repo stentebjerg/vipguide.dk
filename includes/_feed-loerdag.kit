@@ -1,19 +1,49 @@
 <!-- @include /preloader -->
 <!-- @include /vagtplan -->
 <script>
+function loadFromLocalStorage() {
+    var data = localStorage.getItem('loerdag');
+    if (data == null)
+    {
+      return data;
+    }
+    
+    return JSON.parse(data);
+  }
+  
+  function refresh() {
+    localStorage.setItem('loerdag', null);
+    location.reload();
+  } 
+  
+  function setInLocalStorage(rawData) {
+    console.log('rawDAta');
+    console.log(rawData);
+    localStorage.setItem('loerdag', JSON.stringify(rawData));
+  }
+  
+  function loadDataIntoSpreadSheet() {
+    
+    var data = loadFromLocalStorage();
+    var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1CNrVQoSyKQ1j0SYOHPf0s4TPgXZvYlBZh3I2lopW73M/edit#gid=956771978';
+    // Compile the Handlebars template
+    var FeedTemplate = Handlebars.compile($('#feed-template').html());
+    // Out feed
+    $('#feed').sheetrock({
+      url: mySpreadsheet,
+      query: "select A,B,C,D,E,F,G,H,I,J,K,L,M,N",
+      rowTemplate: FeedTemplate,
+      callback: function (success, options, response) {
+      console.log(success);
+      console.log(options);
+      setInLocalStorage(response.raw);
+      console.log(response);
+        $('.preloader-wrapper').hide();
+      }
+    }, data);
+  }
 <!-- @include /handlebars-helpers -->
 $(document).ready(function() {
-  var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1CNrVQoSyKQ1j0SYOHPf0s4TPgXZvYlBZh3I2lopW73M/edit#gid=956771978';
-  // Compile the Handlebars template
-  var FeedTemplate = Handlebars.compile($('#feed-template').html());
-  // Out feed
-  $('#feed').sheetrock({
-    url: mySpreadsheet,
-    query: "select A,B,C,D,E,F,G,H,I,J,K,L,M,N",
-    rowTemplate: FeedTemplate,
-    callback: function (success) {
-      $('.preloader-wrapper').hide();
-    }
-  });
+  loadDataIntoSpreadSheet();
 });
 </script>
