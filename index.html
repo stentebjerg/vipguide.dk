@@ -16,7 +16,9 @@
 	<meta name="theme-color" content="#ffffff">
 </head>
 <body class="white">
+	  
     <div class="">
+    	<a class="btn-floating btn-large waves-effect waves-light pink accent-3 refresh"><i class="material-icons">refresh</i></a>
         <nav class="indigo accent-3">
             <div class="nav-wrapper">
             <div id="logo-container" class="brand-logo center">Onsdag 9/8-2017</div>
@@ -88,6 +90,9 @@
     <script id="feed-template" type="text/x-handlebars-template">
         <li>
             <div class="collapsible-header collection-item avatar">
+                <i class="material-icons expand less">expand_less</i>
+                <i class="material-icons expand more">expand_more</i>
+                <i class="material-icons close">close</i>
                 <img src="http://vipguide.dk/assets/img/{{toLowerCase cells.Firma}}.png" alt="{{cells.Firma}}" class="circle">
                 <span class="title">{{cells.Firma}}</span>
                 <p>{{cells.Type}} kl. {{cells.Afgang}}
@@ -95,8 +100,6 @@
                     {{#if cells.Hold}}
                     <br>
                     <a href="/hold.html">Hold {{cells.Hold}}</a>{{/if}}</p>
-                {{#if cells.Drejebog}}
-                <a target="_blank" href="{{cells.Drejebog}}" class="secondary-content">Drejebog</a> {{/if}}
             </div>
             <div class="collapsible-body">
                 <div class="flex-container">
@@ -128,7 +131,6 @@
                         </div>
                         {{/if}}
                     
-                    
                         {{#if cells.Afhentning}}
                         <div class="flex-item">
                         <h6>Afhentning</h6>
@@ -140,6 +142,13 @@
                         <div class="flex-item">
                         <h6>Tur</h6>
                         <p>{{cells.Tur}}</p>
+                        </div>
+                        {{/if}}
+
+                        {{#if cells.Drejebog}}
+                        <div class="flex-item">
+                        <h6>Drejebog</h6>
+                        <a target="_blank" href="{{cells.Drejebog}}">Link til drejebog <i class="material-icons open-in-new">open_in_new</i></a>
                         </div>
                         {{/if}}
                     </div>

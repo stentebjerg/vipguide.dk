@@ -20,6 +20,26 @@ html {
   font-weight: 500
 }
 
+.refresh {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.expand, .close {
+  position: absolute;
+  right: 0;
+  color:#039be5;
+
+  &.more {
+    top:20px;
+  }
+}
+
+.close {
+  display: none!important;
+}
+
 nav {
     .brand-logo {
       font-size: 1.5rem;
@@ -165,7 +185,29 @@ nav {
   @extend .white;
   @extend .grey-text, .text-darken-4;
   border:none;
+
+  .expand {
+    display: none
+  }
+  .close {
+    display: block!important;
 }
+}
+
+.flex-item {
+      a {
+        position: relative;
+        padding-right: 20px;
+
+        i.open-in-new {
+          font-size: 14px;
+          position: absolute;
+          right: 0;
+          top: 3px;
+        }
+      }
+
+    }
 .collection .collection-item.avatar i.phone {
   transform: translateY(2px);
   font-size: 16px;
@@ -183,9 +225,6 @@ nav {
 
     }
 
-    .flex-item {
-
-    }
     padding-left: 72px;
     p {
       padding: 0;
