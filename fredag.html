@@ -18,7 +18,7 @@
 <body class="white">
 	  
     <div class="">
-    	<a class="btn-floating btn-large waves-effect waves-light pink accent-3 refresh"><i class="material-icons">refresh</i></a>
+    	<a class="btn-floating btn-large waves-effect waves-light pink accent-3 refresh" onclick="refresh()"><i class="material-icons">refresh</i></a>
         <nav class="indigo accent-3">
             <div class="nav-wrapper">
             <div id="logo-container" class="brand-logo center">Fredag 11/8-2017</div>
@@ -210,18 +210,7 @@ function loadFromLocalStorage() {
 Handlebars.registerHelper('toLowerCase', function(str) {
   return str.toLowerCase();
 });$(document).ready(function() {
-  var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1CNrVQoSyKQ1j0SYOHPf0s4TPgXZvYlBZh3I2lopW73M/edit#gid=2105609213';
-  // Compile the Handlebars template
-  var FeedTemplate = Handlebars.compile($('#feed-template').html());
-  // Out feed
-  $('#feed').sheetrock({
-    url: mySpreadsheet,
-    query: "select A,B,C,D,E,F,G,H,I,J,K,L,M,N",
-    rowTemplate: FeedTemplate,
-    callback: function (success) {
-      $('.preloader-wrapper').hide();
-    }
-  });
+  loadDataIntoSpreadSheet();
 });
 </script>
 </body>
