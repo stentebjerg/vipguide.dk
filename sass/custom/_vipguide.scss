@@ -11,9 +11,6 @@ html {
     @extend .light-blue-text, .text-darken-1;
 }
 
-.collection .collection-item.avatar .circle {
-  border: 1px solid $collapsible-border-color; 
-}
 
 .collection .collection-item.avatar p {
   @extend .grey-text, .text-darken-1;
@@ -26,6 +23,8 @@ html {
 nav {
     .brand-logo {
       font-size: 1.5rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
     }
     a.button-collapse {
         padding-left: 15px;
@@ -117,12 +116,10 @@ nav {
     &.active .finurligheder {
     color: #ff1744 !important;
   }
-  &.active .phone {
+  &.active .phone,
+  &.active .people  {
       color: #00C853 !important;
-    }
-  &.active .people {
-      color: #d500f9 !important;
-    }
+  }
   &.active .facts {
       color: #f50057 !important;
     }
@@ -143,6 +140,8 @@ nav {
     height: 50px;
     line-height: 50px;
     @extend .grey-text, .text-darken-3;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
   }
   i.material-icons {
     display: inline-block;
