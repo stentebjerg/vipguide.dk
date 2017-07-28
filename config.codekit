@@ -233,6 +233,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/grundfos.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9196,
+		"inputAbbreviatedPath": "\/assets\/img\/grundfos.png",
+		"outputAbbreviatedPath": "\/assets\/img\/grundfos.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/harman.png": {
 		"fileType": 32768,
 		"ignore": 0,
