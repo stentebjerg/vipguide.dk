@@ -2,8 +2,26 @@ html {
   @extend .grey-text, .text-darken-4;
 }
 .preloader-wrapper {
+  /*
   margin:100px auto;
   display: block;
+  */
+  background: #3d5afe;
+  position: absolute;
+  width: 26px!important;
+  height: 26px!important;
+  right: 16px;
+  top: 16px;
+  z-index: 1;
+}
+
+nav.pink .preloader-wrapper,
+nav.pink .refresh{
+  display: none!important;
+}
+
+nav.green .preloader-wrapper {
+  background: #00C853;
 }
 
 .collection .collection-item.avatar .secondary-content {
@@ -21,9 +39,8 @@ html {
 }
 
 .refresh {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+  padding-right: 15px;
+  cursor: pointer;
 }
 
 .expand, .close {
