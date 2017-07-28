@@ -18,7 +18,7 @@
 <body class="white">    	
         <nav class="green accent-4">
             <div class="nav-wrapper">
-            <div id="logo-container" class="brand-logo center">Hold</div>
+            <div id="logo-container" class="brand-logo center">Holdsammensætning</div>
 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="side-nav" id="mobile-demo">
                     <li class="top"><a href="/"></a></li>
@@ -126,7 +126,8 @@ function loadFromLocalStorage() {
       url: mySpreadsheet,
       query: "select D,E",
       rowTemplate: FeedTemplate,
-      fetchSize: 9,
+      fetchSize: 1,
+      // fetchSize: 9,
       callback: function (success, options, response) {
       console.log(success);
       console.log(options);
