@@ -134,13 +134,35 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/bestseller.png": {
+	"\/assets\/img\/bat.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1156,
+		"inputAbbreviatedPath": "\/assets\/img\/bat.png",
+		"outputAbbreviatedPath": "\/assets\/img\/bat.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/bauer.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 15178,
+		"inputAbbreviatedPath": "\/assets\/img\/bauer.png",
+		"outputAbbreviatedPath": "\/assets\/img\/bauer.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/Bestseller.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 19752,
-		"inputAbbreviatedPath": "\/assets\/img\/bestseller.png",
-		"outputAbbreviatedPath": "\/assets\/img\/bestseller.png",
+		"inputAbbreviatedPath": "\/assets\/img\/Bestseller.png",
+		"outputAbbreviatedPath": "\/assets\/img\/Bestseller.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -152,6 +174,17 @@
 		"initialSize": 22175,
 		"inputAbbreviatedPath": "\/assets\/img\/cisco.png",
 		"outputAbbreviatedPath": "\/assets\/img\/cisco.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/clear channel.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 31532,
+		"inputAbbreviatedPath": "\/assets\/img\/clear channel.png",
+		"outputAbbreviatedPath": "\/assets\/img\/clear channel.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -174,6 +207,17 @@
 		"initialSize": 19700,
 		"inputAbbreviatedPath": "\/assets\/img\/danish crown.png",
 		"outputAbbreviatedPath": "\/assets\/img\/danish crown.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/danske bank.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 17518,
+		"inputAbbreviatedPath": "\/assets\/img\/danske bank.png",
+		"outputAbbreviatedPath": "\/assets\/img\/danske bank.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -607,6 +651,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/Peter Larsen kaffe.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 12302,
+		"inputAbbreviatedPath": "\/assets\/img\/Peter Larsen kaffe.jpeg",
+		"outputAbbreviatedPath": "\/assets\/img\/Peter Larsen kaffe.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/peter larsen kaffe.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 56379,
+		"inputAbbreviatedPath": "\/assets\/img\/peter larsen kaffe.png",
+		"outputAbbreviatedPath": "\/assets\/img\/peter larsen kaffe.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/pot.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -695,6 +761,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/sjoelund.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 15178,
+		"inputAbbreviatedPath": "\/assets\/img\/sjoelund.png",
+		"outputAbbreviatedPath": "\/assets\/img\/sjoelund.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/sjølund.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 15178,
+		"inputAbbreviatedPath": "\/assets\/img\/sjølund.png",
+		"outputAbbreviatedPath": "\/assets\/img\/sjølund.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/smalltile.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -702,6 +790,17 @@
 		"initialSize": 3523,
 		"inputAbbreviatedPath": "\/assets\/img\/smalltile.png",
 		"outputAbbreviatedPath": "\/assets\/img\/smalltile.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/sydbank.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 658392,
+		"inputAbbreviatedPath": "\/assets\/img\/sydbank.png",
+		"outputAbbreviatedPath": "\/assets\/img\/sydbank.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -724,6 +823,28 @@
 		"initialSize": 7302,
 		"inputAbbreviatedPath": "\/assets\/img\/tulip.png",
 		"outputAbbreviatedPath": "\/assets\/img\/tulip.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/Unibet.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9969,
+		"inputAbbreviatedPath": "\/assets\/img\/Unibet.jpeg",
+		"outputAbbreviatedPath": "\/assets\/img\/Unibet.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/unibet.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 42627,
+		"inputAbbreviatedPath": "\/assets\/img\/unibet.png",
+		"outputAbbreviatedPath": "\/assets\/img\/unibet.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

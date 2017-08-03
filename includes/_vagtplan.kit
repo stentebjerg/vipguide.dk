@@ -26,16 +26,9 @@
                         {{#if cells.Kontaktperson}}
                         <div class="flex-item">
                         <h6>Kontaktperson</h6>
-                        <p>{{cells.Kontaktperson}}</p>
+                        <p>{{cells.Kontaktperson}}{{#if cells.Mobil}}<br><a style="padding-right: 0"href="tel:{{cells.Mobil}}">{{cells.Mobil}}</a>📱{{/if}} </p>
                         </div>
                         {{/if}}
-
-                        {{#if cells.Mobil}}
-                        <div class="flex-item">
-                        <h6>Mobil</h6>
-                        <p>{{cells.Mobil}}</p>
-                        </div>
-                        {{/if}} 
 
                         {{#if cells.Kommentar}}
                         <div class="flex-item">

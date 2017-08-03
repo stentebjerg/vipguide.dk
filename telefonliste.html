@@ -18,7 +18,7 @@
 <body class="white">    	
         <nav class="green accent-4">
             <div class="nav-wrapper">
-            <div id="logo-container" class="brand-logo center">Telefonliste</div>
+            <div id="logo-container" class="brand-logo center"><a href="/"><i class="material-icons">home</i></a></div>
 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="side-nav" id="mobile-demo">
                     <li class="top"><a href="/"></a></li>
@@ -80,7 +80,10 @@
     </div>            </div>
         </nav>
     </div>
-               
+   
+<div class="grey lighten-2 grey-text text-darken-2 date">
+            Telefonliste
+    </div>            
  <script type="text/javascript" src="/scripts/min/app.min.js"></script>
 <ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
 <script id="feed-template" type="text/x-handlebars-template">
@@ -90,7 +93,7 @@
   {{else}}
     <i class="material-icons circle grey lighten-2">perm_identity</i>
   {{/if}}
-    <span class="title">{{cells.Navn}}</span>{{#if cells.Telefon}}<br><a href="tel:{{cells.Telefon}}"><i class="material-icons phone">phone</i> {{cells.Telefon}}</a>{{/if}}
+    <span class="title">{{cells.Navn}}</span>{{#if cells.Telefon}}<br><a href="tel:{{cells.Telefon}}">📱 {{cells.Telefon}}</a>{{/if}}
     </li>
   </script>
     </ul>

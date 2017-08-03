@@ -63,7 +63,53 @@
 			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_nav.kit",
 			"settings":
 			{
-				"buffer_size": 1549,
+				"buffer_size": 1594,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/index.kit",
+			"settings":
+			{
+				"buffer_size": 425,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "FY16\n7846874\n\nFY17\n11156885\n\n\n(11156885-7846874)/7846874*100=42%\n\n\nhttp://sitecore.ucommerce.net/ucommerceapi/wakeupdata/ucproducts?currency=EUR&getvariants=false&usevarianturls=false&culturecode=en-us&guid=ACBA10EA-0A48-401D-B388-FDE77A8852B3\n\nhttp://umbraco7.ucommerce.net/ucommerceapi/wakeupdata/ucproducts?testdisplay=true&currency=EUR&getvariants=false&usevarianturls=false&culturecode=en-us&guid=130DE8CD-1BB3-44D7-B188-318E122814B6",
+			"settings":
+			{
+				"buffer_size": 438,
+				"line_ending": "Unix",
+				"name": "FY16"
+			}
+		},
+		{
+			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_feed-hold.kit",
+			"settings":
+			{
+				"buffer_size": 1800,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/hold.kit",
+			"settings":
+			{
+				"buffer_size": 284,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_feed-telefonliste.kit",
+			"settings":
+			{
+				"buffer_size": 1964,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -71,7 +117,24 @@
 			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_vagtplan.kit",
 			"settings":
 			{
-				"buffer_size": 2644,
+				"buffer_size": 3066,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_feed-fredag.kit",
+			"settings":
+			{
+				"buffer_size": 1305,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<div class=\"power-house-box\" style=\"background: #F1F1F2; padding: 20px 20px 0 20px; margin-bottom: 20px; z-index: 1; overflow: hidden; position: relative;\">\n<div class=\"power-house-batch\" style=\"border-radius: 50%; border: 5px solid #ccc; width: 500px; height: 500px; position: absolute; top: -70px; right: 85px; transform: rotate(15deg); opacity: 0.2; z-index: 0; padding-top: 100px;\"><svg id=\"Layer_1\" data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"120\" height=\"120\" viewbox=\"0 0 120 120\" style=\"fill: #ccc; height: 300px;\">\n<title>partnersArtboard 3</title>\n<path d=\"M111,116H9a7,7,0,0,1-7-7V97a1,1,0,0,1,1-1H117a1,1,0,0,1,1,1v12A7,7,0,0,1,111,116ZM4,98v11a5,5,0,0,0,5,5H111a5,5,0,0,0,5-5V98Z\"></path><path d=\"M21,120H13a5,5,0,0,1-5-5,1,1,0,0,1,1-1H25a1,1,0,0,1,1,1A5,5,0,0,1,21,120Zm-10.83-4A3,3,0,0,0,13,118h8a3,3,0,0,0,2.83-2Z\"></path><path d=\"M107,120H99a5,5,0,0,1-5-5,1,1,0,0,1,1-1h16a1,1,0,0,1,1,1A5,5,0,0,1,107,120Zm-10.83-4A3,3,0,0,0,99,118h8a3,3,0,0,0,2.83-2Z\"></path><path d=\"M113.26,32H108a1,1,0,0,1,0-2h5.26a3,3,0,0,0,3-2.8l1.47-22a3,3,0,0,0-3-3.2H5.28a3,3,0,0,0-3,3.2l1.47,22a3,3,0,0,0,3,2.8H12a1,1,0,0,1,0,2H6.74a5,5,0,0,1-5-4.67L.29,5.33A5,5,0,0,1,5.28,0H114.72a5,5,0,0,1,5,5.33l-1.47,22A5,5,0,0,1,113.26,32Z\"></path><path d=\"M113,98a1,1,0,0,1-1-1V54a1,1,0,0,1,2,0V97A1,1,0,0,1,113,98Z\"></path><path d=\"M7,98a1,1,0,0,1-1-1V31a1,1,0,0,1,2,0V97A1,1,0,0,1,7,98Z\"></path><path d=\"M38.24,27.76a1,1,0,0,1-.71-.29,5,5,0,0,0-7.07,0,1,1,0,0,1-1.41-1.41,7,7,0,0,1,9.89,0,1,1,0,0,1-.71,1.71Z\"></path><path d=\"M29.76,36.24a1,1,0,0,1-.71-.29,7,7,0,0,1,0-9.9,1,1,0,0,1,1.41,1.41,5,5,0,0,0,0,7.07,1,1,0,0,1-.71,1.71Z\"></path><path d=\"M50,47H18a7,7,0,0,1-7-7V22a7,7,0,0,1,7-7H50a7,7,0,0,1,7,7V40A7,7,0,0,1,50,47ZM18,17a5,5,0,0,0-5,5V40a5,5,0,0,0,5,5H50a5,5,0,0,0,5-5V22a5,5,0,0,0-5-5Z\"></path><path d=\"M41,59H27a7,7,0,0,1-7-7V46a1,1,0,0,1,1-1H47a1,1,0,0,1,1,1v6A7,7,0,0,1,41,59ZM22,47v5a5,5,0,0,0,5,5H41a5,5,0,0,0,5-5V47Z\"></path><path d=\"M36,63H32a1,1,0,0,1-1-1V58a1,1,0,0,1,1-1h4a1,1,0,0,1,1,1v4A1,1,0,0,1,36,63Zm-3-2h2V59H33Z\"></path><path d=\"M34,42A11,11,0,1,1,45,31,11,11,0,0,1,34,42Zm0-20a9,9,0,1,0,9,9A9,9,0,0,0,34,22Z\"></path><path d=\"M38.24,36.24a1,1,0,0,1-.71-1.71,5,5,0,0,0,0-7.07,1,1,0,0,1,1.41-1.41,7,7,0,0,1,0,9.9A1,1,0,0,1,38.24,36.24Z\"></path><path d=\"M34,32a1,1,0,0,1-.71-1.71l4.24-4.24a1,1,0,0,1,1.41,1.41l-4.24,4.24A1,1,0,0,1,34,32Z\"></path><path d=\"M18,34a3,3,0,1,1,3-3A3,3,0,0,1,18,34Zm0-4a1,1,0,1,0,1,1A1,1,0,0,0,18,30Z\"></path><path d=\"M50,34a3,3,0,1,1,3-3A3,3,0,0,1,50,34Zm0-4a1,1,0,1,0,1,1A1,1,0,0,0,50,30Z\"></path><path d=\"M51,53H42a1,1,0,0,1,0-2h9a1,1,0,0,1,0,2Z\"></path><path d=\"M63,55H53a3,3,0,0,1,0-6H63a3,3,0,0,1,0,6ZM53,51a1,1,0,0,0,0,2H63a1,1,0,0,0,0-2Z\"></path><path d=\"M38.82,94H29.18a10.94,10.94,0,0,1-9.84-6.08l-.51-1a11,11,0,0,1-1.05-3.36L16,71.14A1,1,0,0,1,17,70H51a1,1,0,0,1,1,1.14L50.22,83.54a11,11,0,0,1-1.05,3.36l-.51,1A10.94,10.94,0,0,1,38.82,94ZM18.15,72l1.61,11.25A9,9,0,0,0,20.62,86l.51,1a9,9,0,0,0,8,5h9.64a9,9,0,0,0,8-5l.51-1a9,9,0,0,0,.86-2.75L49.85,72Z\"></path><path d=\"M52,86H49a1,1,0,0,1,0-2h3a4,4,0,0,0,0-8H51a1,1,0,0,1,0-2h1a6,6,0,0,1,0,12Z\"></path><path d=\"M41,98H27a1,1,0,0,1-1-1V93a1,1,0,0,1,2,0v3H40V93a1,1,0,0,1,2,0v4A1,1,0,0,1,41,98Z\"></path><path d=\"M90.24,27.76a1,1,0,0,1-.71-.29,5,5,0,0,0-7.07,0,1,1,0,0,1-1.41-1.41,7,7,0,0,1,9.89,0,1,1,0,0,1-.71,1.71Z\"></path><path d=\"M81.76,36.24a1,1,0,0,1-.71-.29,7,7,0,0,1,0-9.9,1,1,0,0,1,1.41,1.41,5,5,0,0,0,0,7.07,1,1,0,0,1-.71,1.71Z\"></path><path d=\"M102,47H70a7,7,0,0,1-7-7V22a7,7,0,0,1,7-7h32a7,7,0,0,1,7,7V40A7,7,0,0,1,102,47ZM70,17a5,5,0,0,0-5,5V40a5,5,0,0,0,5,5h32a5,5,0,0,0,5-5V22a5,5,0,0,0-5-5Z\"></path><path d=\"M93,59H79a7,7,0,0,1-7-7V46a1,1,0,0,1,1-1H99a1,1,0,0,1,1,1v6A7,7,0,0,1,93,59ZM74,47v5a5,5,0,0,0,5,5H93a5,5,0,0,0,5-5V47Z\"></path><path d=\"M88,63H84a1,1,0,0,1-1-1V58a1,1,0,0,1,1-1h4a1,1,0,0,1,1,1v4A1,1,0,0,1,88,63Zm-3-2h2V59H85Z\"></path><path d=\"M86,42A11,11,0,1,1,97,31,11,11,0,0,1,86,42Zm0-20a9,9,0,1,0,9,9A9,9,0,0,0,86,22Z\"></path><path d=\"M90.24,36.24a1,1,0,0,1-.71-1.71,5,5,0,0,0,0-7.07,1,1,0,0,1,1.41-1.41,7,7,0,0,1,0,9.9A1,1,0,0,1,90.24,36.24Z\"></path><path d=\"M82,36.24a1,1,0,0,1-.71-1.71l4.24-4.24a1,1,0,0,1,1.41,1.41l-4.24,4.24A1,1,0,0,1,82,36.24Z\"></path><path d=\"M70,34a3,3,0,1,1,3-3A3,3,0,0,1,70,34Zm0-4a1,1,0,1,0,1,1A1,1,0,0,0,70,30Z\"></path><path d=\"M102,34a3,3,0,1,1,3-3A3,3,0,0,1,102,34Zm0-4a1,1,0,1,0,1,1A1,1,0,0,0,102,30Z\"></path><path d=\"M103,53H94a1,1,0,0,1,0-2h9a1,1,0,0,1,0,2Z\"></path><path d=\"M115,55H105a3,3,0,0,1,0-6h10a3,3,0,0,1,0,6Zm-10-4a1,1,0,0,0,0,2h10a1,1,0,0,0,0-2Z\"></path><path d=\"M90.82,94H81.18a10.94,10.94,0,0,1-9.84-6.08l-.51-1a11,11,0,0,1-1.05-3.36L68,71.14A1,1,0,0,1,69,70h34a1,1,0,0,1,1,1.14l-1.77,12.39a11,11,0,0,1-1.05,3.36l-.51,1A10.94,10.94,0,0,1,90.82,94ZM70.15,72l1.61,11.25A9,9,0,0,0,72.62,86l.51,1a9,9,0,0,0,8,5h9.64a9,9,0,0,0,8-5l.51-1a9,9,0,0,0,.86-2.75L101.85,72Z\"></path><path d=\"M104,86h-3a1,1,0,0,1,0-2h3a4,4,0,0,0,0-8h-1a1,1,0,0,1,0-2h1a6,6,0,0,1,0,12Z\"></path><path d=\"M93,98H79a1,1,0,0,1-1-1V93a1,1,0,0,1,2,0v3H92V93a1,1,0,0,1,2,0v4A1,1,0,0,1,93,98Z\"></path><path d=\"M64,32H56a1,1,0,0,1,0-2h8a1,1,0,0,1,0,2Z\"></path><path d=\"M113,51a1,1,0,0,1-1-1V31a1,1,0,0,1,2,0V50A1,1,0,0,1,113,51Z\"></path><path d=\"M103,116H17a1,1,0,0,1-1-1v-4a5,5,0,0,1,5-5H99a5,5,0,0,1,5,5v4A1,1,0,0,1,103,116Zm-85-2h84v-3a3,3,0,0,0-3-3H21a3,3,0,0,0-3,3Z\"></path></svg></div>\n<h5 class=\"serif sub_header color-green mb0\">11.00</h5>\n<h3 class=\"mb0\">Product Advisory Board</h3>\n<p class=\"mt24\">As Ucommerce Power House this is the chance to be heard and provide feedback to Ucommerce.</p>\n<p>This first session is exclusively for Power Houses. Get in touch with <a href=\"mailto:anders.stentebjerg@ucommerce.net\">Anders Stentebjerg</a>, Global Partner Manager for more information.</p>\n</div>\n<h5 class=\"serif sub_header color-green mb0\">12.30</h5>\n<h3 class=\"mb24\">Break</h3>\n<hr />\n<h5 class=\"serif sub_header color-green mb0\">13.00</h5>\n<h3 class=\"mb0\">Hello &amp; welcome</h3>\n<p class=\"mt24\"><small class=\"bold\">Anders Stentebjerg, Global Partner Manager, Ucommerce</small><br /> Beyond the Partner Program.</p>\n<hr />\n<h5 class=\"serif sub_header color-green mb0\">13.30</h5>\n<h3 class=\"mb0\">Content &amp; Commerce</h3>\n<p class=\"mt24\"><small class=\"bold\">Søren Spelling Lund, Founder &amp; CEO Ucommerce, Martin Sandvad, Partner &amp; CCO Ucommerce</small> <br /> We constantly keep talking about Content &amp; Commerce, but what does it actually mean? Why do we insist on calling the E-commerce Manager a Digital Merchant? And why do we believe the future of commerce is inherently linked to a picture of an 1890’s grocery store? Come and hear Martin &amp; Søren talk about the future of commerce and where they believe the main differentiator will be for customers in the future. </p>\n<hr />\n<h5 class=\"serif sub_header color-green mb0\">14.30</h5>\n<h3 class=\"mb0\">Umbraco</h3>\n<p class=\"mt24\"><small class=\"bold\">Kim Sneum Madsen, Chief Friend Maker, Umbraco</small> <br />Ucommerce was born in Umbraco and we have stayed true to Umbraco ever since. We have followed Umbraco every step of the way, most recently with our integration into Umbraco Cloud, and we will continue to follow Umbraco in the future. Come and hear from the Chief Friend Maker at Umbraco, Kim Sneum Madsen, on their plans for the future and their view on commerce.</p>\n<hr />\n<h5 class=\"serif sub_header color-green mb0\">15.00</h5>\n<h3 class=\"mb24\">Break</h3>\n<hr />\n<h5 class=\"serif sub_header color-green mb0\">15.30</h5>\n<h3 class=\"mb0\">Kentico</h3>\n<p class=\"mt24\"><small class=\"bold\">Petr Vozak, E-commerce Product Owner, Kentico</small> <br />Kentico is the newest addition to the Ucommerce family, where we just recently announced our partnership and upcoming integration. We will be making our official launch together with Kentico 11 this fall. The partnership is based on the realization, that increasing complexity and customer requirements, encourages both platforms to focus on what they do best, and then make the integration to give the partners and customers the best of both worlds.</p>\n<hr />\n<h5 class=\"serif sub_header color-green mb0\">16.00</h5>\n<h3 class=\"mb24\">Break</h3>\n<hr />\n<h5 class=\"serif sub_header color-green mb0\">16.15</h5>\n<h3 class=\"mb0\">LUX</h3>\n<p class=\"mt24\"><small class=\"bold\">Morten Skjoldager, Lead Developer, Ucommerce</small> <br />Get a sneak peak in to the future of Ucommerce UI. This talk will demonstrate the latest from project LUX (<strong>L</strong>ight Weight <strong>U</strong>ser E<strong>x</strong>perience) and what to expect from the Ucommerce platform in the future.</p>\n<hr />\n<h5 class=\"serif sub_header color-green mb0\">16.45</h5>\n<h3>Tech Talks</h3>\n<table>\n<tbody>\n<tr>\n<th style=\"text-align: center;\"><img src=\"/media/6326/raptor.png\" width=\"80\" /><br /><small class=\"text-center\">Raptor</small></th>\n<th style=\"text-align: center;\"><img src=\"/media/6330/perfion.png\" width=\"80\" style=\"margin: 0 20px;\" /><br /><small class=\"text-center\">Perfion</small></th>\n<th style=\"text-align: center;\"><img src=\"/media/6324/webshipr.png\" width=\"80\" /><br /><small class=\"text-center\">Webshipr</small></th>\n</tr>\n</tbody>\n</table>\n<p class=\"mt24\">Some of our Technology Partners will showcase how easy and valued it is to extend the Ucommerce platform.</p>\n<hr />\n<h5 class=\"serif sub_header color-green mb0\">17.15</h5>\n<h3 class=\"mb24\">Closing Remarks</h3>\n<hr />\n<h5 class=\"serif sub_header color-green mb0\">17.30</h5>\n<h3 class=\"mb24\">Family Photo</h3>\n<hr />\n<h5 class=\"serif sub_header color-green mb0\">19.00</h5>\n<h3 class=\"mb0\">MVP Award &amp; Dinner</h3>\n<p>Socialising, networking, dinner and of course announce new MVPs as well as Power Houses.</p>",
+			"settings":
+			{
+				"buffer_size": 9658,
 				"line_ending": "Unix"
 			}
 		},
@@ -88,7 +151,8 @@
 			"file": "custom/_vipguide.scss",
 			"settings":
 			{
-				"buffer_size": 3807,
+				"buffer_size": 4694,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -96,7 +160,8 @@
 			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/onsdag.kit",
 			"settings":
 			{
-				"buffer_size": 398,
+				"buffer_size": 484,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -104,7 +169,8 @@
 			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/torsdag.kit",
 			"settings":
 			{
-				"buffer_size": 417,
+				"buffer_size": 425,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -112,15 +178,17 @@
 			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/fredag.kit",
 			"settings":
 			{
-				"buffer_size": 398,
+				"buffer_size": 423,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/index.kit",
+			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/loerdag.kit",
 			"settings":
 			{
-				"buffer_size": 416,
+				"buffer_size": 424,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -167,6 +235,8 @@
 	"expanded_folders":
 	[
 		"/Users/andersstentebjerg/Documents/Github/vipguide.dk",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/assets",
+		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/assets/img",
 		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes"
 	],
 	"file_history":
@@ -204,7 +274,7 @@
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 25.0
 	},
 	"find_in_files":
 	{
@@ -280,7 +350,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 8,
 			"sheets":
 			[
 				{
@@ -289,52 +359,93 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1549,
+						"buffer_size": 1594,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1549,
-								1549
+								385,
+								385
 							]
 						],
 						"settings":
 						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"tab_size": 4,
+							"tabs_extra_last_activated": 1501524455.58,
+							"tabs_extra_last_activated_sheet_index": 0,
+							"tabs_extra_spawned": true,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_vagtplan.kit",
+					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/index.kit",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2644,
+						"buffer_size": 425,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								890,
-								890
+								350,
+								350
 							]
 						],
 						"settings":
 						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"tabs_extra_last_activated": 1501532478.73,
+							"tabs_extra_last_activated_sheet_index": 1,
+							"tabs_extra_spawned": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 438,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								438,
+								438
+							]
+						],
+						"settings":
+						{
+							"auto_name": "FY16",
+							"incomplete_sync": null,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tabs_extra_last_activated": 1501706327.59,
+							"tabs_extra_last_activated_sheet_index": 2
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -344,7 +455,215 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 3,
+					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_feed-hold.kit",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1800,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1418,
+								1418
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"tabs_extra_last_activated": 1501249232.08,
+							"tabs_extra_last_activated_sheet_index": 1,
+							"tabs_extra_spawned": true,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/hold.kit",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 284,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								284,
+								284
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tabs_extra_last_activated": 1501249680.34,
+							"tabs_extra_last_activated_sheet_index": 3,
+							"tabs_extra_spawned": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_feed-telefonliste.kit",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1964,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1964,
+								1964
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"tabs_extra_last_activated": 1501249020.17,
+							"tabs_extra_last_activated_sheet_index": 3,
+							"tabs_extra_spawned": true,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_vagtplan.kit",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3066,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"tabs_extra_last_activated": 1501706821.56,
+							"tabs_extra_last_activated_sheet_index": 7,
+							"tabs_extra_spawned": true,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_feed-fredag.kit",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1305,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"tabs_extra_last_activated": 1501738305.19,
+							"tabs_extra_last_activated_sheet_index": 7,
+							"tabs_extra_spawned": true,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9658,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								9658
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tabs_extra_last_activated": 1501762697.89,
+							"tabs_extra_last_activated_sheet_index": 8
+						},
+						"translation.x": 0.0,
+						"translation.y": 1004.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
 					"semi_transient": false,
 					"settings":
 					{
@@ -362,65 +681,80 @@
 						"settings":
 						{
 							"auto_name": "5 A",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tabs_extra_spawned": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 10,
 					"file": "custom/_vipguide.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3807,
+						"buffer_size": 4694,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3196,
-								3196
+								4453,
+								4453
 							]
 						],
 						"settings":
 						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/CSS/CSS.sublime-syntax",
 							"tab_size": 2,
+							"tabs_extra_last_activated": 1501249540.27,
+							"tabs_extra_last_activated_sheet_index": 7,
+							"tabs_extra_spawned": true,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2486.0,
+						"translation.y": 3595.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 11,
 					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/onsdag.kit",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 398,
+						"buffer_size": 484,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								265,
+								265
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tabs_extra_last_activated": 1501524046.17,
+							"tabs_extra_last_activated_sheet_index": 8,
+							"tabs_extra_spawned": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -430,87 +764,105 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 12,
 					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/torsdag.kit",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 417,
+						"buffer_size": 425,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								416,
-								416
+								213,
+								213
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tabs_extra_last_activated": 1501524445.14,
+							"tabs_extra_last_activated_sheet_index": 9,
+							"tabs_extra_spawned": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 13,
 					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/fredag.kit",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 398,
+						"buffer_size": 423,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								342,
-								342
+								163,
+								213
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tabs_extra_last_activated": 1501249779.33,
+							"tabs_extra_last_activated_sheet_index": 10,
+							"tabs_extra_spawned": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/index.kit",
+					"buffer": 14,
+					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/loerdag.kit",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 416,
+						"buffer_size": 424,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								356,
+								356
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tabs_extra_last_activated": 1501249883.06,
+							"tabs_extra_last_activated_sheet_index": 11,
+							"tabs_extra_spawned": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 8,
 					"type": "text"
 				}
 			]
@@ -518,7 +870,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 25.0
 	},
 	"input":
 	{
@@ -551,11 +903,15 @@
 	{
 		"height": 0.0
 	},
+	"output.sftp":
+	{
+		"height": 100.0
+	},
 	"pinned_build_system": "",
 	"project": "vipguide.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 46.0
 	},
 	"save_all_on_build": true,
 	"select_file":
