@@ -18,12 +18,12 @@
 <body class="white">    	
         <nav class="indigo accent-3 index">
     <div class="nav-wrapper">
-<div id="logo-container" class="brand-logo center"><a href="/"><img src="/assets/img/smukfest-logo.svg"></a></div>
+        <div id="logo-container" class="brand-logo center"><a href="/"><img src="/assets/img/smukfest-logo.svg"></a></div>
 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="side-nav" id="mobile-demo">
                     <li class="top"><a href="/"></a></li>
                     <li class="headline">Vagtplan</li>
-                    <!--li><a href="/onsdag.html"><i class="material-icons time">access_time</i> Onsdag</a></li-->
+                    <li><a href="/onsdag.html"><i class="material-icons time">access_time</i> Onsdag</a></li>
                     <li><a href="/torsdag.html"><i class="material-icons time">access_time</i> Torsdag</a></li>
                     <li><a href="/fredag.html"><i class="material-icons time">access_time</i> Fredag</a></li>
                     <li><a href="/loerdag.html"><i class="material-icons time">access_time</i> Lørdag</a></li>
@@ -80,26 +80,43 @@
     </div>            </div>
         </nav>
     </div>
-    <div class="index flex-container">
-    	<a href="/torsdag.html" class="flex-item">
-    		<div class="content">
-    			<h2>Torsdag</h2>
-    			<p> Vagtplan <br><small>10/8-2017</small></p>
-    		</div>
-    	</a>
-    	<a href="/fredag.html" class="flex-item">
-    		<div class="content">
-    			<h2>Fredag</h2>
-    			<p> Vagtplan <br><small>11/8-2017</small></p>
-    		</div>
-    	</a>
-    	<a href="/loerdag.html" class="flex-item">
-    		<div class="content">
-    			<h2>Lørdag</h2>
-    			<p> Vagtplan<br><small>12/8-2017</small></p>
-    		</div>
-    	</a>
-    </div>
-    <script type="text/javascript" src="/scripts/min/app.min.js"></script>
-</body>
-</html>    
+        <div class="index flex-container">
+            <a href="/onsdag.html" class="flex-item video">
+                <div class="video-container">
+                    <video autoplay muted loop>
+                        <source src="/assets/video/index-onsdag.mp4" type="video/mp4">
+                        <source src="/assets/video/index-onsdag.ogg" type="video/ogg">
+                        <source src="/assets/video/index-onsdag.webm" type="video/webm">
+                    </video>
+                </div>
+                <div class="content">
+                    <h3>Onsdag</h3>
+                    <p> Vagtplan
+                        <br><small>09/8-2017</small></p>
+                </div>
+            </a>
+            <a href="/onsdag.html" class="flex-item">
+                <div class="content">
+                    <h3>Torsdag</h3>
+                    <p> Vagtplan
+                        <br><small>10/8-2017</small></p>
+                </div>
+            </a>
+            <a href="/fredag.html" class="flex-item">
+                <div class="content">
+                    <h3>Fredag</h3>
+                    <p> Vagtplan
+                        <br><small>11/8-2017</small></p>
+                </div>
+            </a>
+            <a href="/loerdag.html" class="flex-item">
+                <div class="content">
+                    <h3>Lørdag</h3>
+                    <p> Vagtplan
+                        <br><small>12/8-2017</small></p>
+                </div>
+            </a>
+        </div>
+        <script type="text/javascript" src="/scripts/min/app.min.js"></script>
+        </body>
+        </html>
