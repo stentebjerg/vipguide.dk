@@ -302,7 +302,7 @@ nav {
 
 /* Index */
 
-.flex-container {
+.index.flex-container {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -313,7 +313,7 @@ nav {
     width:100%;
 }
 
-.flex-item{
+.index .flex-item{
     order: 0;
     flex: 1 1 auto;
     align-self: auto;
