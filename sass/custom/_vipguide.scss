@@ -1,6 +1,9 @@
 html {
   @extend .grey-text, .text-darken-4;
 }
+html, body {
+  height: 100%;
+}
 .preloader-wrapper {
   /*
   margin:100px auto;
@@ -16,7 +19,9 @@ html {
 }
 
 nav.pink .preloader-wrapper,
-nav.pink .refresh{
+nav.pink .refresh,
+nav.index .refresh,
+nav.index .preloader-wrapper{
   display: none!important;
 }
 
@@ -62,6 +67,16 @@ nav {
       font-size: 1.5rem;
       font-family: 'Montserrat', sans-serif;
       font-weight: 300;
+
+      a {
+        width: 64px;
+        height: 64px;
+        display: block;
+      }
+      img {
+        margin-top: 3px;
+        width: 50px;
+      }
     }
     a.button-collapse {
         padding-left: 15px;
@@ -285,3 +300,66 @@ nav {
   background: $collapsible-border-color; 
 }
 
+/* Index */
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    width:100%;
+}
+
+.flex-item{
+    order: 0;
+    flex: 1 1 auto;
+    align-self: auto;
+    width:100%;
+    padding: 0 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    @extend .white-text;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    /*
+    &:before {
+      content: ' ';
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    */
+
+    .time {      
+      font-size: 50px;
+      
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1em;
+    }
+    small {
+      
+    }
+
+    &:nth-child(1) {
+      background-image: url(../assets/img/index-torsdag.jpg);
+      
+    }
+    &:nth-child(2) {
+      background-image: url(../assets/img/index-fredag.jpg);
+    }
+    &:nth-child(3) {
+      background-image: url(../assets/img/index-loerdag.jpg);
+    }
+}

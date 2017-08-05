@@ -563,6 +563,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/index-fredag.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.29781e+06,
+		"inputAbbreviatedPath": "\/assets\/img\/index-fredag.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/index-fredag.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/index-loerdag.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.83444e+06,
+		"inputAbbreviatedPath": "\/assets\/img\/index-loerdag.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/index-loerdag.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/index-torsdag.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.23082e+06,
+		"inputAbbreviatedPath": "\/assets\/img\/index-torsdag.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/index-torsdag.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/jyllands-posten.png": {
 		"fileType": 32768,
 		"ignore": 0,
