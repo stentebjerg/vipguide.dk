@@ -129,8 +129,7 @@ function loadFromLocalStorage() {
       url: mySpreadsheet,
       query: "select D,E",
       rowTemplate: FeedTemplate,
-      fetchSize: 1,
-      // fetchSize: 9,
+      fetchSize: 9,
       callback: function (success, options, response) {
       console.log(success);
       console.log(options);
