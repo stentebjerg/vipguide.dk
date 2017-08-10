@@ -16,9 +16,9 @@
 	<meta name="theme-color" content="#ffffff">
 </head>
 <body class="white">    	
-        <nav class="indigo accent-3 index">
-    <div class="nav-wrapper">
-        <div id="logo-container" class="brand-logo center"><a href="/"><img src="/assets/img/smukfest-logo.svg"></a></div>
+        <nav class="indigo accent-3">
+            <div class="nav-wrapper">
+<div id="logo-container" class="brand-logo center"><a href="/"><img src="/assets/img/smukfest-logo.svg"></a></div>
 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="side-nav" id="mobile-demo">
                     <li class="top"><a href="/"></a></li>
@@ -80,43 +80,129 @@
     </div>            </div>
         </nav>
     </div>
-        <div class="index flex-container">
-            <a href="/onsdag.html" class="flex-item video">
-                <div class="video-container">
-                    <video playsinline autoplay muted loop>
-                        <source src="/assets/video/index-onsdag.mp4" type="video/mp4">
-                        <source src="/assets/video/index-onsdag.ogg" type="video/ogg">
-                        <source src="/assets/video/index-onsdag.webm" type="video/webm">
-                    </video>
+               
+    <div class="grey lighten-2 grey-text text-darken-2 date">
+            Torsdag 10/8-2017
+    </div>
+<script type="text/javascript" src="/scripts/min/app.min.js"></script>
+<ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
+    <script id="feed-template" type="text/x-handlebars-template">
+        <li>
+            <div class="collapsible-header collection-item avatar">
+                <i class="material-icons expand less">expand_less</i>
+                <i class="material-icons expand more">expand_more</i>
+                <i class="material-icons close">close</i>
+                <img src="http://vipguide.dk/assets/img/{{toLowerCase cells.Firma}}.png" alt="{{cells.Firma}}" class="circle">
+                <span class="title">{{cells.Firma}}</span>
+                <p>{{cells.Type}} kl. {{cells.Afgang}}
+                    <br>{{cells.Antal}} personer
+                    {{#if cells.Hold}}
+                    <br>
+                    <a href="/hold.html">Hold {{cells.Hold}}</a>{{/if}}</p>
+            </div>
+            <div class="collapsible-body">
+                <div class="flex-container">
+                        {{#if cells.Moedetidspunkt}}
+                        <div class="flex-item">
+                        <h6>Mødetidspunkt</h6>
+                        Mød kl. <u>{{cells.Moedetidspunkt}}</u>, men kom gerne før og få en 🍺
+                        </div>
+                        {{/if}}
+
+                        {{#if cells.Kontaktperson}}
+                        <div class="flex-item">
+                        <h6>Kontaktperson</h6>
+                        <p>{{cells.Kontaktperson}}{{#if cells.Mobil}}<br><a style="padding-right: 0"href="tel:{{cells.Mobil}}">{{cells.Mobil}}</a>📱{{/if}} </p>
+                        </div>
+                        {{/if}}
+
+                        {{#if cells.Kommentar}}
+                        <div class="flex-item">
+                        <h6>Kommentarer</h6>
+                        <p>{{cells.Kommentar}}</p>
+                        </div>
+                        {{/if}}
+                    
+                        {{#if cells.Afhentning}}
+                        <div class="flex-item">
+                        <h6>Afhentning</h6>
+                        <p>{{cells.Afhentning}}</p>
+                        </div>
+                        {{/if}} 
+
+                        {{#if cells.Tur}}
+                        <div class="flex-item">
+                        <h6>Tur</h6>
+                        <p>{{cells.Tur}}</p>
+                        </div>
+                        {{/if}}
+
+                        {{#if cells.Drejebog}}
+                        <div class="flex-item">
+                        <h6>Drejebog</h6>
+                        <a target="_blank" href="{{cells.Drejebog}}">Link til drejebog <i class="material-icons open-in-new">open_in_new</i></a>
+                        </div>
+                        {{/if}}
+                    </div>
                 </div>
-                <div class="content">
-                    <h3>Onsdag</h3>
-                    <p> Vagtplan
-                        <br><small>09/8-2017</small></p>
-                </div>
-            </a>
-            <a href="/torsdag.html" class="flex-item">
-                <div class="content">
-                    <h3>Torsdag</h3>
-                    <p> Vagtplan
-                        <br><small>10/8-2017</small></p>
-                </div>
-            </a>
-            <a href="/fredag.html" class="flex-item">
-                <div class="content">
-                    <h3>Fredag</h3>
-                    <p> Vagtplan
-                        <br><small>11/8-2017</small></p>
-                </div>
-            </a>
-            <a href="/loerdag.html" class="flex-item">
-                <div class="content">
-                    <h3>Lørdag</h3>
-                    <p> Vagtplan
-                        <br><small>12/8-2017</small></p>
-                </div>
-            </a>
-        </div>
-        <script type="text/javascript" src="/scripts/min/app.min.js"></script>
-        </body>
-        </html>
+            </div>
+        </li>
+    </script>
+</ul>
+<script>
+function loadFromLocalStorage() {
+    var data = localStorage.getItem('torsdag');
+    if (data == null)
+    {
+      return data;
+    }
+    
+    return JSON.parse(data);
+  }
+  
+  function refresh() {
+    localStorage.setItem('torsdag', null);
+    location.reload();
+  } 
+  
+  function setInLocalStorage(rawData) {
+    console.log('rawDAta');
+    console.log(rawData);
+    localStorage.setItem('torsdag', JSON.stringify(rawData));
+  }
+  
+  function loadDataIntoSpreadSheet() {
+    
+    var data = loadFromLocalStorage();
+    var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1CNrVQoSyKQ1j0SYOHPf0s4TPgXZvYlBZh3I2lopW73M/edit#gid=369183786';
+    // Compile the Handlebars template
+    var FeedTemplate = Handlebars.compile($('#feed-template').html());
+    // Out feed
+    $('#feed').sheetrock({
+      url: mySpreadsheet,
+      query: "select A,B,C,D,E,F,G,H,I,J,K,L,M,N",
+      rowTemplate: FeedTemplate,
+      callback: function (success, options, response) {
+      console.log(success);
+      console.log(options);
+      setInLocalStorage(response.raw);
+      console.log(response);
+        $('.preloader-wrapper').hide();
+      }
+    }, data);
+  }
+// Compares first value to the second one allowing entering IF clouse if true.
+// Otherwise entering ELSE clause if exist.
+ Handlebars.registerHelper('ifEquals', function(a, b, options) {
+  if (a === b) {
+    return options.fn(this);
+  }
+  return options.inverse(this);
+});
+Handlebars.registerHelper('toLowerCase', function(str) {
+  return str.toLowerCase();
+});$(document).ready(function() {
+  loadDataIntoSpreadSheet();
+});
+</script></body>
+</html>
