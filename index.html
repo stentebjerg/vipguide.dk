@@ -82,7 +82,7 @@
     </div>
                
     <div class="grey lighten-2 grey-text text-darken-2 date">
-            Fredag 11/8-2017
+            Fredag 12/8-2017
     </div>
 <script type="text/javascript" src="/scripts/min/app.min.js"></script>
 <ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
@@ -151,7 +151,7 @@
 </ul>
 <script>
 function loadFromLocalStorage() {
-    var data = localStorage.getItem('fredag');
+    var data = localStorage.getItem('loerdag');
     if (data == null)
     {
       return data;
@@ -161,20 +161,20 @@ function loadFromLocalStorage() {
   }
   
   function refresh() {
-    localStorage.setItem('fredag', null);
+    localStorage.setItem('loerdag', null);
     location.reload();
   } 
   
   function setInLocalStorage(rawData) {
     console.log('rawDAta');
     console.log(rawData);
-    localStorage.setItem('fredag', JSON.stringify(rawData));
+    localStorage.setItem('loerdag', JSON.stringify(rawData));
   }
   
   function loadDataIntoSpreadSheet() {
     
     var data = loadFromLocalStorage();
-    var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1CNrVQoSyKQ1j0SYOHPf0s4TPgXZvYlBZh3I2lopW73M/edit#gid=2105609213';
+    var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1CNrVQoSyKQ1j0SYOHPf0s4TPgXZvYlBZh3I2lopW73M/edit#gid=956771978';
     // Compile the Handlebars template
     var FeedTemplate = Handlebars.compile($('#feed-template').html());
     // Out feed
@@ -204,6 +204,5 @@ Handlebars.registerHelper('toLowerCase', function(str) {
 });$(document).ready(function() {
   loadDataIntoSpreadSheet();
 });
-</script>
-</body>
+</script></body>
 </html>
