@@ -2,7 +2,54 @@
    <div>
         <ul v-if="rows != null" id="feed" class="feed collapsible collection" data-collapsible="accordion">
             <li v-for="(row, index) in rows" :key="index">
-                <p>{{row.Firma}}</p>
+                <div class="collapsible-header collection-item avatar">
+                    <i class="material-icons expand less">expand_less</i>
+                    <i class="material-icons expand more">expand_more</i>
+                    <i class="material-icons close">close</i>
+                    <img :src="row.ImageUrl" :alt="row.Firma" class="circle">
+                    <span class="title">{{row.Firma}}</span>
+                    <p>{{row.Type}} kl. {{row.Afgang}}
+                        <br>{{row.Antal}} personer
+                        <br>
+                        <a v-if="row.Hold" href="/hold.html">Hold {{row.Hold}}</a></p>
+                </div>
+                <div class="collapsible-body">
+                    <div class="flex-container">
+                        <div v-if="row.Moedetidspunkt" class="flex-item">
+                        <h6>Mødetidspunkt</h6>
+                        Mød kl. <u>{{row.Moedetidspunkt}}</u>, men kom gerne før og få en 🍺
+                        </div>
+
+                        <div v-if="row.Kontaktperson" class="flex-item">
+                        <h6>Kontaktperson</h6>
+                        <p>{{row.Kontaktperson}}
+                            <span v-if="row.Mobil">
+                                <br><a style="padding-right: 0" :href="getPhoneNumberStr(row.Mobil)">{{row.Mobil}}</a>📱
+                            </span>
+                        </p>
+                        </div>
+
+                        <div v-if="row.Kommentar" class="flex-item">
+                        <h6>Kommentarer</h6>
+                        <p>{{row.Kommentar}}</p>
+                        </div>
+                    
+                        <div v-if="row.Afhentning" class="flex-item">
+                        <h6>Afhentning</h6>
+                        <p>{{row.Afhentning}}</p>
+                        </div>
+
+                        <div v-if="row.Tur" class="flex-item">
+                        <h6>Tur</h6>
+                        <p>{{row.Tur}}</p>
+                        </div>
+
+                        <div v-if="row.Drejebog" class="flex-item">
+                        <h6>Drejebog</h6>
+                        <a target="_blank" :href="row.Drejebog">Link til drejebog <i class="material-icons open-in-new">open_in_new</i></a>
+                        </div>
+                    </div>
+                </div>
             </li>
         </ul>
     </div>
