@@ -1,11 +1,10 @@
 <template>
    <div>
         <ul v-if="rows != null" id="feed" class="feed collapsible collection" data-collapsible="accordion">
-            <li v-for="(value, index) in rows" :key="index">
-                <!-- <p>{{value}}</p> -->
+            <li v-for="(row, index) in rows" :key="index">
+                <p>{{row.Firma}}</p>
             </li>
         </ul>
-        <p>More soon.</p>
     </div>
 </template>
 
@@ -36,8 +35,6 @@ export default {
         },
 
         setInLocalStorage: function(rawData) {
-            // window.console.log('rawDAta');
-            // window.console.log(rawData);
             localStorage.setItem('loerdag', JSON.stringify(rawData));
         },
 
@@ -54,9 +51,65 @@ export default {
 
         myCallback: function (success, options, response) {
             this.setInLocalStorage(response.raw);
-            this.rows = this.loadFromLocalStorage().table.rows;
+            this.rows = [1, 2, 3]; 
+            
+            var arr = this.loadFromLocalStorage().table.rows;
+            var headers = this.initHeaders(arr);
+            this.rows = this.transformRows(arr, headers);
             $('.preloader-wrapper').hide();
         },
+
+        // Helper methods for getting names of the columns
+        initHeaders: function (arr) {
+            var headersArr = arr[0].c;
+            var headers = [];
+            for (let i = 0; i < headersArr.length; i++) {
+                var emptyPropertyStr = "_col" + i;
+
+                // If property doesn't exist at all or contains null
+                if (headersArr[i]) {
+                    var headerVal = headersArr[i];
+                    headerVal = (headerVal.v) ? headerVal.v : emptyPropertyStr;
+                    headers.push(headerVal);
+                } else {
+                    headers.push(emptyPropertyStr);
+                }
+            }
+            return headers;
+        },
+
+        transformRows: function (arr, headers) {
+            var resultArr = [];
+            for (let i = 1; i < arr.length; i++) {
+                resultArr.push(this.transformRow(arr[i], headers));
+            }
+            return resultArr;
+        },
+
+        transformRow: function (row, headers) {
+            var rowArr = row.c;
+
+            var newObj = { };
+            for (let i = 0; i < rowArr.length; i++) {
+                newObj[headers[i]] = this.getPropertyValue(rowArr[i]);
+            }
+            newObj["ImageUrl"] = this.getImageUrl(newObj["Firma"]);
+            return newObj;
+        },
+
+        getPropertyValue: function (row) {
+            return (row) ? row.v : null;
+        },
+
+        getImageUrl: function (name) {
+            var str = name + "";
+            var url = "http://vipguide.dk/assets/img/" + str.toLowerCase() + ".png";
+            return url;
+        },
+
+        getPhoneNumberStr: function (phoneNumber) {
+            return "tel:" + phoneNumber;
+        }
     }
 }
 
