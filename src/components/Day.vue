@@ -52,6 +52,7 @@
                 </div>
             </li>
         </ul>
+        <div class="hidden-area"></div>
     </div>
 </template>
 

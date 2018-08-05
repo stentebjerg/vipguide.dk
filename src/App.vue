@@ -1,20 +1,19 @@
 <template>
   <div id="app">
     <SidePannel></SidePannel>
-    <Main></Main>
-    <div class="hidden-area"></div>
+    <ContentSection></ContentSection>
   </div>
 </template>
 
 <script>
 import SidePannel from './components/SidePannel.vue'
-import Main from './components/Main.vue'
+import ContentSection from './components/ContentSection.vue'
 
 export default {
   name: 'App',
   components: {
     SidePannel,
-    Main
+    ContentSection
   }
 }
 </script>
