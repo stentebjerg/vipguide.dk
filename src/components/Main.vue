@@ -1,7 +1,7 @@
 <template>
-   <div>
-        <ul v-if="rows != null" id="feed" class="feed collapsible collection" data-collapsible="accordion">
-            <li v-for="(row, index) in rows" :key="index">
+    <div>
+        <ul v-if="rows != null" id="feed" class="feed collapsible collection" data-collapsible="accordion" v-on:click="toggleDetails">
+            <li v-for="(row, index) in rows" :key="index" class="row-item">
                 <div class="collapsible-header collection-item avatar">
                     <i class="material-icons expand less">expand_less</i>
                     <i class="material-icons expand more">expand_more</i>
@@ -156,6 +156,36 @@ export default {
 
         getPhoneNumberStr: function (phoneNumber) {
             return "tel:" + phoneNumber;
+        },
+
+        // Helper methods for toggling row
+        toggleDetails: function (event) {
+            var ele = $(event.target)
+
+            var clickedAgain = ele.closest("li").hasClass("active");
+            if (clickedAgain) {
+                this.toggleSections(ele, false)
+            } else {
+                var allRows = $(".row-item");
+                this.toggleSections(allRows, false);
+                this.toggleSections(ele, true);
+            }
+        },
+
+        toggleSections: function (ele, toggle) {
+            var speed = 200;
+            var li = ele.closest("li");
+            var div = li.find("div");
+
+            if (!toggle) {
+                li.removeClass("active");
+                div.removeClass("active");
+                li.find("div.collapsible-body").slideUp(speed);
+            } else {
+                li.addClass("active");
+                div.addClass("active");
+                li.find("div.collapsible-body").slideDown(speed);
+            }
         }
     }
 }
