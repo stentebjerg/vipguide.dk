@@ -2,7 +2,7 @@
     <nav class="indigo accent-3">
         <div class="nav-wrapper">
             <div id="logo-container" class="brand-logo center"><a href="/"><img src="../assets/img/smukfest-logo.svg"></a></div>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse" v-on:click="toggleSidePannel(true)"><i class="material-icons">menu</i></a>
                 <ul class="side-nav" id="mobile-demo">
                     <li class="top"><a href="/"></a></li>
                     <li class="headline">Vagtplan</li>
@@ -19,7 +19,7 @@
                     <li><a href="https://www.facebook.com/groups/240788406061190" target="_blank"><i class="material-icons">open_in_new</i> Facebook</a></li>
                 </ul>
                 
-                <a class="refresh right" onclick="refresh()"><i class="material-icons">refresh</i></a>
+                <a class="refresh right" v-on:click="refresh"><i class="material-icons">refresh</i></a>
         
             <div class="preloader-wrapper small active">
                 <div class="spinner-layer spinner-blue">
@@ -67,13 +67,57 @@
 </template>
 
 <script>
-export default {
-    name: 'SidePannel'
+import $ from 'jquery';
 
+export default {
+    name: 'SidePannel',
+    mounted() {
+        this.toggleSidePannel(false);
+    },
+    methods: {
+        refresh: function () {
+            localStorage.setItem('loerdag', null);
+            location.reload();
+        }, 
+
+        // Methods for toggling the sideNav
+        toggleSidePannel: function (showSidenav) {
+            var e1 = '<div class="hiddendiv common"></div>';
+            var e2 = '<div class="drag-target" style="touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); left: 0px;"></div>';
+            var e3 = '<div class="drag-target" style="touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 50%; right: 0px;"></div>';
+            var e4 = '<div id="sidenav-overlay" style="opacity: 1;" class=""></div>';
+
+            var sidenav = $(".side-nav");
+            var hiddenArea = $(".hidden-area");
+            hiddenArea.empty();
+            hiddenArea.append(e1);
+
+            var body = $("body");
+            if (showSidenav) {
+                body.css({"overflow": "hidden", "width": "calc(100% - 17px)"});
+                sidenav.css({"transform": "translateX(0px)", "transition": "0.3s"});
+
+                hiddenArea.append(e3);
+                hiddenArea.append(e4);
+
+                $('#sidenav-overlay, .drag-target').on("click", { showSidenav: false }, this.toggleSidePannelCallback);
+            } else {
+                body.css({"overflow": "visible", "width": "100%"});
+                sidenav.css({"transform": "translateX(-100%)"});
+
+                hiddenArea.append(e2);
+            }
+        },
+
+        toggleSidePannelCallback: function (event) {
+            this.toggleSidePannel(event.data.showSidenav);
+        }
+    }
 }
 </script>
 
 <style lang="scss">
-    @import "../sass/app.scss";
+@import "../sass/app.scss";
+    
 </style>
 

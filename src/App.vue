@@ -2,6 +2,7 @@
   <div id="app">
     <SidePannel></SidePannel>
     <Main></Main>
+    <div class="hidden-area"></div>
   </div>
 </template>
 
