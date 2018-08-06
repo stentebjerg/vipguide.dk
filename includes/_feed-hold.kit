@@ -2,7 +2,7 @@
 <ul id="feed" class="feed collapsible collection team" data-collapsible="accordion">
 <script id="feed-template" type="text/x-handlebars-template">
     <li class="collection-item avatar">
-    <i class="circle indigo accent-3">{{cells.Holdnummer}}</i>
+    <i class="circle">{{cells.Holdnummer}}</i>
     <span class="title">{{{escape cells.Navne}}}</span>
     </li>
   </script>
@@ -35,7 +35,7 @@ function loadFromLocalStorage() {
   function loadDataIntoSpreadSheet() {
     
     var data = loadFromLocalStorage();
-    var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1CNrVQoSyKQ1j0SYOHPf0s4TPgXZvYlBZh3I2lopW73M/edit#gid=817945410';
+    var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1ZKVCbxpCk4j6w-0UPLGYlylJejQLh_pp2mQ0rDUAmC8/edit#gid=817945410';
     // Compile the Handlebars template
     var FeedTemplate = Handlebars.compile($('#feed-template').html());
     // Out feed
@@ -43,7 +43,7 @@ function loadFromLocalStorage() {
       url: mySpreadsheet,
       query: "select D,E",
       rowTemplate: FeedTemplate,
-      fetchSize: 9,
+      fetchSize: 7,
       callback: function (success, options, response) {
       console.log(success);
       console.log(options);
@@ -53,7 +53,7 @@ function loadFromLocalStorage() {
       }
     }, data);
   }
-<!-- @include /handlebars-helpers -->
+<!-- @include handlebars-helpers -->
 $(document).ready(function() {
   loadDataIntoSpreadSheet();
 });

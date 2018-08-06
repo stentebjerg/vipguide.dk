@@ -1,0 +1,62 @@
+<script type="text/javascript" src="/scripts/min/app.min.js"></script>
+<ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
+    <li class="day"><h4>Onsdag</h4></li>
+    <script id="feed-template" type="text/x-handlebars-template">
+        {{#if cells.Dag}}
+        <li class="day"><h4>{{cells.Dag}}</h4></li>
+        {{else}}
+        <li>
+            <div class="flex-container collapsible-header ">
+                <div class="circle{{#ifvalue cells.Type equals="Afhentning"}} {{toLowerCase cells.Type}}{{/ifvalue}}">{{cells.Antal}}</div>
+                <div class="left">
+                    <span class="headline">{{cells.Firma}}</span><br>
+                    <span class="info">{{cells.Type}}{{#if cells.Hold}} · {{cells.Hold}}{{/if}}</span>
+                </div>
+                <div class="number right">kl. {{cells.Tidspunkt}}</div>
+                
+            </div>
+
+
+            <div class="collapsible-body">
+
+                        {{#if cells.Mødetidspunkt}}
+                        
+                        <h6>Mødetidspunkt</h6>
+                        <p>⏱ Kl. <u>{{cells.Mødetidspunkt}}</u></p>
+                        
+                        {{/if}}
+
+                        {{#if cells.Navn}}
+                        
+                        <h6>Kontaktperson</h6>
+                        <p>📱 {{cells.Navn}}{{#if cells.Mobilnummer}} <a href="tel:{{cells.Mobilnummer}}">{{cells.Mobilnummer}}</a>{{/if}} </p>
+                        
+                        {{/if}}
+                    
+                        {{#if cells.Start}}
+                        
+                        <h6>Start lokation</h6>
+                        <p>✅ {{cells.Start}}</p>
+                        
+                        {{/if}} 
+
+                        {{#if cells.Slut}}
+                        
+                        <h6>Slut lokation</h6>
+                        <p>🎯 {{cells.Slut}}</p>
+                        
+                        {{/if}}
+
+                        {{#if cells.Bemærkninger}}
+                        
+                        <h6>Bemærkninger</h6>
+                        <p>⁉️ {{cells.Bemærkninger}}</p>
+                        
+                        {{/if}}
+
+                </div>
+            </div>
+        </li>
+        {{/if}}
+    </script>
+</ul>

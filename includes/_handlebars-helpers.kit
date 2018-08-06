@@ -9,3 +9,17 @@
 Handlebars.registerHelper('toLowerCase', function(str) {
   return str.toLowerCase();
 });
+Handlebars.registerHelper('substr', function(length, context, options) {
+ if ( context.length > length ) {
+  return context.substring(0, length);
+ } else {
+  return context;
+ }
+});
+Handlebars.registerHelper("ifvalue", function(conditional, options) {
+    if (conditional == options.hash.equals) {
+        return options.fn(this);
+    } else {
+        return options.inverse(this);
+    }
+});

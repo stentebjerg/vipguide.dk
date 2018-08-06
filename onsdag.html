@@ -2,21 +2,24 @@
 <html>
 <meta charset="UTF-8">
 <meta name="robots" content="noindex, nofollow">
-<title>Vipguide 2017</title>
+<title>Vipguide 2018</title>
 <head>
 	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700|Montserrat:300,400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="/css/app.min.css" media="screen,projection" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
 	<link rel="manifest" href="/assets/img/manifest.json">
 	<link rel="mask-icon" href="/assets/img/safari-pinned-tab.svg" color="#5bbad5">
 	<meta name="theme-color" content="#ffffff">
+	-->
 </head>
 <body class="white">    	
-        <nav class="indigo accent-3">
+        
+<nav class="indigo accent-3">
             <div class="nav-wrapper">
 <div id="logo-container" class="brand-logo center"><a href="/"><img src="/assets/img/smukfest-logo.svg"></a></div>
 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -36,48 +39,8 @@
                     <li><a href="https://www.facebook.com/groups/240788406061190" target="_blank"><i class="material-icons">open_in_new</i> Facebook</a></li>
                 </ul>
                 
-                <a class="refresh right" onclick="refresh()"><i class="material-icons">refresh</i></a>
-<div class="preloader-wrapper small active">
-      <div class="spinner-layer spinner-blue">
-        <div class="circle-clipper left">
-          <div class="circle"></div>
-        </div><div class="gap-patch">
-          <div class="circle"></div>
-        </div><div class="circle-clipper right">
-          <div class="circle"></div>
-        </div>
-      </div>
-
-      <div class="spinner-layer spinner-red">
-        <div class="circle-clipper left">
-          <div class="circle"></div>
-        </div><div class="gap-patch">
-          <div class="circle"></div>
-        </div><div class="circle-clipper right">
-          <div class="circle"></div>
-        </div>
-      </div>
-
-      <div class="spinner-layer spinner-yellow">
-        <div class="circle-clipper left">
-          <div class="circle"></div>
-        </div><div class="gap-patch">
-          <div class="circle"></div>
-        </div><div class="circle-clipper right">
-          <div class="circle"></div>
-        </div>
-      </div>
-
-      <div class="spinner-layer spinner-green">
-        <div class="circle-clipper left">
-          <div class="circle"></div>
-        </div><div class="gap-patch">
-          <div class="circle"></div>
-        </div><div class="circle-clipper right">
-          <div class="circle"></div>
-        </div>
-      </div>
-    </div>            </div>
+                <!-- include preloader -->
+            </div>
         </nav>
     </div>
                
@@ -87,71 +50,25 @@
 <script type="text/javascript" src="/scripts/min/app.min.js"></script>
 <ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
     <script id="feed-template" type="text/x-handlebars-template">
+        <li><h4>{{cells.Dag}}</h4></li>
         <li>
-            <div class="collapsible-header collection-item avatar">
-                <i class="material-icons expand less">expand_less</i>
-                <i class="material-icons expand more">expand_more</i>
-                <i class="material-icons close">close</i>
-                <img src="http://vipguide.dk/assets/img/{{toLowerCase cells.Firma}}.png" alt="{{cells.Firma}}" class="circle">
+            <div class="collection-item">
+                
                 <span class="title">{{cells.Firma}}</span>
-                <p>{{cells.Type}} kl. {{cells.Afgang}}
+                <p>{{cells.Type}} kl. 
+                    {{#if cells.Tidspunkt-a}}}{{cells.Tidspunkt-a}}{{/if}}
+                    {{#if cells.Tidspunkt-g}}}{{cells.Tidspunkt-g}}{{/if}}
                     <br>{{cells.Antal}} personer
                     {{#if cells.Hold}}
                     <br>
                     <a href="/hold.html">Hold {{cells.Hold}}</a>{{/if}}</p>
-            </div>
-            <div class="collapsible-body">
-                <div class="flex-container">
-                        {{#if cells.Moedetidspunkt}}
-                        <div class="flex-item">
-                        <h6>Mødetidspunkt</h6>
-                        Mød kl. <u>{{cells.Moedetidspunkt}}</u>, men kom gerne før og få en 🍺
-                        </div>
-                        {{/if}}
-
-                        {{#if cells.Kontaktperson}}
-                        <div class="flex-item">
-                        <h6>Kontaktperson</h6>
-                        <p>{{cells.Kontaktperson}}{{#if cells.Mobil}}<br><a style="padding-right: 0"href="tel:{{cells.Mobil}}">{{cells.Mobil}}</a>📱{{/if}} </p>
-                        </div>
-                        {{/if}}
-
-                        {{#if cells.Kommentar}}
-                        <div class="flex-item">
-                        <h6>Kommentarer</h6>
-                        <p>{{cells.Kommentar}}</p>
-                        </div>
-                        {{/if}}
-                    
-                        {{#if cells.Afhentning}}
-                        <div class="flex-item">
-                        <h6>Afhentning</h6>
-                        <p>{{cells.Afhentning}}</p>
-                        </div>
-                        {{/if}} 
-
-                        {{#if cells.Tur}}
-                        <div class="flex-item">
-                        <h6>Tur</h6>
-                        <p>{{cells.Tur}}</p>
-                        </div>
-                        {{/if}}
-
-                        {{#if cells.Drejebog}}
-                        <div class="flex-item">
-                        <h6>Drejebog</h6>
-                        <a target="_blank" href="{{cells.Drejebog}}">Link til drejebog <i class="material-icons open-in-new">open_in_new</i></a>
-                        </div>
-                        {{/if}}
-                    </div>
-                </div>
             </div>
         </li>
     </script>
 </ul>
 <script>
 function loadFromLocalStorage() {
-    var data = localStorage.getItem('onsdag');
+    var data = localStorage.getItem('feed');
     if (data == null)
     {
       return data;
@@ -161,26 +78,26 @@ function loadFromLocalStorage() {
   }
   
   function refresh() {
-    localStorage.setItem('onsdag', null);
+    localStorage.setItem('feed', null);
     location.reload();
   } 
   
   function setInLocalStorage(rawData) {
     console.log('rawDAta');
     console.log(rawData);
-    localStorage.setItem('onsdag', JSON.stringify(rawData));
+    localStorage.setItem('feed', JSON.stringify(rawData));
   }
   
   function loadDataIntoSpreadSheet() {
     
     var data = loadFromLocalStorage();
-    var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1CNrVQoSyKQ1j0SYOHPf0s4TPgXZvYlBZh3I2lopW73M/edit#gid=491341087';
+    var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1nrMzACt57w46QNmnWVkz3CDb3ovyLGbi-JTrnH1G2bQ/edit#gid=1569505630';
     // Compile the Handlebars template
     var FeedTemplate = Handlebars.compile($('#feed-template').html());
     // Out feed
     $('#feed').sheetrock({
       url: mySpreadsheet,
-      query: "select A,B,C,D,E,F,G,H,I,J,K,L,M,N",
+      query: "select A,B,C,D,E,F,G,H,I,J,K,L,M,N,O",
       rowTemplate: FeedTemplate,
       callback: function (success, options, response) {
       console.log(success);
@@ -201,8 +118,24 @@ function loadFromLocalStorage() {
 });
 Handlebars.registerHelper('toLowerCase', function(str) {
   return str.toLowerCase();
-});$(document).ready(function() {
+});
+Handlebars.registerHelper('substr', function(length, context, options) {
+ if ( context.length > length ) {
+  return context.substring(0, length);
+ } else {
+  return context;
+ }
+});
+Handlebars.registerHelper("ifvalue", function(conditional, options) {
+    if (conditional == options.hash.equals) {
+        return options.fn(this);
+    } else {
+        return options.inverse(this);
+    }
+});
+$(document).ready(function() {
   loadDataIntoSpreadSheet();
 });
-</script></body>
+</script>
+</body>
 </html>

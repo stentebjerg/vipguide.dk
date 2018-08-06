@@ -1,12 +1,10 @@
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="/scripts/min/app.min.js"></script>
 <ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
     <script id="feed-template" type="text/x-handlebars-template">
         <li>
             <div class="collapsible-header collection-item avatar">
-                <i class="material-icons expand less">expand_less</i>
-                <i class="material-icons expand more">expand_more</i>
-                <i class="material-icons close">close</i>
-                <img src="http://vipguide.dk/assets/img/{{toLowerCase cells.Firma}}.png" alt="{{cells.Firma}}" class="circle">
+                
                 <span class="title">{{cells.Firma}}</span>
                 <p>{{cells.Type}} kl. {{cells.Afgang}}
                     <br>{{cells.Antal}} personer

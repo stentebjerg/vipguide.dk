@@ -1,0 +1,19 @@
+<script type="text/javascript" src="/scripts/min/app.min.js"></script>
+<ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
+    <script id="feed-template" type="text/x-handlebars-template">
+        <li><h4>{{cells.Dag}}</h4></li>
+        <li>
+            <div class="collection-item">
+                
+                <span class="title">{{cells.Firma}}</span>
+                <p>{{cells.Type}} kl. 
+                    {{#if cells.Tidspunkt-a}}}{{cells.Tidspunkt-a}}{{/if}}
+                    {{#if cells.Tidspunkt-g}}}{{cells.Tidspunkt-g}}{{/if}}
+                    <br>{{cells.Antal}} personer
+                    {{#if cells.Hold}}
+                    <br>
+                    <a href="/hold.html">Hold {{cells.Hold}}</a>{{/if}}</p>
+            </div>
+        </li>
+    </script>
+</ul>

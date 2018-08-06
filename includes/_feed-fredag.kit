@@ -1,4 +1,4 @@
-<!-- @include /vagtplan -->
+<!-- @include vagtplan -->
 <script>
 function loadFromLocalStorage() {
     var data = localStorage.getItem('fredag');
@@ -41,7 +41,7 @@ function loadFromLocalStorage() {
       }
     }, data);
   }
-<!-- @include /handlebars-helpers -->
+<!-- @include handlebars-helpers -->
 $(document).ready(function() {
   loadDataIntoSpreadSheet();
 });

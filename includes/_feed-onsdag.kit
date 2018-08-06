@@ -1,7 +1,7 @@
-<!-- @include /vagtplan -->
+<!-- @include vagtplan-copy -->
 <script>
 function loadFromLocalStorage() {
-    var data = localStorage.getItem('onsdag');
+    var data = localStorage.getItem('feed');
     if (data == null)
     {
       return data;
@@ -11,26 +11,26 @@ function loadFromLocalStorage() {
   }
   
   function refresh() {
-    localStorage.setItem('onsdag', null);
+    localStorage.setItem('feed', null);
     location.reload();
   } 
   
   function setInLocalStorage(rawData) {
     console.log('rawDAta');
     console.log(rawData);
-    localStorage.setItem('onsdag', JSON.stringify(rawData));
+    localStorage.setItem('feed', JSON.stringify(rawData));
   }
   
   function loadDataIntoSpreadSheet() {
     
     var data = loadFromLocalStorage();
-    var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1CNrVQoSyKQ1j0SYOHPf0s4TPgXZvYlBZh3I2lopW73M/edit#gid=491341087';
+    var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1nrMzACt57w46QNmnWVkz3CDb3ovyLGbi-JTrnH1G2bQ/edit#gid=1569505630';
     // Compile the Handlebars template
     var FeedTemplate = Handlebars.compile($('#feed-template').html());
     // Out feed
     $('#feed').sheetrock({
       url: mySpreadsheet,
-      query: "select A,B,C,D,E,F,G,H,I,J,K,L,M,N",
+      query: "select A,B,C,D,E,F,G,H,I,J,K,L,M,N,O",
       rowTemplate: FeedTemplate,
       callback: function (success, options, response) {
       console.log(success);
@@ -41,7 +41,7 @@ function loadFromLocalStorage() {
       }
     }, data);
   }
-<!-- @include /handlebars-helpers -->
+<!-- @include handlebars-helpers -->
 $(document).ready(function() {
   loadDataIntoSpreadSheet();
 });

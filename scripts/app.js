@@ -4,7 +4,7 @@ $(document).ready(function() {
     /* Add active class to nav */
     $(function() {
         if ((location.pathname.split("/")[1]) !== "") {
-            $('.nav-wrapper a[href^="/' + location.pathname.split("/")[1] + '"]').parent().addClass('active');
+            $('.nav-wrapper a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
         }
     });
 });

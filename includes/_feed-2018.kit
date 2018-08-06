@@ -1,7 +1,7 @@
-<!-- @include /vagtplan -->
+<!-- @include vagtplan-2018 -->
 <script>
 function loadFromLocalStorage() {
-    var data = localStorage.getItem('loerdag');
+    var data = localStorage.getItem('app');
     if (data == null)
     {
       return data;
@@ -11,20 +11,20 @@ function loadFromLocalStorage() {
   }
   
   function refresh() {
-    localStorage.setItem('loerdag', null);
+    localStorage.setItem('app', null);
     location.reload();
   } 
   
   function setInLocalStorage(rawData) {
     console.log('rawDAta');
     console.log(rawData);
-    localStorage.setItem('loerdag', JSON.stringify(rawData));
+    localStorage.setItem('app', JSON.stringify(rawData));
   }
   
   function loadDataIntoSpreadSheet() {
     
     var data = loadFromLocalStorage();
-    var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1CNrVQoSyKQ1j0SYOHPf0s4TPgXZvYlBZh3I2lopW73M/edit#gid=956771978';
+    var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1B5hOGKYn0ivTDLw8kBPIehg1D26wdvwUqZ5BZTN15ps/edit#gid=1569505630';
     // Compile the Handlebars template
     var FeedTemplate = Handlebars.compile($('#feed-template').html());
     // Out feed
@@ -36,12 +36,12 @@ function loadFromLocalStorage() {
       console.log(success);
       console.log(options);
       setInLocalStorage(response.raw);
-      console.log(response);
+      //console.log(response);
         $('.preloader-wrapper').hide();
       }
     }, data);
   }
-<!-- @include /handlebars-helpers -->
+<!-- @include handlebars-helpers -->
 $(document).ready(function() {
   loadDataIntoSpreadSheet();
 });

@@ -4,170 +4,106 @@
 		"selected_items":
 		[
 			[
-				"iniln",
-				"inline-block"
-			],
-			[
-				"padd",
-				"padding-left"
-			],
-			[
-				"trans",
-				"transform"
+				"d",
+				"display\tproperty"
 			],
 			[
 				"mar",
-				"margin-left"
+				"margin-top\tproperty"
 			],
 			[
-				"c",
-				"cover"
+				"font-si",
+				"font-size\tproperty"
 			],
 			[
-				"back",
-				"background-size"
+				"pa",
+				"placeholder\tAttr"
 			],
 			[
-				"pad",
-				"padding-bottom"
+				"providesSite",
+				"providesSitefinity"
 			],
 			[
-				"Af",
-				"Afhentning"
+				"providesSi",
+				"providesSitefinity"
 			],
 			[
-				"col",
-				"color"
-			],
-			[
-				"ma",
-				"margin"
-			],
-			[
-				"font",
-				"font-size"
-			],
-			[
-				"inline",
-				"inline-block"
-			],
-			[
-				"out",
-				"output"
+				"data-filter-platform-site",
+				"data-filter-platform-sitefinity"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/sass/app.scss",
+			"file": "sass/custom/_vipguide.scss",
 			"settings":
 			{
-				"buffer_size": 1150,
+				"buffer_size": 8294,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/sass/custom/_vipguide.scss",
+			"file": "index.kit",
 			"settings":
 			{
-				"buffer_size": 3889,
+				"buffer_size": 301,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_head.kit",
+			"file": "hold.kit",
 			"settings":
 			{
-				"buffer_size": 2098,
+				"buffer_size": 316,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_vagtplan.kit",
+			"file": "telefonliste.kit",
 			"settings":
 			{
-				"buffer_size": 1497,
+				"buffer_size": 319,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_feed-telefonliste.kit",
+			"file": "facts.kit",
 			"settings":
 			{
-				"buffer_size": 1201,
+				"buffer_size": 4411,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_feed-hold.kit",
+			"file": "includes/_feed-loerdag.kit",
 			"settings":
 			{
-				"buffer_size": 1033,
+				"buffer_size": 1328,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/facts.kit",
+			"file": "includes/_vagtplan-2018.kit",
 			"settings":
 			{
-				"buffer_size": 2577,
+				"buffer_size": 2674,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/fredag.kit",
+			"file": "includes/_handlebars-helpers.kit",
 			"settings":
 			{
-				"buffer_size": 398,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/hold.kit",
-			"settings":
-			{
-				"buffer_size": 271,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/index.kit",
-			"settings":
-			{
-				"buffer_size": 398,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/loerdag.kit",
-			"settings":
-			{
-				"buffer_size": 416,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/telefonliste.kit",
-			"settings":
-			{
-				"buffer_size": 293,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/torsdag.kit",
-			"settings":
-			{
-				"buffer_size": 417,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/scripts/app.js",
-			"settings":
-			{
-				"buffer_size": 337,
+				"buffer_size": 753,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -179,27 +115,26 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 0.0,
 		"last_filter": "",
 		"selected_items":
 		[
 			[
-				"install",
+				"Package Control: instal",
 				"Package Control: Install Package"
 			],
 			[
-				"package",
-				"Preferences: Browse Packages"
+				"install",
+				"Package Control: Install Package"
 			]
 		],
-		"width": 449.0
+		"width": 0.0
 	},
 	"console":
 	{
-		"height": 126.0,
+		"height": 0.0,
 		"history":
 		[
-			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
 		]
 	},
 	"distraction_free":
@@ -213,50 +148,54 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/assets",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/assets/img/icons",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/css",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/sass",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/sass/custom",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/scripts",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/scripts/min"
+		"/Users/andersstentebjerg/Documents/vipguide.dk",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/includes",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/sass",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/sass/custom",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/scripts",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/scripts/min"
 	],
 	"file_history":
 	[
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_foot.kit",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_preloader.kit",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/index.html",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/sass/custom/_vipguide.scss",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/README.md",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_feed-torsdag.kit",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_head.kit",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_feed-telefonliste.kit",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/telefonliste.kit",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/torsdag.kit",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/index.kit",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_feed-hold.kit",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/hold.html",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/hold.kit",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/assets/img/vipguide-logo-2016.svg",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/sass/components/_color.scss",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_feed-onsdag.kit",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_nav.kit",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/index-archieve.html",
-		"/Users/andersstentebjerg/Desktop/ucommerce",
-		"/Users/andersstentebjerg/Documents/Github/README.md",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/sass/materialize.scss",
-		"/Users/andersstentebjerg/Documents/Github/vipguide.dk/js/waves.js",
-		"/Users/andersstentebjerg/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+		"/Users/andersstentebjerg/Documents/vipguide.dk/includes/_handlebars-helpers.kit",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/includes/_feed-loerdag.kit",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/hold.kit",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/index.html",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/includes/_feed-telefonliste.kit",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/includes/_vagtplan.kit",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/includes/_head.kit",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/scripts/app.js",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/includes/_nav-bottom.kit",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/telefonliste.kit",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/includes/_nav-top.kit",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/scripts/min/app.min.js",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/includes/_feed-torsdag.kit",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/includes/_feed-onsdag.kit",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/includes/_vagtplan-copy.kit",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/includes/_nav.kit",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/index.kit",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/sass/components/_typography.scss",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/includes/_feed-hold.kit",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/sass/components/forms/_input-fields.scss",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/sass/custom/_vipguide.scss",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/includes/_feed-fredag.kit",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/includes/_feed.kit",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/sass/components/_color.scss",
+		"/Users/andersstentebjerg/Documents/vipguide.dk/vipguide.sublime-project",
+		"/Users/andersstentebjerg/Downloads/Crayfish.1.0.1.18073.nupkg",
+		"/Users/andersstentebjerg/Documents/ucommerce.net/src/UCWebsiteV2/css/screen.css",
+		"/Users/andersstentebjerg/Library/Application Support/Sublime Text 3/Packages/User/SFTP.sublime-settings",
+		"/Users/andersstentebjerg/Desktop/cg18-logo.svg",
+		"/Users/andersstentebjerg/Dropbox/Apps/Transmit/Favorites/Favorites.xml",
+		"/Users/andersstentebjerg/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings"
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 101.0,
 		"where_history":
 		[
 		]
@@ -266,52 +205,46 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"hold",
-			"avatar",
-			"i",
-			"hold",
-			"border-bottom",
-			".collection-item",
-			".collection .collection-item",
-			"color",
-			"avatar",
-			"date",
-			"nav .brand-logo",
-			"HRTemplate",
-			"#000",
-			"active",
-			"Onsdag",
-			"body",
+			"conso",
+			"60",
+			"</div>",
+			"<div class=\"flex-item\">",
 			"Hold",
-			"\"",
-			"Onsdag",
-			"Helle Katrine Pind",
-			"Skriv mail",
-			"active",
-			"grey",
-			"red",
-			" collection-item avatar",
-			" collection-item ",
-			"collection",
-			"papersheet",
-			"favicon",
-			"badges",
-			"fff",
-			"Onsdag",
-			"\"day\"",
-			".\"",
-			".",
-			"Onsdag",
-			"ol",
-			"figcaption",
-			"shouldStopExecution",
-			"/d",
-			"</span> -"
+			".js",
+			"<li>",
+			"/",
+			"class=\"active\"",
+			"nav-wrapper",
+			"nav",
+			")",
+			") .cirl ",
+			":nth",
+			"li",
+			"<span class=\"info\">Afhentning 13:00 · Mødetid 12:30 · Hold 3</span>",
+			"<div class=\"left\">",
+			"circ",
+			"h2",
+			"nav",
+			"if",
+			"Tidspunkt-g",
+			"h6",
+			"onsdag",
+			"colla",
+			"display",
+			"feed-template-2",
+			"feed-2",
+			"feed-template-2",
+			"feed-template",
+			"font",
+			"onsdag",
+			"nav",
+			"Firma",
+			"loerdag"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
 		],
@@ -324,87 +257,34 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/sass/app.scss",
+					"file": "sass/custom/_vipguide.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1150,
+						"buffer_size": 8294,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								209,
-								209
+								166,
+								166
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/sass/custom/_vipguide.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3889,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3887,
-								3887
-							]
-						],
-						"settings":
-						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/CSS/CSS.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1964.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_head.kit",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2098,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								130,
-								130
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -414,27 +294,28 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_vagtplan.kit",
+					"buffer": 1,
+					"file": "index.kit",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1497,
+						"buffer_size": 301,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								375,
-								375
+								73,
+								58
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -444,26 +325,91 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_feed-telefonliste.kit",
+					"buffer": 2,
+					"file": "hold.kit",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1201,
+						"buffer_size": 316,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								99,
-								99
+								208,
+								128
 							]
 						],
 						"settings":
 						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "telefonliste.kit",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 319,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								319,
+								319
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "facts.kit",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4411,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4377,
+								4377
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -475,23 +421,26 @@
 				},
 				{
 					"buffer": 5,
-					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/includes/_feed-hold.kit",
+					"file": "includes/_feed-loerdag.kit",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1033,
+						"buffer_size": 1328,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								153,
-								153
+								1060,
+								1065
 							]
 						],
 						"settings":
 						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
@@ -500,198 +449,64 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/facts.kit",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2577,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2577,
-								2577
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 6,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 338.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 6,
 					"type": "text"
 				},
 				{
+					"buffer": 6,
+					"file": "includes/_vagtplan-2018.kit",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2674,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								306,
+								306
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
 					"buffer": 7,
-					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/fredag.kit",
+					"file": "includes/_handlebars-helpers.kit",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 398,
+						"buffer_size": 753,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								397,
-								397
+								301,
+								312
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/hold.kit",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 271,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								270,
-								270
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/index.kit",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 398,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								397,
-								397
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/loerdag.kit",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 416,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								415,
-								415
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/telefonliste.kit",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 293,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								293,
-								293
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/torsdag.kit",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 417,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								416,
-								416
-							]
-						],
-						"settings":
-						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
@@ -700,41 +515,17 @@
 					},
 					"stack_index": 7,
 					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "/Users/andersstentebjerg/Documents/Github/vipguide.dk/scripts/app.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 337,
-						"regions":
-						{
-						},
-						"selection":
-						[
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 26.0
 	},
 	"input":
 	{
-		"height": 31.0
+		"height": 38.0
 	},
 	"layout":
 	{
@@ -763,11 +554,15 @@
 	{
 		"height": 0.0
 	},
+	"output.sftp":
+	{
+		"height": 120.0
+	},
 	"pinned_build_system": "",
 	"project": "vipguide.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -805,7 +600,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 236.0,
+	"side_bar_width": 231.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
