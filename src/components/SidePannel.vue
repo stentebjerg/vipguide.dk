@@ -6,10 +6,10 @@
                 <ul class="side-nav" id="mobile-demo">
                     <li class="top"><a href="/"></a></li>
                     <li class="headline">Vagtplan</li>
-                    <li><a href="/onsdag.html"><i class="material-icons time">access_time</i> Onsdag</a></li>
-                    <li><a href="/torsdag.html"><i class="material-icons time">access_time</i> Torsdag</a></li>
-                    <li><a href="/fredag.html"><i class="material-icons time">access_time</i> Fredag</a></li>
-                    <li><a href="/loerdag.html"><i class="material-icons time">access_time</i> Lørdag</a></li>
+                    <router-link class="col" to="/onsdag.html"  exact @click.native="loadPage"><i class="material-icons time">access_time</i>Onsdag</router-link>
+                    <router-link class="col" to="/torsdag.html" exact @click.native="loadPage"><i class="material-icons time">access_time</i>Torsdag</router-link>
+                    <router-link class="col" to="/fredag.html"  exact @click.native="loadPage"><i class="material-icons time">access_time</i>Fredag</router-link>
+                    <router-link class="col" to="/loerdag.html" exact @click.native="loadPage"><i class="material-icons time">access_time</i>Lørdag</router-link>
                     <li class="divider"></li>
                     <li class="headline">Information</li>
                     <li><a href="/telefonliste.html"><i class="material-icons phone">contact_phone</i> Telefonliste</a></li>
@@ -68,15 +68,21 @@
 
 <script>
 import $ from 'jquery';
+import PagesStore from '../stores/PagesStore.js'
 
 export default {
     name: 'SidePannel',
+    data() {
+        return { 
+            PS: PagesStore.data
+        };
+    },
     mounted() {
         this.toggleSidePannel(false);
     },
     methods: {
         refresh: function () {
-            localStorage.setItem('loerdag', null);
+            localStorage.setItem(this.PS.currentPage, null);
             location.reload();
         }, 
 
@@ -111,6 +117,12 @@ export default {
 
         toggleSidePannelCallback: function (event) {
             this.toggleSidePannel(event.data.showSidenav);
+        },
+
+        loadPage: function () {
+            var pageName = this.$router.resolve(location).location.path;
+            this.PS.currentPage = pageName.substring(1, pageName.indexOf('.'));
+            this.toggleSidePannel(false);
         }
     }
 }

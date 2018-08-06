@@ -1,9 +1,6 @@
 <template>
     <div>
-        <div class="grey lighten-2 grey-text text-darken-2 date">
-            Lørdag 12/8-2017
-        </div>
-        <Day></Day>
+      <Day></Day>
     </div>
 </template>
 
@@ -14,7 +11,7 @@ export default {
   name: 'App',
   components: {
     Day
-  }
+  },
 }
 </script>
 

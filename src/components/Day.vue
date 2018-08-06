@@ -1,5 +1,8 @@
 <template>
     <div>
+        <div class="grey lighten-2 grey-text text-darken-2 date">
+            {{this.title}}
+        </div>
         <ul v-if="rows != null" id="feed" class="feed collapsible collection" data-collapsible="accordion" v-on:click="toggleDetails">
             <li v-for="(row, index) in rows" :key="index" class="row-item">
                 <div class="collapsible-header collection-item avatar">
@@ -59,49 +62,58 @@
 <script>
 import $ from 'jquery';
 import sheetrock from 'sheetrock';
+import PagesStore from '../stores/PagesStore.js'
 
 export default {
     name: 'Main',
     data() {
-        var rows = null;
-        return { rows };
+        return { 
+            rows: null, 
+            title: "",
+            PS: PagesStore.data
+        };
     },
-
-    mounted () {
-        this.loadDataIntoSpreadSheet();
+    watch: {
+        "PS.currentPage": function() {
+            this.toggleDetails(null);
+            this.loadDataFromSpreadSheet() 
+        }
+    },
+    mounted() {
+        this.loadDataFromSpreadSheet();
     },
     methods: {
-        loadFromLocalStorage: function() {
-            var data = localStorage.getItem('loerdag');
+        loadFromLocalStorage: function(pageName) {
+            var data = localStorage.getItem(pageName);
             if (data == null) { return data; }
             return JSON.parse(data);
         },
 
         refresh: function() {
-            localStorage.setItem('loerdag', null);
+            localStorage.setItem(this.PS.currentPage, null);
             location.reload();
         },
 
         setInLocalStorage: function(rawData) {
-            localStorage.setItem('loerdag', JSON.stringify(rawData));
+            localStorage.setItem(this.PS.currentPage, JSON.stringify(rawData));
         },
 
-        loadDataIntoSpreadSheet: function () {
-            var data = this.loadFromLocalStorage();
-            var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1CNrVQoSyKQ1j0SYOHPf0s4TPgXZvYlBZh3I2lopW73M/edit#gid=956771978';
+        loadDataFromSpreadSheet: function () {
+            var pages = JSON.parse(localStorage.getItem("pages"));
+            this.title = pages[this.PS.currentPage].title;
+            var mySpreadsheet = pages[this.PS.currentPage].url;
+            var data = this.loadFromLocalStorage(this.PS.currentPage);
             // Out feed
             sheetrock({
-            url: mySpreadsheet,
-            query: "select A,B,C,D,E,F,G,H,I,J,K,L,M,N",
-            callback: this.myCallback
+                url: mySpreadsheet,
+                query: "select A,B,C,D,E,F,G,H,I,J,K,L,M,N",
+                callback: this.myCallback
             }, data);
         },
 
         myCallback: function (success, options, response) {
             this.setInLocalStorage(response.raw);
-            this.rows = [1, 2, 3]; 
-            
-            var arr = this.loadFromLocalStorage().table.rows;
+            var arr = this.loadFromLocalStorage(this.PS.currentPage).table.rows;
             var headers = this.initHeaders(arr);
             this.rows = this.transformRows(arr, headers);
             $('.preloader-wrapper').hide();
@@ -161,6 +173,12 @@ export default {
 
         // Helper methods for toggling row
         toggleDetails: function (event) {
+            // Cheating my way around to collapse all the row items after "redirecting" to another page
+            if (!event) {
+                this.toggleSections($(".row-item"), false);
+                return;
+            }
+
             var ele = $(event.target)
 
             var clickedAgain = ele.closest("li").hasClass("active");
