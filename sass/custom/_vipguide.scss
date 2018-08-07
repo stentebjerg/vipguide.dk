@@ -35,6 +35,7 @@ nav .title {
     margin: 40px 0;
     min-height: auto!important;
     
+    
     .circle {
     background: #5171f8;
     
@@ -44,15 +45,17 @@ nav .title {
 
     &.day {
     margin: 40px 0 20px 0;
+    
     }
     }
     
-
-  
-
   }
 
 
+}
+
+.feed li.day {
+    display: none;
 }
 
 .flex-container {
@@ -121,17 +124,10 @@ html, body {
   height: 100%;
 }
 .preloader-wrapper {
-  /*
-  margin:100px auto;
-  display: block;
-  */
-  background: #3d5afe;
-  position: absolute;
-  width: 26px!important;
-  height: 26px!important;
-  right: 16px;
-  top: 16px;
-  z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -24px 0 0 -24px;
 }
 
 nav.pink .preloader-wrapper,

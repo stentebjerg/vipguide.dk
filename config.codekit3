@@ -2287,7 +2287,7 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "\/scripts\/min\/materialize.min.min.js",
 		"oF": 0,
 		"sC": 1,
@@ -2376,12 +2376,6 @@
 			"followForSyntaxChecking": 1,
 			"linkedFileAbbreviatedPath": "\/scripts\/handlebars.min.js",
 			"position": 2,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/scripts\/materialize.min.js",
-			"position": 3,
 			"type": 0
 			}
 		]

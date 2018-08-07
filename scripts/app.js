@@ -1,6 +1,6 @@
 $(document).ready(function() {
     /* Slide navigation */
-    $(".button-collapse").sideNav();
+    // $(".button-collapse").sideNav();
     /* Add active class to nav */
     $(function() {
         if ((location.pathname.split("/")[1]) !== "") {

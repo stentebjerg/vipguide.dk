@@ -21,9 +21,52 @@
         
 <nav class="pink accent-5 nav-wrapper top">
 	<div class="title">Vagtplan</div>
-	<a class="refresh" onclick="refresh()"><i class="material-icons">refresh</i></a>
+	<!--a class="refresh" onclick="refresh()"><i class="material-icons">refresh</i></a-->
 </nav>   
+
     <script type="text/javascript" src="/scripts/min/app.min.js"></script>
+    <!--a class="refresh right" onclick="refresh()"><i class="material-icons">refresh</i></a-->
+    <div class="preloader-wrapper active">
+          <div class="spinner-layer spinner-blue">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div><div class="gap-patch">
+              <div class="circle"></div>
+            </div><div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+    
+          <div class="spinner-layer spinner-red">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div><div class="gap-patch">
+              <div class="circle"></div>
+            </div><div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+    
+          <div class="spinner-layer spinner-yellow">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div><div class="gap-patch">
+              <div class="circle"></div>
+            </div><div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+    
+          <div class="spinner-layer spinner-green">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div><div class="gap-patch">
+              <div class="circle"></div>
+            </div><div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
     <ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
         <li class="day"><h4>Onsdag</h4></li>
         <script id="feed-template" type="text/x-handlebars-template">
@@ -85,48 +128,9 @@
             {{/if}}
         </script>
     </ul>
+    
+    
     <script>
-    function loadFromLocalStorage() {
-        var data = localStorage.getItem('app');
-        if (data == null)
-        {
-          return data;
-        }
-        
-        return JSON.parse(data);
-      }
-      
-      function refresh() {
-        localStorage.setItem('app', null);
-        location.reload();
-      } 
-      
-      function setInLocalStorage(rawData) {
-        console.log('rawDAta');
-        console.log(rawData);
-        localStorage.setItem('app', JSON.stringify(rawData));
-      }
-      
-      function loadDataIntoSpreadSheet() {
-        
-        var data = loadFromLocalStorage();
-        var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1B5hOGKYn0ivTDLw8kBPIehg1D26wdvwUqZ5BZTN15ps/edit#gid=1569505630';
-        // Compile the Handlebars template
-        var FeedTemplate = Handlebars.compile($('#feed-template').html());
-        // Out feed
-        $('#feed').sheetrock({
-          url: mySpreadsheet,
-          query: "select A,B,C,D,E,F,G,H,I,J,K,L,M,N",
-          rowTemplate: FeedTemplate,
-          callback: function (success, options, response) {
-          console.log(success);
-          console.log(options);
-          setInLocalStorage(response.raw);
-          //console.log(response);
-            $('.preloader-wrapper').hide();
-          }
-        }, data);
-      }
     // Compares first value to the second one allowing entering IF clouse if true.
     // Otherwise entering ELSE clause if exist.
      Handlebars.registerHelper('ifEquals', function(a, b, options) {
@@ -153,7 +157,19 @@
         }
     });
     $(document).ready(function() {
-      loadDataIntoSpreadSheet();
+      var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1B5hOGKYn0ivTDLw8kBPIehg1D26wdvwUqZ5BZTN15ps/edit#gid=1973710197';
+      // Compile the Handlebars template
+      var FeedTemplate = Handlebars.compile($('#feed-template').html());
+      // Out feed
+      $('#feed').sheetrock({
+        url: mySpreadsheet,
+        query: "select A,B,C,D,E,F,G,H,I,J,K,L,M,N",
+        rowTemplate: FeedTemplate,
+        callback: function (success) {
+          $('.preloader-wrapper').hide();
+          $('.day').show();
+        }
+      });
     });
     </script>
 	<div class="navbar-fixed">

@@ -1,48 +1,21 @@
 <!-- @include vagtplan-2018 -->
+
+
 <script>
-function loadFromLocalStorage() {
-    var data = localStorage.getItem('app');
-    if (data == null)
-    {
-      return data;
-    }
-    
-    return JSON.parse(data);
-  }
-  
-  function refresh() {
-    localStorage.setItem('app', null);
-    location.reload();
-  } 
-  
-  function setInLocalStorage(rawData) {
-    console.log('rawDAta');
-    console.log(rawData);
-    localStorage.setItem('app', JSON.stringify(rawData));
-  }
-  
-  function loadDataIntoSpreadSheet() {
-    
-    var data = loadFromLocalStorage();
-    var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1B5hOGKYn0ivTDLw8kBPIehg1D26wdvwUqZ5BZTN15ps/edit#gid=1569505630';
-    // Compile the Handlebars template
-    var FeedTemplate = Handlebars.compile($('#feed-template').html());
-    // Out feed
-    $('#feed').sheetrock({
-      url: mySpreadsheet,
-      query: "select A,B,C,D,E,F,G,H,I,J,K,L,M,N",
-      rowTemplate: FeedTemplate,
-      callback: function (success, options, response) {
-      console.log(success);
-      console.log(options);
-      setInLocalStorage(response.raw);
-      //console.log(response);
-        $('.preloader-wrapper').hide();
-      }
-    }, data);
-  }
 <!-- @include handlebars-helpers -->
 $(document).ready(function() {
-  loadDataIntoSpreadSheet();
+  var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1B5hOGKYn0ivTDLw8kBPIehg1D26wdvwUqZ5BZTN15ps/edit#gid=1973710197';
+  // Compile the Handlebars template
+  var FeedTemplate = Handlebars.compile($('#feed-template').html());
+  // Out feed
+  $('#feed').sheetrock({
+    url: mySpreadsheet,
+    query: "select A,B,C,D,E,F,G,H,I,J,K,L,M,N",
+    rowTemplate: FeedTemplate,
+    callback: function (success) {
+      $('.preloader-wrapper').hide();
+      $('.day').show();
+    }
+  });
 });
 </script>
