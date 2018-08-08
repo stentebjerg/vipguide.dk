@@ -1,18 +1,7 @@
 {
-    "onsdag": {
-        "title": "Onsdag 9/8-2017", 
-        "url": "https://docs.google.com/spreadsheets/d/1CNrVQoSyKQ1j0SYOHPf0s4TPgXZvYlBZh3I2lopW73M/edit#gid=491341087"
-    },
-    "torsdag": {
-        "title": "Torsdag 10/8-2017", 
-        "url": "https://docs.google.com/spreadsheets/d/1CNrVQoSyKQ1j0SYOHPf0s4TPgXZvYlBZh3I2lopW73M/edit#gid=369183786"
-    },
-    "fredag": {
-        "title": "Fredag 11/8-2017", 
-        "url": "https://docs.google.com/spreadsheets/d/1CNrVQoSyKQ1j0SYOHPf0s4TPgXZvYlBZh3I2lopW73M/edit#gid=2105609213"
-    },
-    "loerdag": {
-        "title": "Lørdag 12/8-2017", 
-        "url": "https://docs.google.com/spreadsheets/d/1CNrVQoSyKQ1j0SYOHPf0s4TPgXZvYlBZh3I2lopW73M/edit#gid=956771978"
+    "days": ["mandag", "tirsdag", "onsdag", "torsdag", "fredag", "Lørdag", "Søndag"],
+    "docs": {
+        "app": "https://docs.google.com/spreadsheets/d/1B5hOGKYn0ivTDLw8kBPIehg1D26wdvwUqZ5BZTN15ps/edit#gid=1569505630",
+        "telefonliste": "https://docs.google.com/spreadsheets/d/1B5hOGKYn0ivTDLw8kBPIehg1D26wdvwUqZ5BZTN15ps/edit#gid=1528045351"
     }
 }

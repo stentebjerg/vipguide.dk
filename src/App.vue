@@ -1,21 +1,24 @@
 <template>
   <div id="app">
-    <SidePannel></SidePannel>
-    <!-- <ContentSection></ContentSection> -->
+    <NavTop></NavTop>
+    <ContentSection></ContentSection>
+    <NavBottom></NavBottom>
   </div>
 </template>
 
 <script>
-import SidePannel from './components/SidePannel.vue'
+import NavTop from './components/NavTop.vue'
 import ContentSection from './components/ContentSection.vue'
+import NavBottom from './components/NavBottom'
 
 import pagesJson from './feed/pages.json'
 
 export default {
   name: 'App',
   components: {
-    SidePannel,
-    ContentSection
+    NavTop,
+    ContentSection,
+    NavBottom
   },
   created() {
     this.addPagesToLocalStorage();
