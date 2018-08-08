@@ -24,6 +24,48 @@
 	<!--a class="refresh" onclick="refresh()"><i class="material-icons">refresh</i></a-->
 </nav>          
  <script type="text/javascript" src="/scripts/min/app.min.js"></script>
+ <!--a class="refresh right" onclick="refresh()"><i class="material-icons">refresh</i></a-->
+ <div class="preloader-wrapper active">
+       <div class="spinner-layer spinner-blue">
+         <div class="circle-clipper left">
+           <div class="circle"></div>
+         </div><div class="gap-patch">
+           <div class="circle"></div>
+         </div><div class="circle-clipper right">
+           <div class="circle"></div>
+         </div>
+       </div>
+ 
+       <div class="spinner-layer spinner-red">
+         <div class="circle-clipper left">
+           <div class="circle"></div>
+         </div><div class="gap-patch">
+           <div class="circle"></div>
+         </div><div class="circle-clipper right">
+           <div class="circle"></div>
+         </div>
+       </div>
+ 
+       <div class="spinner-layer spinner-yellow">
+         <div class="circle-clipper left">
+           <div class="circle"></div>
+         </div><div class="gap-patch">
+           <div class="circle"></div>
+         </div><div class="circle-clipper right">
+           <div class="circle"></div>
+         </div>
+       </div>
+ 
+       <div class="spinner-layer spinner-green">
+         <div class="circle-clipper left">
+           <div class="circle"></div>
+         </div><div class="gap-patch">
+           <div class="circle"></div>
+         </div><div class="circle-clipper right">
+           <div class="circle"></div>
+         </div>
+       </div>
+     </div>
  <ul id="feed" class="feed collapsible collection" data-collapsible="accordion">
  <script id="feed-template" type="text/x-handlebars-template">
      <li class="collection-item avatar">
@@ -36,48 +78,8 @@
      </li>
    </script>
      </ul>
+ 
  <script>
- function loadFromLocalStorage() {
-     var data = localStorage.getItem('telefonliste');
-     if (data == null)
-     {
-       return data;
-     }
-     
-     return JSON.parse(data);
-   }
-   
-   function refresh() {
-     localStorage.setItem('telefonliste', null);
-     location.reload();
-   } 
-   
-   function setInLocalStorage(rawData) {
-     console.log('rawDAta');
-     console.log(rawData);
-     localStorage.setItem('telefonliste', JSON.stringify(rawData));
-   }
-   
-   function loadDataIntoSpreadSheet() {
-     
-     var data = loadFromLocalStorage();
-     var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1ZKVCbxpCk4j6w-0UPLGYlylJejQLh_pp2mQ0rDUAmC8/edit#gid=817945410';
-     // Compile the Handlebars template
-     var FeedTemplate = Handlebars.compile($('#feed-template').html());
-     // Out feed
-     $('#feed').sheetrock({
-       url: mySpreadsheet,
-       query: "select A,B,C",
-       rowTemplate: FeedTemplate,
-       callback: function (success, options, response) {
-       console.log(success);
-       console.log(options);
-       setInLocalStorage(response.raw);
-       console.log(response);
-         $('.preloader-wrapper').hide();
-       }
-     }, data);
-   }
  // Compares first value to the second one allowing entering IF clouse if true.
  // Otherwise entering ELSE clause if exist.
   Handlebars.registerHelper('ifEquals', function(a, b, options) {
@@ -104,7 +106,18 @@
      }
  });
  $(document).ready(function() {
-   loadDataIntoSpreadSheet();
+   var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1B5hOGKYn0ivTDLw8kBPIehg1D26wdvwUqZ5BZTN15ps/edit#gid=1528045351';
+   // Compile the Handlebars template
+   var FeedTemplate = Handlebars.compile($('#feed-template').html());
+   // Out feed
+   $('#feed').sheetrock({
+     url: mySpreadsheet,
+     query: "select A,B,C",
+     rowTemplate: FeedTemplate,
+     callback: function (success) {
+       $('.preloader-wrapper').hide();
+     }
+   });
  });
  </script>    
  <div class="navbar-fixed">

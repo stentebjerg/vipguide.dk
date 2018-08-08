@@ -1,6 +1,4 @@
 <!-- @include vagtplan-2018 -->
-
-
 <script>
 <!-- @include handlebars-helpers -->
 $(document).ready(function() {
@@ -10,7 +8,7 @@ $(document).ready(function() {
   // Out feed
   $('#feed').sheetrock({
     url: mySpreadsheet,
-    query: "select A,B,C,D,E,F,G,H,I,J,K,L,M,N",
+    query: "select A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P",
     rowTemplate: FeedTemplate,
     callback: function (success) {
       $('.preloader-wrapper').hide();

@@ -13,7 +13,7 @@
                     <span class="headline">{{cells.Firma}}</span><br>
                     <span class="info">{{cells.Type}}{{#if cells.Hold}} · {{cells.Hold}}{{/if}}</span>
                 </div>
-                <div class="number right">kl. {{cells.Tidspunkt}}</div>
+                <div class="number right">kl. {{cells.Tidspunkt}}{{#if cells.Tidspunkt2}} / {{cells.Tidspunkt2}}{{/if}}</div>
                 
             </div>
 
@@ -25,6 +25,11 @@
                         <h6>Mødetidspunkt</h6>
                         <p>⏱ Kl. <u>{{cells.Mødetidspunkt}}</u></p>
                         
+                        {{/if}}
+
+                        {{#if cells.Sluttid}}
+                        <h6>Sluttidspunkt</h6>
+                        <p>⌚️ Kl. {{cells.Sluttid}}{{#if cells.Sluttid2}} / {{cells.Sluttid2}}{{/if}}</p>
                         {{/if}}
 
                         {{#if cells.Navn}}
@@ -39,7 +44,9 @@
                         <h6>Start lokation</h6>
                         <p>✅ {{cells.Start}}</p>
                         
-                        {{/if}} 
+                        {{/if}}
+
+
 
                         {{#if cells.Slut}}
                         

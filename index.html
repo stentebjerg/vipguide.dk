@@ -22,8 +22,7 @@
 <nav class="pink accent-5 nav-wrapper top">
 	<div class="title">Vagtplan</div>
 	<!--a class="refresh" onclick="refresh()"><i class="material-icons">refresh</i></a-->
-</nav>   
-
+</nav>
     <script type="text/javascript" src="/scripts/min/app.min.js"></script>
     <!--a class="refresh right" onclick="refresh()"><i class="material-icons">refresh</i></a-->
     <div class="preloader-wrapper active">
@@ -80,7 +79,7 @@
                         <span class="headline">{{cells.Firma}}</span><br>
                         <span class="info">{{cells.Type}}{{#if cells.Hold}} · {{cells.Hold}}{{/if}}</span>
                     </div>
-                    <div class="number right">kl. {{cells.Tidspunkt}}</div>
+                    <div class="number right">kl. {{cells.Tidspunkt}}{{#if cells.Tidspunkt2}} / {{cells.Tidspunkt2}}{{/if}}</div>
                     
                 </div>
     
@@ -92,6 +91,11 @@
                             <h6>Mødetidspunkt</h6>
                             <p>⏱ Kl. <u>{{cells.Mødetidspunkt}}</u></p>
                             
+                            {{/if}}
+    
+                            {{#if cells.Sluttid}}
+                            <h6>Sluttidspunkt</h6>
+                            <p>⌚️ Kl. {{cells.Sluttid}}{{#if cells.Sluttid2}} / {{cells.Sluttid2}}{{/if}}</p>
                             {{/if}}
     
                             {{#if cells.Navn}}
@@ -106,7 +110,9 @@
                             <h6>Start lokation</h6>
                             <p>✅ {{cells.Start}}</p>
                             
-                            {{/if}} 
+                            {{/if}}
+    
+    
     
                             {{#if cells.Slut}}
                             
@@ -128,8 +134,6 @@
             {{/if}}
         </script>
     </ul>
-    
-    
     <script>
     // Compares first value to the second one allowing entering IF clouse if true.
     // Otherwise entering ELSE clause if exist.
@@ -163,7 +167,7 @@
       // Out feed
       $('#feed').sheetrock({
         url: mySpreadsheet,
-        query: "select A,B,C,D,E,F,G,H,I,J,K,L,M,N",
+        query: "select A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P",
         rowTemplate: FeedTemplate,
         callback: function (success) {
           $('.preloader-wrapper').hide();
