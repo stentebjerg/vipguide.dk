@@ -8,7 +8,7 @@
         {{else}}
         <li>
             <div class="flex-container collapsible-header ">
-                <div class="circle{{#ifvalue cells.Type equals="Afhentning"}} {{toLowerCase cells.Type}}{{/ifvalue}}">{{cells.Antal}}</div>
+                <div class="circle{{#ifvalue cells.Type equals="Afhentning"}} {{toLowerCase cells.Type}}{{/ifvalue}}{{#ifvalue cells.Type equals="Guided tur"}} {{toLowerCase cells.Type}}{{/ifvalue}}">{{cells.Antal}}</div>
                 <div class="left">
                     <span class="headline">{{cells.Firma}}</span><br>
                     <span class="info">{{cells.Type}}{{#if cells.Hold}} · {{cells.Hold}}{{/if}}</span>

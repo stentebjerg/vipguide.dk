@@ -37,16 +37,18 @@ nav .title {
     
     
     .circle {
-    background: #51e587;
-    
-    &.afhentning{
+      background: #5171f8;
+    }
+    .guided{
       background: #fe3265;
+    }
+
+    .afhentning{
+      background: #51e587;
     }
 
     &.day {
     margin: 40px 0 20px 0;
-    
-    }
     }
     
   }
@@ -75,7 +77,6 @@ nav .title {
     height: 3rem;
     line-height: 3rem; 
     text-align: center;
-    background: #5171f8;
     color: #fff;
     font-size: 20px;
     font-weight: 300;
