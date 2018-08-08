@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <SidePannel></SidePannel>
-    <ContentSection></ContentSection>
+    <!-- <ContentSection></ContentSection> -->
   </div>
 </template>
 
