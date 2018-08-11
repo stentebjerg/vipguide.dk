@@ -14,6 +14,7 @@
 
 <script>
 import PagesStore from '../stores/PagesStore.js'
+import $ from 'jquery';
 
 export default {
   name: 'NavBottom',
@@ -21,14 +22,22 @@ export default {
         return { PS: PagesStore.data };
     },
   methods: {
-    loadPage: function () {
+    loadPage: function (event) {
         var pageName = this.$router.resolve(location).location.path;
-        this.PS.currentPage = pageName.substring(1, pageName.indexOf('.'));
+        pageName = pageName.substring(1, pageName.indexOf('.'));
+        this.PS.currentPage = pageName;
+        this.PS.title = this.PS.pages[pageName];
+        // this.toggleNavIcons(event);
+    },
+    toggleNavIcons: function (event) {
+        $("nav-wrapper > a").removeClass("active");
+        $(event.target).closest("a").addClass("active");
     }
   }
 }
 </script>
 
-<style>
+<style lang="scss">
+@import "../sass/app.scss";
 
 </style>

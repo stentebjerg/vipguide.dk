@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     addPagesToLocalStorage: function() {
-      // localStorage.clear();
+      localStorage.clear();
       localStorage.pages = JSON.stringify(pagesJson);
     }
   }

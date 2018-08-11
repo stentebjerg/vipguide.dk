@@ -1,7 +1,14 @@
 {
-    "days": ["mandag", "tirsdag", "onsdag", "torsdag", "fredag", "Lørdag", "Søndag"],
+    "days": ["Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag", "Søndag"],
     "docs": {
         "app": "https://docs.google.com/spreadsheets/d/1B5hOGKYn0ivTDLw8kBPIehg1D26wdvwUqZ5BZTN15ps/edit#gid=1569505630",
         "telefonliste": "https://docs.google.com/spreadsheets/d/1B5hOGKYn0ivTDLw8kBPIehg1D26wdvwUqZ5BZTN15ps/edit#gid=1528045351"
+    },
+    "pages": {
+        "home": "Vagtplan",
+        "telefonliste": "Telefonliste",
+        "hold": "Holdsammensætning",
+        "facts": "Facts",
+        "finurligheder": "(Ffinurligheder ?)"
     }
 }

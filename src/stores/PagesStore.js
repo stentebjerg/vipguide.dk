@@ -1,6 +1,8 @@
 const PagesStore = {
     data: {
-        currentPage: "onsdag"
+        currentPage: "home",
+        title: "Vagtplan",
+        pages: JSON.parse(localStorage.pages).pages,
     }
 };
 
