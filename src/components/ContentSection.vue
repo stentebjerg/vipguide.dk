@@ -3,6 +3,7 @@
       <!-- <Day v-if="isCurrentPage('hold')"></Day> -->
       <Telefonliste v-if="isCurrentPage('telefonliste')"></Telefonliste>
       <Hold v-if="isCurrentPage('hold')"></Hold>
+      <Facts v-if="isCurrentPage('facts')"></Facts>
     </div>
 </template>
 
@@ -13,13 +14,15 @@ import sheetrock from 'sheetrock';
 import Day from './Day.vue'
 import Telefonliste from './Telefonliste.vue'
 import Hold from './Hold.vue'
+import Facts from './Facts.vue'
 
 export default {
     name: 'ContentSection',
     components: {
         Day,
         Telefonliste,
-        Hold
+        Hold,
+        Facts
     },
     data() {
         return { PS: PagesStore.data };

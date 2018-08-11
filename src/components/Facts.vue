@@ -1,0 +1,108 @@
+<template>
+    <div class="container">
+            <h4>Nyheder 2018</h4>
+            <ul class="browser-default">
+                <li>Udsolgt på 90 min – inden musikprogrametet var offentliggjort. 12.000 på venteliste</li>
+                <li>Dynaudio: Proff. stuido på Kærligheden</li>
+                <li>26 artister på Kærligheden</li>
+                <li>Power Tools Race. Racerbane med elværktøjer. Event hver eftermiddag</li>
+                <li>Menneskebibliotek: Lån en fordom. 20 forskellige fordomme</li>
+                <li>Haps og Sjus og bedre kendt som Bøge-lounge. Alt er clearet med Skovfogeden mht. monterigen. Pladserne har været udlodet i konkurrencer</li>
+                <li>E-cooking: Pimpet sminkedåserne. Smuk2Go</li>
+                <li>Combi-sport med Hummel. Ligger i Sheerwood (gamle Telia). Flødeis, hils på en bedstemor. Alt gakket sport</li>
+                <li>Spejltoilet. Man kan kigge ud, men man kan ikke kigge ind – siger de …</li>
+                <li>Grøn energi.Aura. Alt strøm kommer fra vind energi. Flydende naturgas. </li>
+                <li>Walther robot. IBM Watson tecnologi. Ikke fysisk synlig i år. </li>
+                <li>Sigtbar. 2 gin bar: 1. Overfor champagne-baren. 2 ved Søbadet</li>
+                <li>Aperol ligger i Mexival. </li>
+                <li>Ambassaden. Museum, vores nabo</li>
+            </ul>
+            <h4>Gæster</h4>
+            <ul class="browser-default">
+                <li>1980: (år 1 – med fri entre) man regner med mellem 600 – 1000 tilskuere</li>
+                <li> 1987: 6.500 partoutgæster</li>
+                <li> 1998: 16.500 partoutgæster</li>
+                <li> 2003: 21.500 partoutgæster</li>
+                <li> 2015: 28.000 partoutgæster</li>
+                <li> 2016: 27.000 partoutgæster</li>
+            </ul>
+            <p>
+                Gæsterne på festivalen fordeler sig i 2016 med ca. 27.000 betalende partoutgæster, ca. 20.000 betalende enkeltdagsgæster (fordelt på de fem dage med entré), svarende til ca. 30 - 34.000 betalende gæster i skoven pr. dag.
+            </p>
+            <h4>Medhjælpere</h4>
+            <ul class="browser-default">
+                <li>2009: 10.769 medhjælpere</li>
+                <li> 2010: 11.154 medhjælpere</li>
+                <li> 2011: 12.641 medhjælpere</li>
+                <li> 2012: 12.498 medhjælpere</li>
+                <li> 2013: 12.633 medhjælpere</li>
+                <li> 2014: 12.349 medhjælpere</li>
+                <li> 2015: 12.750 medhjælpere</li>
+            </ul>
+            <h4>Økonomi</h4>
+            <ul class="browser-default">
+                <li>Omsætning 2008 ca. 84 mio. kr.</li>
+                <li> Omsætning 2009 ca. 87 mio. kr.</li>
+                <li> Omsætning 2010 ca. 98 mio. kr.</li>
+                <li> Omsætning 2011 ca. 107 mio. kr.</li>
+                <li> Omsætning 2012 ca. 116 mio. kr.</li>
+                <li> Omsætning 2013 ca. 127 mio. kr</li>
+                <li> Omsætning 2014 ca. 124 mio. kr.</li>
+                <li> Omsætning 2015 ca. 135 mio. kr.</li>
+                
+                <i>(Alle omsætningstal er ex. moms)</i>
+            </ul>
+            <h4>Areal</h4>
+            <ul class="browser-default">
+                <li>Selve festivalpladsen = ca. 230.000 m²</li>
+                <li> Hele området inkl. campingpladser og parkering = +600.000 m²</li>
+            </ul>
+            <h4>Forbrugstal 2015</h4>
+            <ul class="browser-default">
+                <li>193.000 flasker øl (herunder omkring 10 ks. Faxe Free og 5 ks. Pladderballe Kalapøjser)</li>
+                <li> 184.000 liter fadøl</li>
+                <li> 39.510 Cocio</li>
+                <li> 16.974 fl. Egekilde vand</li>
+                <li> 4.665 fl. Cava – og så mere end 3000 fl. Champagne</li>
+                <li> 165 fl. snaps</li>
+                <li> 0 fl. Aalborg Export</li>
+                <li> 63 fl. Pisang Ambon</li>
+                <li> 7 fl. Ricard pastis</li>
+                <li> 2 fl. Dr. Nielsens Bitter</li>
+                <li> 864 fl. Baileys</li>
+                <li> 1.663 fl. Kahlua</li>
+                <li> 12 fl. 1Enkelt</li>
+                <li> 63 fl. Hot and Sweet cactus</li>
+                <li> 32 kasser af husets cigar</li>
+                <li> 56 tons isterninger</li>
+                <li> 300.000 styks engangsbestik</li>
+                <li> 120.000 affaldssække</li>
+                <li> 3.000.000 meter toiletpapir</li>
+                <li> 9.000 champagneglas</li>
+                <li> 1.000.000 øl krus</li>
+                <li> 2.000 hovedpine piller</li>
+            </ul>
+            <h4>Ekstra facts</h4>
+            <ul class="browser-default">
+                <li>Vi lejer mere end 340 telte i alle størrelser.</li>
+                <li>Lægger 32.000 m² gulv.</li>
+                <li>Opsætter omkring 50 km. hegn. </li>
+                <li>Opstiller omkring 200 boder og barer </li>
+                <li>Klargør 190 sanitetsvogne med i alt 1362 vandskyllende toiletter </li>
+                <li>Laver vores egen skov-børnehave – til de medhjælpere der arbejder før og efter festivalen</li>
+                <li>Har ca. 3.000 opstillere i arbejde. </li>
+                <li>Vores gæster stiller omkring 12.000 egne telte op </li>
+            </ul>
+            <i><a target="_blank" href="http://www.smukfest.dk/media/2509/smukfest-facts-and-figures-2016.pdf">Kilde: Tal & fakta</a></i>
+        </div>
+</template>
+
+<script>
+export default {
+    name: 'Facts'
+}
+</script>
+
+<style>
+
+</style>
