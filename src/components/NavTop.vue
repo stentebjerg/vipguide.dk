@@ -9,10 +9,9 @@
 import PagesStore from '../stores/PagesStore.js'
 
 export default {
-  name: 'NavTop',
-  data() {
+    name: 'NavTop',
+    data() {
         return { 
-            rows: null, 
             PS: PagesStore.data
         };
     },

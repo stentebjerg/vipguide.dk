@@ -26,7 +26,7 @@ export default {
         var pageName = this.$router.resolve(location).location.path;
         pageName = pageName.substring(1, pageName.indexOf('.'));
         this.PS.currentPage = pageName;
-        this.PS.title = this.PS.pages[pageName];
+        this.PS.title = this.PS.allData.pagesData[pageName].title;
         // this.toggleNavIcons(event);
     },
     toggleNavIcons: function (event) {
