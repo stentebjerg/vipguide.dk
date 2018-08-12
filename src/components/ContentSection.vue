@@ -80,7 +80,8 @@ export default {
         initHeaders: function (arr) {
             var headers = [];
             for (let i = 0; i < arr.length; i++) {
-                headers.push(arr[i].label);
+                var newHeader = { label: arr[i].label, type: arr[i].type };
+                headers.push(newHeader);
             }
             return headers;
         },
@@ -99,16 +100,23 @@ export default {
             var rowArr = row.c;
             var newObj = { };
             for (let i = 0; i < rowArr.length; i++) {
-                newObj[headers[i]] = (rowArr[i]) ? rowArr[i].v : null;
-                if (!newObj[headers[i]]) count++;
+                var label = headers[i].label;
+                var type = headers[i].type;
+                
+                var val = null;
+                if (rowArr[i]) {
+                    if (rowArr[i].v) val = rowArr[i].v;
+                    if (rowArr[i].f && type === "timeofday") val = rowArr[i].f; // Otherwise we get time in the following format: [10, 30, 0, 0]
+                    newObj[label] = val;
+                }
+                if (!val) count++;
             }
             return (count !== rowArr.length) ? newObj : null;
-        },
+        }
     }
 }
 </script>
 
 <style>
-
 
 </style>

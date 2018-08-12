@@ -10,7 +10,8 @@
                     <span class="headline">{{row.Firma}}</span><br>
                     <span class="info">{{row.Type}}<span v-if="row.Hold"> · {{row.Hold}}</span></span>
                 </div>
-                <div class="number right">kl. {{row.Tidspunkt}}<span v-if="row.Tidspunkt2"> / {{row.Tidspunkt2}}</span></div>
+                <div v-if="row.Tidspunkt2"  class="number right">kl. {{row.Tidspunkt}} / {{row.Tidspunkt2}}</div>
+                <div v-else                 class="number right">kl. {{row.Tidspunkt}}</div>
             </div>
             <div class="collapsible-body">
                 <span v-if="row.Mødetidspunkt">
