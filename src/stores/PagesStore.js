@@ -2,8 +2,8 @@ import pagesJson from '../feed/pages.json'
 
 const PagesStore = {
     data: {
-        currentPage: "home",
-        title: "Vagtplan",
+        currentPage: null,
+        title: "X",
         allData: null,
     },
 

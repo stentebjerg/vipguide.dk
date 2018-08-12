@@ -1,174 +1,79 @@
 <template>
-    <div>
-        <div class="grey lighten-2 grey-text text-darken-2 date">
-            {{this.title}}
-        </div>
-        <ul v-if="rows != null" id="feed" class="feed collapsible collection" data-collapsible="accordion" v-on:click="toggleDetails">
-            <li v-for="(row, index) in rows" :key="index" class="row-item">
-                <div class="collapsible-header collection-item avatar">
-                    <i class="material-icons expand less">expand_less</i>
-                    <i class="material-icons expand more">expand_more</i>
-                    <i class="material-icons close">close</i>
-                    <img :src="row.ImageUrl" :alt="row.Firma" class="circle">
-                    <span class="title">{{row.Firma}}</span>
-                    <p>{{row.Type}} kl. {{row.Afgang}}
-                        <br>{{row.Antal}} personer
-                        <br>
-                        <a v-if="row.Hold" href="/hold.html">Hold {{row.Hold}}</a></p>
+    <ul id="feed" class="feed collapsible collection" data-collapsible="accordion" v-on:click="toggleDetails">
+        <li class="day"><h4>Lørdag 🎉</h4></li>
+        <li v-for="(row, index) in rows" :key="index" class="row-item">
+            <!-- <li v-if="row.Dag" class="day"><h4>{{cells.Dag}}</h4></li>
+            <li v-else> -->
+            <div class="flex-container collapsible-header ">
+                <div :class="getCircleClasses(row)">{{row.Antal}}</div>
+                <div class="left">
+                    <span class="headline">{{row.Firma}}</span><br>
+                    <span class="info">{{row.Type}}<span v-if="row.Hold"> · {{row.Hold}}</span></span>
                 </div>
-                <div class="collapsible-body">
-                    <div class="flex-container">
-                        <div v-if="row.Moedetidspunkt" class="flex-item">
-                        <h6>Mødetidspunkt</h6>
-                        Mød kl. <u>{{row.Moedetidspunkt}}</u>, men kom gerne før og få en 🍺
-                        </div>
+                <div class="number right">kl. {{row.Tidspunkt}}<span v-if="row.Tidspunkt2"> / {{row.Tidspunkt2}}</span></div>
+            </div>
+            <div class="collapsible-body">
+                <span v-if="row.Mødetidspunkt">
+                    <h6>Mødetidspunkt</h6>
+                    <p>⏱ Kl. <u>{{row.Mødetidspunkt}}</u></p>
+                </span>
 
-                        <div v-if="row.Kontaktperson" class="flex-item">
-                        <h6>Kontaktperson</h6>
-                        <p>{{row.Kontaktperson}}
-                            <span v-if="row.Mobil">
-                                <br><a style="padding-right: 0" :href="getPhoneNumberStr(row.Mobil)">{{row.Mobil}}</a>📱
-                            </span>
-                        </p>
-                        </div>
+                <span v-if="row.Sluttid">
+                    <h6>Sluttidspunkt</h6>
+                    <p>⌚️ Kl. {{row.Sluttid}}<span v-if="row.Sluttid2"> / {{row.Sluttid2}}</span></p>
+                </span>
 
-                        <div v-if="row.Kommentar" class="flex-item">
-                        <h6>Kommentarer</h6>
-                        <p>{{row.Kommentar}}</p>
-                        </div>
-                    
-                        <div v-if="row.Afhentning" class="flex-item">
-                        <h6>Afhentning</h6>
-                        <p>{{row.Afhentning}}</p>
-                        </div>
+                <span v-if="row.Navn">
+                    <h6>Kontaktperson</h6>
+                    <p>📱 {{row.Navn}} <a v-if="row.Mobilnummer" :href="getPhoneNumberStr(row.Mobilnummer)">{{row.Mobilnummer}}</a></p>
+                </span>
+            
+                <span v-if="row.Start">
+                    <h6>Start lokation</h6>
+                    <p>✅ {{row.Start}}</p>
+                </span>
 
-                        <div v-if="row.Tur" class="flex-item">
-                        <h6>Tur</h6>
-                        <p>{{row.Tur}}</p>
-                        </div>
+                <span v-if="row.Slut">
+                    <h6>Slut lokation</h6>
+                    <p>🎯 {{row.Slut}}</p>
+                </span>
 
-                        <div v-if="row.Drejebog" class="flex-item">
-                        <h6>Drejebog</h6>
-                        <a target="_blank" :href="row.Drejebog">Link til drejebog <i class="material-icons open-in-new">open_in_new</i></a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-        <div class="hidden-area"></div>
-    </div>
+                <span v-if="row.Bemærkninger">
+                    <h6>Bemærkninger</h6>
+                    <p>⁉️ {{row.Bemærkninger}}</p>
+                </span>
+            </div>
+        </li>
+    </ul>
 </template>
 
 <script>
-import $ from 'jquery';
-import sheetrock from 'sheetrock';
 import PagesStore from '../stores/PagesStore.js'
+import $ from 'jquery'
 
 export default {
-    name: 'Main',
+    name: 'Day',
     data() {
         return { 
             rows: null, 
-            title: "",
             PS: PagesStore.data
         };
     },
-    watch: {
-        "PS.currentPage": function() {
-            this.toggleDetails(null);
-            this.loadDataFromSpreadSheet() 
-        }
-    },
     mounted() {
-        this.loadDataFromSpreadSheet();
+        $('.day').show();
+        var name = "Home";
+        this.rows = PagesStore.loadFromLocalStorage(name.toLowerCase()).rows;
     },
     methods: {
-        loadFromLocalStorage: function(pageName) {
-            var data = localStorage.getItem(pageName);
-            if (data == null) { return data; }
-            return JSON.parse(data);
-        },
-
-        refresh: function() {
-            localStorage.setItem(this.PS.currentPage, null);
-            location.reload();
-        },
-
-        setInLocalStorage: function(rawData) {
-            localStorage.setItem(this.PS.currentPage, JSON.stringify(rawData));
-        },
-
-        loadDataFromSpreadSheet: function () {
-            var pages = JSON.parse(localStorage.getItem("pages"));
-            this.title = pages[this.PS.currentPage].title;
-            var mySpreadsheet = pages[this.PS.currentPage].url;
-            var data = this.loadFromLocalStorage(this.PS.currentPage);
-            // Out feed
-            sheetrock({
-                url: mySpreadsheet,
-                query: "select A,B,C,D,E,F,G,H,I,J,K,L,M,N",
-                callback: this.myCallback
-            }, data);
-        },
-
-        myCallback: function (success, options, response) {
-            this.setInLocalStorage(response.raw);
-            var arr = this.loadFromLocalStorage(this.PS.currentPage).table.rows;
-            var headers = this.initHeaders(arr);
-            this.rows = this.transformRows(arr, headers);
-            $('.preloader-wrapper').hide();
-        },
-
-        // Helper methods for getting names of the columns
-        initHeaders: function (arr) {
-            var headersArr = arr[0].c;
-            var headers = [];
-            for (let i = 0; i < headersArr.length; i++) {
-                var emptyPropertyStr = "_col" + i;
-
-                // If property doesn't exist at all or contains null
-                if (headersArr[i]) {
-                    var headerVal = headersArr[i];
-                    headerVal = (headerVal.v) ? headerVal.v : emptyPropertyStr;
-                    headers.push(headerVal);
-                } else {
-                    headers.push(emptyPropertyStr);
-                }
-            }
-            return headers;
-        },
-
-        transformRows: function (arr, headers) {
-            var resultArr = [];
-            for (let i = 1; i < arr.length; i++) {
-                resultArr.push(this.transformRow(arr[i], headers));
-            }
-            return resultArr;
-        },
-
-        transformRow: function (row, headers) {
-            var rowArr = row.c;
-
-            var newObj = { };
-            for (let i = 0; i < rowArr.length; i++) {
-                newObj[headers[i]] = this.getPropertyValue(rowArr[i]);
-            }
-            newObj["ImageUrl"] = this.getImageUrl(newObj["Firma"]);
-            return newObj;
-        },
-
-        getPropertyValue: function (row) {
-            return (row) ? row.v : null;
-        },
-
-        getImageUrl: function (name) {
-            var str = name + "";
-            var url = "http://vipguide.dk/assets/img/" + str.toLowerCase() + ".png";
-            return url;
-        },
-
         getPhoneNumberStr: function (phoneNumber) {
             return "tel:" + phoneNumber;
+        },
+
+        getCircleClasses: function (row) {
+            var type = "";
+            type = "" + (row.Type === "Afhentning") ? row.Type.toLowerCase() : "";
+            type = "" + (row.Type === "Guided tur") ? row.Type.toLowerCase() : "";
+            return "circle " + type;
         },
 
         // Helper methods for toggling row
@@ -208,7 +113,6 @@ export default {
         }
     }
 }
-
 </script>
 
 <style>

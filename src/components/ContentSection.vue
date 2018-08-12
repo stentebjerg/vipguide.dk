@@ -1,6 +1,6 @@
 <template>
     <div>
-      <!-- <Day v-if="isCurrentPage('hold')"></Day> -->
+      <Day v-if="isCurrentPage('home')"></Day>
       <Telefonliste v-if="isCurrentPage('telefonliste')"></Telefonliste>
       <Hold v-if="isCurrentPage('hold')"></Hold>
       <Facts v-if="isCurrentPage('facts')"></Facts>
