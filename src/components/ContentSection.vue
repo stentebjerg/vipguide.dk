@@ -1,9 +1,9 @@
 <template>
     <div>
-      <Day v-if="isCurrentPage('home')"></Day>
-      <Telefonliste v-if="isCurrentPage('telefonliste')"></Telefonliste>
-      <Hold v-if="isCurrentPage('hold')"></Hold>
-      <Facts v-if="isCurrentPage('facts')"></Facts>
+        <Day v-if="isCurrentPage('home')"></Day>
+        <Telefonliste v-else-if="isCurrentPage('telefonliste')"></Telefonliste>
+        <Hold v-else-if="isCurrentPage('hold')"></Hold>
+        <Facts v-else-if="isCurrentPage('facts')"></Facts>
     </div>
 </template>
 
@@ -42,6 +42,12 @@ export default {
             return this.PS.currentPage === page;
         },
 
+        goHome: function() {
+            var homePageName = "home";
+            this.PS.currentPage = homePageName;
+            this.PS.title = this.PS.allData.pagesData[homePageName].title;
+        },
+
         loadDataFromSpreadSheet: function (pageName) {
             var data = PagesStore.loadFromLocalStorage(pageName);
             var allData = PagesStore.loadFromLocalStorage("allData");
@@ -67,6 +73,9 @@ export default {
         myCallback: function (success, options, response) {
             var pageName = options.user.params.pageName;
             this.setInLocalStorage(pageName, response.raw);
+            
+            this.PS.pagesLoadedCount++;
+            if (PagesStore.allLoaded()) this.goHome();
         },
 
         setInLocalStorage: function (pageName, rawData) {
